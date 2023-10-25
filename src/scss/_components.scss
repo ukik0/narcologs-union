@@ -1,0 +1,110 @@
+@import 'vars';
+@import 'mixins';
+
+.button {
+    padding: 1.5rem 2rem;
+    border-radius: 5rem;
+    transition-duration: 0.3s;
+    transition-property: background-color, color, border;
+    transition-timing-function: ease;
+    position: relative;
+
+    &::after,
+    &::before {
+        @include pseudo {
+            inset: 0;
+            transition-duration: 0.3s;
+            transition-property: opacity, background;
+            transition-timing-function: ease;
+            z-index: -1;
+            border-radius: inherit;
+        }
+    }
+
+    &:hover {
+        &::after {
+            opacity: 0;
+        }
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &:disabled {
+        user-select: none;
+        pointer-events: none;
+    }
+
+    @include h3;
+}
+
+.button-sky {
+    @extend .button !optional;
+    color: $white;
+    border-radius: 5rem;
+    border: 0.1rem solid #f3fbff;
+
+    &::after {
+        background: linear-gradient(268deg, #02b4ff 15.29%, #88d9fc 77.46%);
+    }
+
+    &::before {
+        background: linear-gradient(266deg, #88d9fc 23.17%, #02b4ff 80.75%);
+    }
+
+    &:disabled {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    &:active {
+        color: $sky-primary;
+        border-color: $sky-primary;
+
+        &::before {
+            background: transparent;
+        }
+    }
+}
+
+.button-outlined {
+    @extend .button !optional;
+    color: $text-primary;
+    border: 0.1rem solid $sky-primary;
+
+    &:hover {
+        color: $sky-primary;
+    }
+
+    &:disabled {
+        color: rgba(36, 190, 254, 0.7);
+    }
+
+    &:active {
+        color: $sky-primary;
+    }
+}
+
+.button-grey {
+    @extend .button !optional;
+    color: $text-primary;
+    border: 0.1rem solid #e7ecfa;
+
+
+    &::after {
+        background: linear-gradient(270deg, #e7ecfa 0%, #fff 86.93%);
+    }
+
+    &::before {
+        background: transparent;
+    }
+
+    &:disabled {
+        color: rgba(41, 52, 74, 0.5);
+        background: linear-gradient(270deg, #e7ecfa 0%, #fff 86.93%);
+    }
+
+    &:active {
+        border-color: #f9fafe;
+        background: transparent;
+    }
+}

@@ -26,10 +26,6 @@ export function buildPlugins({ isDev }: BuildOptions): webpack.WebpackPluginInst
                     to: path.resolve(__dirname, '..', 'build', 'images')
                 },
                 {
-                    from: path.resolve(__dirname, '..', 'src', 'videos'),
-                    to: path.resolve(__dirname, '..', 'build', 'videos')
-                },
-                {
                     from: path.resolve(__dirname, '..', 'src', 'fonts'),
                     to: path.resolve(__dirname, '..', 'build', 'fonts')
                 }

@@ -1,5 +1,19 @@
 //colors
-$text-primary: #1e2328;
+$text-primary: #29344a;
+$text-secondary: #323232;
+
+//background
+$pink: #f7e7fe;
+$blue: #eefaff;
+$grey: #e7ecfa;
+$sky-primary: #24befe;
+$sky-secondary: #e1f0f8;
+$sky-gradient: linear-gradient(230deg, $sky-primary 7.43%, rgba(2, 180, 255, 0.42) 78.83%);
+$white-gradient: linear-gradient(180deg, $grey 0%, #fff 100%);
+
+//shadows
+$shadow: 0px 0.4rem 13rem 0px rgba(0, 0, 0, 0.1);
 
 //additional
-$font-family: 'Proxima Nova', sans-serif;
+$font-family: 'Circe', sans-serif;
+$white: #fff;

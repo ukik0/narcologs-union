@@ -24,6 +24,8 @@ body {
     margin: 0;
     padding: 0;
     color: $text-primary; // цвет по умолчанию текста по сайту
+    background: #effaff url('../images/background.svg') no-repeat top;
+    background-size: 100%;
     //additional
     scrollbar-gutter: stable;
     scroll-behavior: smooth;
@@ -106,7 +108,7 @@ ul li {
 }
 
 .container {
-    width: 125rem;
+    width: 135rem;
     margin: 0 auto;
 }
 
@@ -120,11 +122,6 @@ input[type='number'] {
     -moz-appearance: textfield;
 }
 
-.container {
-    width: 168.4rem;
-    margin: 0 auto;
-}
-
 @media (max-width: 48em) {
     html {
         font-size: calc(100 / 375) * 5vw; // где 375 это ширина моб версии макета
@@ -136,7 +133,7 @@ input[type='number'] {
     }
 
     .container {
-        padding: 0 2rem; // в моб версии отступ от края задаем для всех контейнеров, а там где не нужно можем точечно убрать
+        padding: 0 4rem; // в моб версии отступ от края задаем для всех контейнеров, а там где не нужно можем точечно убрать
         width: 100%;
     }
 }
