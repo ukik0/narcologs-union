@@ -63,5 +63,13 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         type: 'asset/resource'
     };
 
-    return [babelLoader, typescriptLoader, cssLoader, htmlLoader, imagesLoader];
+    const fontsLoader = {
+        test: /\.(woff|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+            filename: '../../fonts/[name][ext]'
+        }
+    };
+
+    return [babelLoader, typescriptLoader, cssLoader, htmlLoader, imagesLoader, fontsLoader];
 }
