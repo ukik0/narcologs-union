@@ -60,7 +60,10 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
     const imagesLoader = {
         test: /\.(png|svg|jpg|jpeg|webp)$/i,
-        type: 'asset/resource'
+        type: 'asset/resource',
+        generator: {
+            filename: '../images/[name][ext]', // Путь и имя файлов изображений в итоговой сборке
+        },
     };
 
     const fontsLoader = {
