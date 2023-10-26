@@ -1,0 +1,215 @@
+.header {
+    margin-top: 4.3rem;
+
+    &__subheader {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 7.1rem;
+        max-width: 129.2rem;
+        width: 100%;
+
+        @include small-tablet {
+            display: none;
+        }
+
+        &-address {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+
+            img {
+                max-width: 2.5043rem;
+                width: 100%;
+                height: 2.4rem;
+            }
+
+            &-text {
+                color: $text-primary;
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: normal;
+                font-style: normal;
+            }
+        }
+
+        &-helper {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            &-name {
+                color: $sky-primary;
+                font-size: 1.6rem;
+                font-weight: 700;
+                line-height: 2.5rem;
+                white-space: nowrap;
+            }
+
+            &-link {
+                display: flex;
+                align-items: center;
+                gap: 0.7rem;
+                width: 100%;
+                white-space: nowrap;
+
+                &.mobile {
+                    display: none;
+
+                    @include small-tablet{
+                        display: inline-flex;
+                        width: auto;
+                    }
+                }
+
+                @include small-tablet {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                &:hover {
+                    .header__subheader-helper-link-text {
+                        color: $sky-primary;
+                    }
+
+                    svg {
+                        path {
+                            fill: $sky-primary;
+                        }
+                    }
+                }
+
+                svg {
+                    max-width: 1.8rem;
+                    width: 100%;
+                    height: 1.8rem;
+
+                    path {
+                        @include transition(fill);
+                    }
+
+                    @include small-tablet {
+                        max-width: 4.2rem;
+                        width: 100%;
+                        height: 4.2rem;
+                    }
+                }
+
+                &-text {
+                    color: $text-secondary;
+                    font-size: 2rem;
+                    font-weight: 900;
+                    line-height: normal;
+                    @include transition(color);
+                }
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        max-width: 129.2rem;
+        width: 100%;
+
+        @include small-tablet {
+            max-width: 100%;
+            align-items: center;
+        }
+    }
+
+    &__logo {
+        max-width: 16.5rem;
+        width: 100%;
+        height: 8.5rem;
+
+        @include small-tablet {
+            max-width: 28.8rem;
+            width: 100%;
+            height: 12rem;
+            margin-top: 1rem;
+        }
+    }
+
+    &__nav {
+        margin-top: auto;
+        margin-bottom: 0.5rem;
+
+        @include small-tablet {
+            display: none;
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            gap: 2.58rem;
+        }
+
+        &-item {
+            position: relative;
+
+            &:not(:last-child) {
+                &::after {
+                    @include pseudo {
+                        right: -1.59rem;
+                        top: 50%;
+                        max-width: 0.4rem;
+                        width: 100%;
+                        height: 0.4rem;
+                        border-radius: 50%;
+                        background: #c0c0c9;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+
+            &-link {
+                color: $text-secondary;
+                text-align: center;
+                font-size: 1.6rem;
+                font-weight: 700;
+                line-height: normal;
+
+                @include transition(color);
+
+                &:hover {
+                    color: $sky-primary;
+                }
+            }
+        }
+    }
+
+    &__burger-menu {
+        max-width: 4.2rem;
+        width: 100%;
+        height: 3.2rem;
+        position: relative;
+        margin-top: 0.8rem;
+        margin-left: 1rem;
+
+        span {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &::after, &::before, span {
+            position: absolute;
+            width: 100%;
+            height: .4rem;
+            border-radius: .2rem;
+            background: $text-primary;
+        }
+
+        &::after {
+            @include pseudo {
+                top: 0;
+            }
+        }
+
+        &::before {
+            @include pseudo {
+                bottom: 0;
+            };
+        }
+    }
+}
