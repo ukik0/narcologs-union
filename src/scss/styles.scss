@@ -1,10 +1,14 @@
 // Global SCSS-files imports
 @import './vars';
-@import './reset';
-@import './fonts';
-@import './global';
 @import './mixins';
+@import './reset';
 @import './components';
-@import './header';
+@import './fonts';
 
 //components
+@import './header';
+@import './hero';
+
+
+@import './global';
+

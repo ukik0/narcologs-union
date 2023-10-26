@@ -17,6 +17,12 @@
     font-weight: 700;
     line-height: 4rem;
 
+    @include small-tablet {
+        font-size: 4.8rem;
+        font-weight: 700;
+        line-height: 6rem;
+    }
+
     @content;
 }
 
@@ -37,6 +43,12 @@
     font-weight: 700;
     line-height: 2.5rem;
 
+    @include small-tablet {
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 3.4rem;
+    }
+
     @content;
 }
 
@@ -47,6 +59,12 @@
     font-weight: 400;
     line-height: 2.7rem;
 
+    @include small-tablet {
+        font-size: 2.8rem;
+        font-weight: 400;
+        line-height: normal;
+    }
+
     @content;
 }
 
@@ -56,6 +74,12 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
+    @include small-tablet {
+        font-size: 3.6rem;
+        font-weight: 700;
+        line-height: normal;
+    }
 
     @content;
 }
