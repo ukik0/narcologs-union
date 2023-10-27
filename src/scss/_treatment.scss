@@ -2,50 +2,6 @@
     &.--bg-white {
         .treatment__content {
             background: $white;
-            padding: 4.2rem 7.6rem 3.5rem;
-
-            @include small-tablet {
-                padding: 4.2rem 4.6rem 0;
-            }
-        }
-
-        .treatment__title{
-            margin-bottom: 1.5rem;
-
-            @include small-tablet {
-                margin-bottom: 2.5rem;
-            }
-        }
-
-        .treatment__description {
-            margin-bottom: 5rem;
-
-            @include small-tablet {
-                margin-bottom: 4rem;
-            }
-        }
-
-        .treatment__poster {
-            right: -3.5rem;
-            top: -4.4rem;
-            max-width: 53.5694rem;
-            height: 38rem;
-
-            @include small-tablet {
-                transform: rotate(3.478deg) translate(5rem, 2rem);
-                max-width: 47.5694rem;
-                height: 31rem;
-            }
-        }
-
-        .treatment__contacts-button {
-            @include small-tablet {
-                margin-top: -4rem;
-            }
-        }
-
-        @include small-tablet {
-            margin-bottom: 15rem;
         }
     }
 
@@ -54,7 +10,7 @@
         border: 0.1rem solid $white;
         background: #f4fbff;
         position: relative;
-        padding: 4.2rem 5.6rem 5.1rem;
+        padding: 4rem 8rem;
 
         @include small-tablet {
             padding: 5rem 3.6rem 0 5rem;
@@ -84,6 +40,33 @@
             height: 35.8rem;
             transform: translate(1rem, 3rem);
         }
+
+        &.--money {
+            right: -3.5rem;
+            top: -4.4rem;
+            max-width: 65.5rem;
+            height: 36.7rem;
+
+            @include small-tablet {
+                transform: rotate(3.478deg) translate(5rem, 2rem);
+                max-width: 47.5694rem;
+                height: 31rem;
+            }
+        }
+
+        &.--wire {
+            max-width: 63.5694rem;
+            width: 100%;
+            height: 37rem;
+
+            @include small-tablet {
+                max-width: 75.5694rem;
+                width: 100%;
+                height: 34rem;
+                transform: translateX(-4rem);
+                margin-top: 4rem;
+            }
+        }
     }
 
     &__title {
@@ -105,6 +88,33 @@
         @include p;
         margin-bottom: 3.2rem;
         max-width: 70.7rem;
+    }
+
+    &__licenses {
+        display: flex;
+        align-items: center;
+        gap: 1.3rem;
+        margin-bottom: 2.5rem;
+
+        @include small-tablet {
+            gap: 2.6rem;
+            margin-bottom: 4.2rem;
+        }
+
+        &-icon {
+            max-width: 3.7rem;
+            width: 100%;
+            height: 3.7rem;
+
+            @include small-tablet {
+                max-width: 7.4rem;
+                height: 7.4rem;
+            }
+        }
+
+        &-title {
+            @include h3;
+        }
     }
 
     &__list {
