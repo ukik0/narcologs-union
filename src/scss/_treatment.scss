@@ -44,7 +44,9 @@
             }
 
             .treatment__contacts-button {
-                margin-top: -4rem;
+                @include small-tablet {
+                    margin-top: -4rem;
+                }
             }
         }
 
