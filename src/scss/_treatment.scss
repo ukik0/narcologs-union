@@ -6,6 +6,48 @@
         position: relative;
         padding: 4.2rem 5.6rem 5.1rem;
 
+        &.--bg-white {
+            background: $white;
+            padding: 4.2rem 7.6rem 3.5rem;
+
+            @include small-tablet {
+                padding: 4.2rem 4.6rem 0;
+            }
+
+            .treatment__title{
+                margin-bottom: 1.5rem;
+
+                @include small-tablet {
+                    margin-bottom: 2.5rem;
+                }
+            }
+
+            .treatment__description {
+                margin-bottom: 5rem;
+
+                @include small-tablet {
+                    margin-bottom: 4rem;
+                }
+            }
+
+            .treatment__poster {
+                right: -3.5rem;
+                top: -4.4rem;
+                max-width: 53.5694rem;
+                height: 38rem;
+
+                @include small-tablet {
+                    transform: rotate(3.478deg) translate(5rem, 2rem);
+                    max-width: 47.5694rem;
+                    height: 31rem;
+                }
+            }
+
+            .treatment__contacts-button {
+                margin-top: -4rem;
+            }
+        }
+
         @include small-tablet {
             padding: 5rem 3.6rem 0 5rem;
         }
