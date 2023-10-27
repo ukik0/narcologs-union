@@ -1,0 +1,82 @@
+.features {
+    &__title {
+        margin-bottom: 6.9rem;
+
+        @include small-tablet {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__button {
+        margin: 0 auto;
+        display: block;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem 1.9rem;
+        align-items: flex-start;
+
+        @include small-tablet {
+            flex-wrap: initial;
+            flex-direction: column;
+            gap: 4.2rem;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__item {
+        border-radius: 5rem;
+        border: 0.2rem solid #dee5f8;
+        background: rgba(255, 255, 255, 0.28);
+        padding: 3.7rem 3.2rem;
+        max-width: 32.3rem;
+        width: 100%;
+        min-height: 33.3rem;
+
+        @include small-tablet {
+            max-width: 100%;
+            min-height: 42.5rem;
+            border-radius: 10rem;
+            padding: 4.6rem 6.8rem;
+        }
+
+        &-heading {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding-bottom: 2.75rem;
+            border-bottom: 0.1rem solid #e3edff;
+
+            @include small-tablet {
+                gap: 3rem;
+                padding-bottom: 3.2rem;
+            }
+
+            &-icon {
+                max-width: 6.25rem;
+                width: 100%;
+                height: 6.6rem;
+
+                @include small-tablet {
+                    max-width: 11.4rem;
+                    height: auto;
+                }
+            }
+
+            &-title {
+                @include h2;
+            }
+        }
+
+        &-description {
+            @include p;
+            margin-top: 1.75rem;
+
+            @include small-tablet {
+                margin-top: 2.88rem;
+            }
+        }
+    }
+}
