@@ -8,6 +8,10 @@
     transition-property: background-color, color, border;
     transition-timing-function: ease;
     position: relative;
+    z-index: 1;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: normal;
 
     @include small-tablet {
         padding: 3rem;

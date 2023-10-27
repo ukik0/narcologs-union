@@ -1,4 +1,8 @@
 .detoxification {
+    @include small-tablet {
+        margin-bottom: 11rem;
+    }
+
     &__content {
         display: flex;
         align-items: flex-start;
