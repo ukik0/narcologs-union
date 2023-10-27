@@ -1,15 +1,11 @@
 .benefits {
     &__title {
+        @include h1;
         margin-bottom: 3.5rem;
-        font-size: 3.5rem;
-        font-weight: 700;
-        line-height: 4rem;
+
 
         @include small-tablet  {
             margin-bottom: 6rem;
-            font-size: 4.4rem;
-            font-weight: 700;
-            line-height: 6rem;
         }
     }
 
