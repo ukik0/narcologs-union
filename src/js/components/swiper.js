@@ -19,7 +19,8 @@ new Swiper(
             },
             768: {
                 spaceBetween: rem(1.6),
-                slidesPerView: '4'
+                slidesPerView: '4',
+                grabCursor: true
             }
         }
     })

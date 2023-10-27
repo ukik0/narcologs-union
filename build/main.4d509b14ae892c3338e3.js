@@ -9323,7 +9323,8 @@ new Swiper('.gallery__swiper', swiperDefaultSetting('gallery', {
     },
     768: {
       spaceBetween: rem(1.6),
-      slidesPerView: '4'
+      slidesPerView: '4',
+      grabCursor: true
     }
   }
 }));
