@@ -1,4 +1,8 @@
 .hero {
+    @include small-tablet {
+        margin-bottom: 10rem;
+    }
+
     &__content {
         display: flex;
         align-items: flex-start;
@@ -40,7 +44,7 @@
                 max-width: 100%;
                 border-radius: 10rem;
                 margin-top: -0.5rem;
-                padding: 4.5rem 1.8rem 4.5rem 6rem;
+                padding: 4.5rem 1.8rem 6rem 6rem;
             }
 
             &-title {
@@ -126,7 +130,7 @@
                     @include small-tablet {
                         padding: 0;
                         width: 100%;
-                        height: 8rem;
+                        height: 9rem;
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -186,11 +190,11 @@
             border-radius: 5rem;
             border: 0.2rem solid #ecf0fb;
             gap: 8rem;
-            padding: 5rem 11.2rem 5.5rem 0;
+            padding: 5.5rem 11.2rem 5.1rem 0;
         }
 
-        @include small-tablet{
-            margin-top: 4rem;
+        @include small-tablet {
+            margin-top: 3rem;
         }
 
         &-image {
@@ -214,6 +218,8 @@
                 display: flex;
                 flex-direction: column;
                 gap: 1.3rem;
+                margin-top: -0.5rem;
+                margin-left: 0.5rem;
             }
 
             &-title {
@@ -227,7 +233,7 @@
                     font-size: 2.5rem;
                     font-weight: 700;
                     line-height: 3.4rem;
-                    margin-bottom: 4rem;
+                    margin-bottom: 3rem;
                 }
 
                 span {
@@ -269,6 +275,10 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
+
+            @include small-tablet {
+                gap: 1.7rem;
+            }
         }
 
         &-item {
@@ -281,17 +291,27 @@
             max-width: 17.5rem;
             width: 100%;
 
-            @include small-tablet{
+            @include small-tablet {
                 border-radius: 10rem;
-                border: .2rem solid #ECF0FB;
+                border: 0.2rem solid #ecf0fb;
                 max-width: 23rem;
                 width: 100%;
-                height: 26rem;
+                height: 24rem;
                 justify-content: center;
+
+                @include small-tablet {
+                    gap: 0;
+                }
             }
 
             &-info {
                 @include h2;
+
+                @include small-tablet {
+                    font-size: 2.8rem;
+                    font-weight: 700;
+                    line-height: 3.4rem;
+                }
             }
 
             &-title {

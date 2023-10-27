@@ -25,8 +25,12 @@ body {
 
 section {
     margin-bottom: 12.2rem;
+}
 
-    @include small-tablet {
-        margin-bottom: 6rem;
+.section-title {
+    @include h1;
+
+    span {
+        color: $sky-primary;
     }
 }
