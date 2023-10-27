@@ -34,3 +34,50 @@ section {
         color: $sky-primary;
     }
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+    border-radius: 50%;
+    background: $white;
+    width: 5rem;
+    height: 5rem;
+    @include transition(background);
+    position: initial;
+    margin: 0;
+    padding: 0;
+
+    @include small-tablet {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    &::after {
+        display: none;
+        visibility: hidden;
+    }
+
+    svg {
+        width: 0.6rem;
+        height: 1.1rem;
+
+        path {
+            @include transition($property: stroke fill);
+        }
+
+        @include small-tablet {
+            width: 1.2rem;
+            height: 2.2rem;
+        }
+    }
+
+    &:hover {
+        background: $sky-primary;
+
+        svg {
+            path {
+                stroke: $white;
+                fill: $white;
+            }
+        }
+    }
+}

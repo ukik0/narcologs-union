@@ -33,7 +33,7 @@
     font-weight: 700;
     line-height: 3rem;
 
-    @include small-tablet{
+    @include small-tablet {
         @include small-tablet {
             font-size: 3.6rem;
             font-weight: 700;
@@ -98,4 +98,29 @@
     transition-timing-function: $timing;
 
     @content;
+}
+
+@mixin swiper-navigation() {
+    @include small-tablet {
+        overflow: hidden;
+
+        .swiper {
+            overflow: visible;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+        gap: 3.5rem;
+        justify-content: center;
+        margin-top: 5rem;
+
+        @include small-tablet {
+            margin-top: 4rem;
+            margin-left: 17rem;
+            gap: 6rem;
+            justify-content: initial;
+        }
+    }
 }
