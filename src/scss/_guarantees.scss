@@ -1,0 +1,160 @@
+.guarantees {
+    &__title {
+        margin-bottom: 3.5rem;
+
+        @include small-tablet {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 3.1rem;
+        justify-content: space-between;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 12rem;
+        }
+    }
+
+    &__info {
+        max-width: 96.8rem;
+        width: 100%;
+
+        @include small-tablet {
+            max-width: 100%;
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.7rem;
+
+            @include small-tablet {
+                gap: 3.5rem;
+            }
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            padding: 2.8rem 2.54rem;
+            gap: 2rem;
+            border-radius: 5rem;
+            background: $white;
+            max-height: 13.5rem;
+
+            @include small-tablet {
+                max-height: 23.2rem;
+                border-radius: 10rem;
+                padding: 2.5rem 2.2rem;
+                gap: 1rem;
+            }
+
+            &-icon {
+                max-width: 8.45rem;
+                width: 100%;
+                height: auto;
+
+                @include small-tablet {
+                    max-width: 14.2rem;
+                }
+            }
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                @include small-tablet {
+                    gap: 1rem;
+                }
+
+                &-title {
+                    @include h2;
+                }
+
+                &-description {
+                    @include p;
+                }
+            }
+        }
+    }
+
+    &__license {
+        max-width: 35rem;
+        width: 100%;
+        padding: 3.6rem 3.5rem;
+        border-radius: 5rem;
+        border: 0.1rem solid #e4eaf9;
+        background: $white;
+        position: relative;
+
+        @include small-tablet {
+            max-width: 100%;
+            padding: 5.2rem 9.6rem;
+            border-radius: 10rem;
+        }
+
+
+        &-image {
+            max-width: 28rem;
+            width: 100%;
+            height: 30.7rem;
+            pointer-events: none;
+            user-select: none;
+
+            @include small-tablet {
+                max-width: 56rem;
+                height: 65.6rem;
+            }
+
+            &-button {
+                max-width: 5.5rem;
+                width: 100%;
+                height: 5.5rem;
+                border-radius: 50%;
+                background: $sky-primary;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                @include small-tablet {
+                    max-width: 11rem;
+                    height: 11rem;
+                    margin-bottom: 3rem;
+                }
+
+                img {
+                    max-width: 2.1rem;
+                    width: 100%;
+                    height: 2.1rem;
+                    @include transition($property: transform);
+
+                    @include small-tablet {
+                        max-width: 4.2rem;
+                        height: 4.2rem;
+                    }
+                }
+
+                &:hover {
+                    img {
+                        transform: scale(1.15);
+                    }
+                }
+            }
+        }
+
+        &-title {
+            @include h2;
+            text-align: center;
+            display: block;
+        }
+    }
+}
