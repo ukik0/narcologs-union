@@ -34,13 +34,14 @@ export function showMoreFeatures() {
         items.forEach((item, index) => {
             if (index < 3) return;
 
-            $(item).fadeOut('fast')
-        })
+            $(item).fadeOut('fast');
+        });
 
         $('.features-hide').fadeOut('fast');
         $('.features-show-more').fadeIn('fast').css('display', 'block');
-    }
 
+        window.scrollTo({ top: $('.features__list').offset()!.top, behavior: 'smooth' });
+    }
 }
 
 if (document.querySelector('.features')) {

@@ -20149,6 +20149,7 @@ function showMoreFeatures() {
         });
         jquery_default()('.features-hide').fadeOut('fast');
         jquery_default()('.features-show-more').fadeIn('fast').css('display', 'block');
+        window.scrollTo({ top: jquery_default()('.features__list').offset().top, behavior: 'smooth' });
     }
 }
 if (document.querySelector('.features')) {
