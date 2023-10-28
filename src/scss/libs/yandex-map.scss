@@ -1,0 +1,66 @@
+.map [class*='copyrights-pane'] {
+    display: none !important;
+}
+
+.map [class*='inner-panes'] {
+    border-radius: 5rem;
+}
+
+.map .ymaps-2-1-79-map {
+    width: 100%;
+    border-radius: inherit;
+}
+
+.map .ymaps-2-1-79-balloon {
+    box-shadow: none;
+}
+
+.map .ymaps-2-1-79-balloon__content {
+    background: transparent;
+}
+
+.map .ymaps-2-1-79-balloon__layout {
+    background: transparent;
+}
+
+.map .ymaps-2-1-79-balloon__tail {
+    left: 12rem;
+    top: -0.5rem;
+
+    &::after {
+        background: linear-gradient(168deg, rgba(240, 244, 250, 0.4) -4.05%, rgba(243, 245, 248, 0.4) 79.9%);
+        border: 0.2rem solid $white;
+        backdrop-filter: blur(0.75rem);
+    }
+}
+
+.position__map {
+    width: 100%;
+    height: 51.5rem;
+    border-radius: 5rem;
+}
+
+.balloon__content {
+    background-size: cover;
+    padding: 3.2rem;
+    border-radius: 3.5rem;
+    background: linear-gradient(168deg, rgba(240, 244, 250, 0.4) -4.05%, rgba(243, 245, 248, 0.4) 79.9%);
+    border: 0.2rem solid $white;
+    backdrop-filter: blur(0.75rem);
+
+    &-title {
+        @include h2 {
+            font-size: 1.9rem;
+        }
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    &-address {
+        color: $text-primary;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}

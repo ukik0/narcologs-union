@@ -5,6 +5,9 @@
 @import './components';
 @import './fonts';
 
+//libs
+@import './libs/yandex-map';
+
 //components
 @import './header';
 @import './hero';
@@ -17,6 +20,7 @@
 @import './guarantees';
 @import './reviews';
 @import './call';
+@import './position';
 
 
 @import './global';

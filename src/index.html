@@ -1153,12 +1153,19 @@
             </div>
         </section>
 
+        <section class="position">
+            <div class="container">
+                <div class="position__content">
+                    <h2 class="position__title section-title">Карта клиник с лечением по виду зависимости</h2>
+                    <div id="position-map" class="map position__map"></div>
+                </div>
+            </div>
+        </section>
+
         <section class="call">
             <div class="container">
                 <div class="call__content">
-                    <button class='call__button button-grey'>
-                        Заказать консультацию
-                    </button>
+                    <button class="call__button button-grey">Заказать консультацию</button>
 
                     <div class="call__info">
                         <h2 class="call__title">
@@ -1175,7 +1182,7 @@
                             <li class="call__item">100% <span>Бесплатно</span></li>
                         </ul>
 
-                        <p class='call__text'>
+                        <p class="call__text">
                             Все консультации <span>бесплатные, анонимные, и круглосуточные</span>
                         </p>
 
@@ -1185,9 +1192,7 @@
                                 <span>8 (800) 600-39-60</span>
                             </a>
 
-                            <button class="treatment__contacts-button button-sky">
-                                Оставить заявку
-                            </button>
+                            <button class="treatment__contacts-button button-sky">Оставить заявку</button>
                         </div>
                     </div>
 
@@ -1201,4 +1206,58 @@
             </div>
         </section>
     </body>
+    <script
+        src="https://api-maps.yandex.ru/2.1/?apikey=c9e39c09-0f62-4828-b0ce-7ca99a606b15&lang=ru_RU"
+        type="text/javascript"
+    ></script>
+
+    <script>
+        const settingPlacemark = {
+            iconLayout: 'default#image',
+            iconImageHref: '/local/templates/nechaev/assets/img/mark.svg',
+            iconImageSize: [52, 52],
+            iconImageOffset: [-26, -26]
+        };
+
+        ymaps.ready(init);
+
+        function init() {
+            let map = new ymaps.Map('position-map', {
+                center: [55.75655367667467, 37.62975919021965],
+                zoom: 12
+            });
+
+            map.controls.remove('searchControl');
+            map.controls.remove('trafficControl');
+            map.controls.remove('typeSelector');
+            map.controls.remove('fullscreenControl');
+            map.controls.remove('rulerControl');
+
+            const placemark = new ymaps.Placemark(
+                map.getCenter(),
+                {
+                    balloonContent: `
+            		<div class='balloon__content'>
+                        <span class='balloon__content-title'>
+                            Москва, Твой шанс
+                        </span>
+
+                        <address class='balloon__content-address'>
+                            г. Москва, Одинцово
+                        </address>
+                    </div>
+            	`
+                },
+                {
+                    hideIconOnBalloonOpen: false,
+                    iconLayout: 'default#image',
+                    iconImageHref: '../images/placemark.svg',
+                    iconImageSize: [28, 28],
+                    iconImageOffset: [62.5, -2]
+                }
+            );
+
+            map.geoObjects.add(placemark);
+        }
+    </script>
 </html>
