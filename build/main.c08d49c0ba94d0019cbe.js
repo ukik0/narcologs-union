@@ -20114,6 +20114,21 @@ new Swiper('.gallery__swiper', swiperDefaultSetting('gallery', {
     }
   }
 }));
+new Swiper('.reviews__swiper', swiperDefaultSetting('reviews', {
+  modules: [Navigation],
+  breakpoints: {
+    0: {
+      slidesPerView: 1.13,
+      spaceBetween: rem(2.1),
+      slideToClickedSlide: true
+    },
+    768: {
+      spaceBetween: rem(3.5),
+      slidesPerView: '2',
+      grabCursor: true
+    }
+  }
+}));
 // EXTERNAL MODULE: ./node_modules/jquery/dist/jquery.js
 var jquery = __webpack_require__(755);
 var jquery_default = /*#__PURE__*/__webpack_require__.n(jquery);

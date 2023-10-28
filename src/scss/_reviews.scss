@@ -1,0 +1,132 @@
+.reviews {
+    @include swiper-navigation;
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 7rem;
+
+        @include small-tablet {
+            margin-bottom: 5rem;
+        }
+
+        &-title {
+            color: $text-primary;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 4rem;
+
+            @include small-tablet {
+                @include h1;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &-author {
+            padding: 2.2rem 2.9rem 2.5rem 2.5rem;
+            border-radius: 5rem;
+            border: 0.2rem solid #dee5f8;
+            background: rgba(255, 255, 255, 1);
+            max-width: 20.1rem;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            @include small-tablet {
+                max-width: 100%;
+                z-index: initial;
+                padding: 3.6rem 9rem 3.2rem 8rem;
+                border-radius: 8rem;
+                flex-direction: row;
+                align-items: center;
+                gap: 1.6rem;
+            }
+
+            &-info {
+                @include small-tablet {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.4rem;
+                }
+            }
+
+            &-image {
+                padding: 0.75rem;
+                border-radius: 50%;
+                max-width: 8.3rem;
+                width: 100%;
+                height: 8.3rem;
+                background: url('../images/author-bg.svg') no-repeat center;
+                background-size: cover;
+
+                @include small-tablet {
+                    padding: 1.4rem;
+                    max-width: 16.6rem;
+                    height: 15.6rem;
+                }
+
+                picture,
+                img,
+                source {
+                    border-radius: inherit;
+                }
+            }
+
+            &-name {
+                @include h3 {
+                    @include small-tablet {
+                        font-size: 3rem;
+                        font-weight: 700;
+                        line-height: 3rem;
+                    }
+                }
+            }
+
+            &-category {
+                color: $text-secondary;
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: normal;
+
+                @include small-tablet {
+                    font-size: 3rem;
+                    line-height: normal;
+                }
+            }
+        }
+
+        &-info {
+            border-radius: 5rem;
+            border: 0.2rem solid #dee5f8;
+            background: rgba(255, 255, 255, 0.5);
+            padding: 3.2rem 2.8rem 0.7rem 13.2rem;
+            margin-left: 8rem;
+            margin-top: -15rem;
+            max-width: 57.3rem;
+            width: 100%;
+            z-index: 1;
+            position: relative;
+
+            @include small-tablet {
+                margin: initial;
+                padding: 6rem 2.8rem;
+                max-width: 100%;
+                border-radius: 8rem;
+            }
+
+            &-description {
+                @include p;
+                margin-bottom: 2.8rem;
+            }
+        }
+    }
+}
