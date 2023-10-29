@@ -1,13 +1,16 @@
-function showCategories() {
-    const categories = document.querySelectorAll('.services__article-category-title');
+interface showElementsProps {
+    triggers: NodeListOf<Element>;
+    itemSelector: string;
+}
 
+function showElements({ triggers, itemSelector }: showElementsProps) {
     function checkActiveCategories() {
-        categories.forEach((category) => {
+        triggers.forEach((category) => {
             const parent = category.parentElement;
 
-            if (!parent!.classList.contains('--active')) return;
+            if (!parent!.classList.contains('--active') || !parent) return;
 
-            const categories = parent!.querySelectorAll('.services__article-category-item');
+            const categories = parent.querySelectorAll(itemSelector);
             setActiveCategories(categories);
         });
     }
@@ -20,13 +23,13 @@ function showCategories() {
         });
     }
 
-    categories.forEach((category) => {
+    triggers.forEach((category) => {
         category.addEventListener('click', () => {
             const parent = category.parentElement;
 
-            const list = parent!.querySelectorAll('.services__article-category-item');
+            const triggers = parent!.querySelectorAll(itemSelector);
 
-            list.forEach((item) => {
+            triggers.forEach((item) => {
                 item.classList.toggle('--active');
                 parent!.classList.toggle('--active');
             });
@@ -35,5 +38,11 @@ function showCategories() {
 }
 
 if (document.querySelector('.services')) {
-    showCategories();
+    const triggers = document.querySelectorAll('.services__article-category-title');
+
+    showElements({ triggers, itemSelector: '.services__article-category-item' });
 }
+
+const triggers = document.querySelectorAll('.footer__nav-block-title');
+
+showElements({ triggers, itemSelector: '.footer__nav-item' });

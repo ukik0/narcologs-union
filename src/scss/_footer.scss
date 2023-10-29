@@ -1,0 +1,262 @@
+.footer {
+    padding: 5.8rem 0 5.4rem 0;
+
+    @include small-tablet {
+        padding: 5.6rem 3.6rem;
+    }
+
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2.7rem;
+
+        @include small-tablet {
+            flex-direction: column;
+            gap: 4rem;
+        }
+    }
+
+    &__nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas:
+            'a c f'
+            'b d f';
+        gap: 3.5rem 9.7rem;
+
+        @include small-tablet {
+            display: flex;
+            flex-direction: column;
+            gap: 3.4rem;
+            grid-gap: 0;
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+
+            &.--active {
+                .footer__nav-block-title {
+                    margin-bottom: 1.8rem;
+
+                    img {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            @include small-tablet {
+                &:not(:last-child) {
+                    margin-bottom: 3rem;
+                }
+            }
+
+            &-title {
+                color: $text-secondary;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 3rem;
+                margin-bottom: 2.1rem;
+                will-change: margin-bottom;
+                transition: margin-bottom 0.3s ease;
+
+                @include small-tablet {
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
+                    @include h3;
+                    margin-bottom: 0rem;
+
+                    img {
+                        max-width: 2.2rem;
+                        width: 100%;
+                        height: 1.2rem;
+                        @include transition(transform);
+                    }
+                }
+            }
+
+            &.a {
+                grid-area: a;
+            }
+            &.b {
+                grid-area: b;
+                transform: translateY(-4.5rem);
+            }
+            &.c {
+                grid-area: c;
+            }
+            &.d {
+                grid-area: d;
+            }
+            &.e {
+                grid-area: e;
+            }
+            &.f {
+                grid-area: f;
+                transform: translateX(-2rem);
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+
+            @include small-tablet {
+                gap: 0;
+            }
+        }
+
+        &-item {
+            @include small-tablet {
+                max-height: 0;
+                overflow: hidden;
+                margin-bottom: 0;
+                will-change: max-height, margin-bottom;
+                transition:
+                    max-height 0.3s cubic-bezier(0, 0.3, 0, 0.3),
+                    margin-bottom 0.3s ease;
+            }
+
+            &.--active {
+                max-height: 10rem;
+                margin-bottom: 1rem;
+            }
+
+            a {
+                color: $text-secondary;
+                text-align: center;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                @include small-tablet {
+                    @include p;
+                }
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5rem;
+        max-width: 29rem;
+        width: 100%;
+
+        @include small-tablet {
+            max-width: 100%;
+            gap: 6.2rem;
+            align-items: flex-start;
+            text-align: start;
+            justify-content: start;
+        }
+
+        &-logo {
+            @extend .header__logo;
+        }
+
+        &-contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            @include small-tablet{
+                gap: 1rem;
+            }
+
+            &-phone {
+                display: flex;
+                align-items: center;
+                gap: 2.2rem;
+                @include transition(color);
+                color: $text-secondary;
+                font-size: 2.8rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+
+                svg {
+                    @include small-tablet{
+                        max-width: 3.6rem;
+                        width: 100%;
+                        height: 3.6rem;
+                    }
+                }
+
+                @include small-tablet{
+                    @include h2;
+                    gap: 2.4rem;
+                }
+
+                &:hover {
+                    color: $sky-primary;
+
+                    svg {
+                        path {
+                            fill: $sky-primary;
+                            @include transition(fill);
+                        }
+                    }
+                }
+            }
+
+            &-list {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                @include small-tablet{
+                    gap: 2rem;
+                }
+            }
+
+            &-item {
+                color: #564f4f;
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 2.5rem;
+                position: relative;
+
+                @include small-tablet{
+                    @include p;
+                }
+
+                &::after {
+                    @include pseudo {
+                        bottom: 0;
+                        right: 0.2rem;
+                        border-radius: 50%;
+                        width: 0.2rem;
+                        height: 0.2rem;
+                        background: $sky-primary;
+                    }
+                }
+            }
+        }
+
+        &-description {
+            color: #7b7b7b;
+            text-align: center;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 2rem;
+
+            @include small-tablet{
+                text-align: start;
+                font-size: 2.4rem;
+                font-weight: 400;
+                line-height: 3.6rem;
+            }
+        }
+    }
+}

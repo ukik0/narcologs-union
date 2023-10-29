@@ -57,7 +57,7 @@
                 .services__article-category-title {
                     margin-bottom: 2.8rem;
 
-                    svg {
+                    img {
                         transform: rotate(180deg);
                     }
                 }
@@ -87,8 +87,8 @@
                     color: $sky-primary;
                 }
 
-                svg {
-                    max-width: 1.2rem;
+                img {
+                    max-width: 1.8rem;
                     width: 100%;
                     height: 1.2rem;
 
@@ -107,11 +107,11 @@
                 margin-bottom: 0;
                 will-change: max-height, margin-bottom;
                 transition:
-                    max-height 0.3s cubic-bezier(0, 1, 0, 1),
+                    max-height 0.3s cubic-bezier(0, 0.3, 0, 0.3),
                     margin-bottom 0.3s ease;
 
                 &.--active {
-                    max-height: 100rem;
+                    max-height: 10rem;
                     margin-bottom: 2.17rem;
 
                     @include small-tablet {
@@ -213,3 +213,6 @@
         }
     }
 }
+
+
+

@@ -10730,14 +10730,14 @@ return jQuery;
 
 "use strict";
 
-function showCategories() {
-    var categories = document.querySelectorAll('.services__article-category-title');
+function showElements(_a) {
+    var triggers = _a.triggers, itemSelector = _a.itemSelector;
     function checkActiveCategories() {
-        categories.forEach(function (category) {
+        triggers.forEach(function (category) {
             var parent = category.parentElement;
-            if (!parent.classList.contains('--active'))
+            if (!parent.classList.contains('--active') || !parent)
                 return;
-            var categories = parent.querySelectorAll('.services__article-category-item');
+            var categories = parent.querySelectorAll(itemSelector);
             setActiveCategories(categories);
         });
     }
@@ -10747,11 +10747,11 @@ function showCategories() {
             category.classList.add('--active');
         });
     }
-    categories.forEach(function (category) {
+    triggers.forEach(function (category) {
         category.addEventListener('click', function () {
             var parent = category.parentElement;
-            var list = parent.querySelectorAll('.services__article-category-item');
-            list.forEach(function (item) {
+            var triggers = parent.querySelectorAll(itemSelector);
+            triggers.forEach(function (item) {
                 item.classList.toggle('--active');
                 parent.classList.toggle('--active');
             });
@@ -10759,8 +10759,11 @@ function showCategories() {
     });
 }
 if (document.querySelector('.services')) {
-    showCategories();
+    var triggers_1 = document.querySelectorAll('.services__article-category-title');
+    showElements({ triggers: triggers_1, itemSelector: '.services__article-category-item' });
 }
+var triggers = document.querySelectorAll('.footer__nav-block-title');
+showElements({ triggers: triggers, itemSelector: '.footer__nav-item' });
 
 
 /***/ })
@@ -20172,7 +20175,7 @@ new Swiper('.reviews__swiper', swiperDefaultSetting('reviews', {
 // EXTERNAL MODULE: ./node_modules/jquery/dist/jquery.js
 var jquery = __webpack_require__(755);
 var jquery_default = /*#__PURE__*/__webpack_require__.n(jquery);
-;// CONCATENATED MODULE: ./src/js/components/features.ts
+;// CONCATENATED MODULE: ./src/js/components/show-more.ts
 
 
 var DESKTOP_WIDTH = parseInt(rem(48));
