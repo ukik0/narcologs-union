@@ -1,6 +1,12 @@
 .position {
     @include swiper-navigation(hidden, 20rem);
 
+    margin-bottom: 20.2rem;
+
+    @include small-tablet {
+        margin-bottom: 11.2rem;
+    }
+
     &__title {
         margin-bottom: 7rem;
 

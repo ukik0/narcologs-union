@@ -1,7 +1,52 @@
 .treatment {
+    &.--car {
+        margin-bottom: 11.2rem;
+    }
+
     &.--bg-white {
         .treatment__content {
             background: $white;
+        }
+    }
+
+    &.--money {
+        margin-bottom: 16rem;
+
+        .treatment__poster {
+            right: -3.5rem;
+            top: -4.4rem;
+            max-width: 53.5rem;
+            height: 37.7rem;
+
+            @include small-tablet {
+                transform: rotate(3.478deg) translate(9rem, 2rem) scale(1.2);
+                max-width: 37.5694rem;
+                height: 24rem;
+            }
+        }
+    }
+
+    &.--wire {
+        .treatment__content {
+            padding-bottom: 3.5rem;
+
+            @include small-tablet {
+                padding-bottom: 2.5rem;
+            }
+        }
+
+        .treatment__poster {
+            max-width: 63.5694rem;
+            width: 100%;
+            height: 37rem;
+
+            @include small-tablet {
+                max-width: 75.5694rem;
+                width: 100%;
+                height: 34rem;
+                transform: translateX(-4rem);
+                margin-top: 9rem;
+            }
         }
     }
 
@@ -10,7 +55,7 @@
         border: 0.1rem solid $white;
         background: #f4fbff;
         position: relative;
-        padding: 4rem 8rem;
+        padding: 4.5rem 5.5rem;
 
         @include small-tablet {
             padding: 5rem 3.6rem 0 5rem;
@@ -39,33 +84,6 @@
             max-width: 52.8rem;
             height: 35.8rem;
             transform: translate(1rem, 3rem);
-        }
-
-        &.--money {
-            right: -3.5rem;
-            top: -4.4rem;
-            max-width: 65.5rem;
-            height: 36.7rem;
-
-            @include small-tablet {
-                transform: rotate(3.478deg) translate(5rem, 2rem);
-                max-width: 47.5694rem;
-                height: 31rem;
-            }
-        }
-
-        &.--wire {
-            max-width: 63.5694rem;
-            width: 100%;
-            height: 37rem;
-
-            @include small-tablet {
-                max-width: 75.5694rem;
-                width: 100%;
-                height: 34rem;
-                transform: translateX(-4rem);
-                margin-top: 4rem;
-            }
         }
     }
 
@@ -99,6 +117,7 @@
         @include small-tablet {
             gap: 2.6rem;
             margin-bottom: 4.2rem;
+            margin-top: 6rem;
         }
 
         &-icon {

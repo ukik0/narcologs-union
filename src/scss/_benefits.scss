@@ -1,4 +1,8 @@
 .benefits {
+    @include small-tablet{
+        margin-bottom: 12rem;
+    }
+
     &__title {
         @include h1;
         margin-bottom: 3.5rem;
@@ -29,7 +33,7 @@
         @include small-tablet {
             flex: initial;
             border-radius: 8rem;
-            padding: 4rem 5rem 3.9rem 7.4rem;
+            padding: 4rem 5rem 4.1rem 7.4rem;
         }
 
         &-icon {

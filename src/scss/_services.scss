@@ -64,9 +64,9 @@
             }
 
             &:not(:last-child) {
-                margin-bottom: 3rem;
+                margin-bottom: 2.3rem;
 
-                @include small-tablet{
+                @include small-tablet {
                     margin-bottom: 3.7rem;
                 }
             }
@@ -132,11 +132,11 @@
     }
 
     &__info {
-        padding: 4.5rem;
         border-radius: 5rem;
         background: $white;
         max-width: 93.4rem;
         width: 100%;
+        padding: 4.5rem 4.5rem 2rem;
 
         @include small-tablet {
             max-width: 100%;
@@ -213,6 +213,3 @@
         }
     }
 }
-
-
-
