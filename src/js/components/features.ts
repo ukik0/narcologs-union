@@ -3,47 +3,72 @@ import $ from 'jquery';
 import { rem } from '../utils/index';
 
 const DESKTOP_WIDTH = parseInt(rem(48));
-const showMoreButton = document.querySelector('.features-show-more');
-const hideButton = document.querySelector('.features-hide');
+const showMoreButton = document.querySelector('.features-show-more')!;
+const hideButton = document.querySelector('.features-hide')!;
 
-export function showMoreFeatures() {
-    const items = Array.from(document.querySelectorAll('.features__item'));
+interface showMoreProps {
+    parent: HTMLElement;
+    showButton?: Element;
+    hideButton?: Element;
+    COUNT_ELEMENTS?: number;
+}
+
+export function showMore({ parent, showButton, hideButton, COUNT_ELEMENTS = 3 }: showMoreProps) {
+    const childrenNodes = parent.childNodes;
 
     if (window.innerWidth > DESKTOP_WIDTH) return;
 
-    items.forEach((item, index) => {
-        if (index > 2) {
-            $(item).fadeOut('slow');
+    childrenNodes.forEach((children, index) => {
+        if (index > COUNT_ELEMENTS + 2) {
+            $(children).fadeOut('slow');
         }
     });
 
-    showMoreButton!.addEventListener('click', showElements);
+    if (showButton) {
+        showButton.addEventListener('click', showElements);
+    }
 
-    hideButton!.addEventListener('click', hideElements);
+    if (hideButton) {
+        hideButton.addEventListener('click', hideElements);
+    }
 
     function showElements() {
-        items.forEach((item) => {
-            $(item).fadeIn('fast');
+        childrenNodes.forEach((children) => {
+            $(children).fadeIn('fast');
         });
 
-        $('.features-hide').fadeIn('fast').css('display', 'block');
-        $('.features-show-more').fadeOut('fast');
+        if (hideButton && showButton) {
+            $(hideButton).fadeIn('fast').css('display', 'block');
+            $(showButton).fadeOut('fast');
+        }
+
+        if (showButton) {
+            $(showButton).hide('fast');
+        }
     }
 
     function hideElements() {
-        items.forEach((item, index) => {
-            if (index < 3) return;
+        childrenNodes.forEach((children, index) => {
+            if (index < COUNT_ELEMENTS + 3) return;
 
-            $(item).fadeOut('fast');
+            $(children).fadeOut('fast');
         });
 
-        $('.features-hide').fadeOut('fast');
-        $('.features-show-more').fadeIn('fast').css('display', 'block');
+        if (hideButton && showButton) {
+            $(hideButton).fadeOut('fast');
+            $(hideButton).fadeIn('fast').css('display', 'block');
+        }
 
-        window.scrollTo({ top: $('.features__list').offset()!.top, behavior: 'smooth' });
+        window.scrollTo({ top: $(parent).offset()!.top - 200, behavior: 'smooth' });
     }
 }
 
 if (document.querySelector('.features')) {
-    showMoreFeatures();
+    showMore({ parent: document.querySelector('.features__list')!, hideButton, showButton: showMoreButton });
+}
+
+if (document.querySelector('.services')) {
+    const showButton = document.querySelector('.services__info-button')!;
+
+    showMore({ parent: document.querySelector('.services__info-content')!, showButton: showButton, COUNT_ELEMENTS: 5 });
 }

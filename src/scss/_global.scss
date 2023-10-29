@@ -25,6 +25,10 @@ body {
 
 section {
     margin-bottom: 12.2rem;
+
+    @include small-tablet{
+        margin-bottom: 10rem;
+    }
 }
 
 .section-title {

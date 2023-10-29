@@ -10723,6 +10723,46 @@ return jQuery;
 } );
 
 
+/***/ }),
+
+/***/ 625:
+/***/ (() => {
+
+"use strict";
+
+function showCategories() {
+    var categories = document.querySelectorAll('.services__article-category-title');
+    function checkActiveCategories() {
+        categories.forEach(function (category) {
+            var parent = category.parentElement;
+            if (!parent.classList.contains('--active'))
+                return;
+            var categories = parent.querySelectorAll('.services__article-category-item');
+            setActiveCategories(categories);
+        });
+    }
+    checkActiveCategories();
+    function setActiveCategories(categories) {
+        categories.forEach(function (category) {
+            category.classList.add('--active');
+        });
+    }
+    categories.forEach(function (category) {
+        category.addEventListener('click', function () {
+            var parent = category.parentElement;
+            var list = parent.querySelectorAll('.services__article-category-item');
+            list.forEach(function (item) {
+                item.classList.toggle('--active');
+                parent.classList.toggle('--active');
+            });
+        });
+    });
+}
+if (document.querySelector('.services')) {
+    showCategories();
+}
+
+
 /***/ })
 
 /******/ 	});
@@ -20138,37 +20178,53 @@ var jquery_default = /*#__PURE__*/__webpack_require__.n(jquery);
 var DESKTOP_WIDTH = parseInt(rem(48));
 var showMoreButton = document.querySelector('.features-show-more');
 var hideButton = document.querySelector('.features-hide');
-function showMoreFeatures() {
-    var items = Array.from(document.querySelectorAll('.features__item'));
+function showMore(_a) {
+    var parent = _a.parent, showButton = _a.showButton, hideButton = _a.hideButton, _b = _a.COUNT_ELEMENTS, COUNT_ELEMENTS = _b === void 0 ? 3 : _b;
+    var childrenNodes = parent.childNodes;
     if (window.innerWidth > DESKTOP_WIDTH)
         return;
-    items.forEach(function (item, index) {
-        if (index > 2) {
-            jquery_default()(item).fadeOut('slow');
+    childrenNodes.forEach(function (children, index) {
+        if (index > COUNT_ELEMENTS + 2) {
+            jquery_default()(children).fadeOut('slow');
         }
     });
-    showMoreButton.addEventListener('click', showElements);
-    hideButton.addEventListener('click', hideElements);
+    if (showButton) {
+        showButton.addEventListener('click', showElements);
+    }
+    if (hideButton) {
+        hideButton.addEventListener('click', hideElements);
+    }
     function showElements() {
-        items.forEach(function (item) {
-            jquery_default()(item).fadeIn('fast');
+        childrenNodes.forEach(function (children) {
+            jquery_default()(children).fadeIn('fast');
         });
-        jquery_default()('.features-hide').fadeIn('fast').css('display', 'block');
-        jquery_default()('.features-show-more').fadeOut('fast');
+        if (hideButton && showButton) {
+            jquery_default()(hideButton).fadeIn('fast').css('display', 'block');
+            jquery_default()(showButton).fadeOut('fast');
+        }
+        if (showButton) {
+            jquery_default()(showButton).hide('fast');
+        }
     }
     function hideElements() {
-        items.forEach(function (item, index) {
-            if (index < 3)
+        childrenNodes.forEach(function (children, index) {
+            if (index < COUNT_ELEMENTS + 3)
                 return;
-            jquery_default()(item).fadeOut('fast');
+            jquery_default()(children).fadeOut('fast');
         });
-        jquery_default()('.features-hide').fadeOut('fast');
-        jquery_default()('.features-show-more').fadeIn('fast').css('display', 'block');
-        window.scrollTo({ top: jquery_default()('.features__list').offset().top, behavior: 'smooth' });
+        if (hideButton && showButton) {
+            jquery_default()(hideButton).fadeOut('fast');
+            jquery_default()(hideButton).fadeIn('fast').css('display', 'block');
+        }
+        window.scrollTo({ top: jquery_default()(parent).offset().top - 200, behavior: 'smooth' });
     }
 }
 if (document.querySelector('.features')) {
-    showMoreFeatures();
+    showMore({ parent: document.querySelector('.features__list'), hideButton: hideButton, showButton: showMoreButton });
+}
+if (document.querySelector('.services')) {
+    var showButton = document.querySelector('.services__info-button');
+    showMore({ parent: document.querySelector('.services__info-content'), showButton: showButton, COUNT_ELEMENTS: 5 });
 }
 
 ;// CONCATENATED MODULE: ./src/js/components/yandex-map.js
@@ -20301,7 +20357,10 @@ function init() {
     });
   });
 }
+// EXTERNAL MODULE: ./src/js/components/services.ts
+var services = __webpack_require__(625);
 ;// CONCATENATED MODULE: ./src/js/components/index.js
+
 
 
 

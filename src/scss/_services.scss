@@ -1,0 +1,215 @@
+.services {
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 2.5rem;
+
+        @include small-tablet {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__article {
+        padding: 5rem 3.9rem;
+        border-radius: 5rem;
+        border: 0.1rem solid $white;
+        background: rgba(255, 255, 255, 0.3);
+        max-width: 39.3rem;
+        width: 100%;
+
+        @include small-tablet {
+            max-width: 100%;
+            padding: 6.2rem 6rem 8.2rem 8.2rem;
+        }
+
+        &-heading {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 4.6rem;
+
+            @include small-tablet {
+                gap: 1.8rem;
+                margin-bottom: 4.5rem;
+            }
+
+            &-image {
+                max-width: 8.8rem;
+                width: 100%;
+                height: 8.8rem;
+
+                @include small-tablet {
+                    max-width: 12rem;
+                    height: 11rem;
+                }
+            }
+
+            &-title {
+                @include h1;
+            }
+        }
+
+        &-category {
+            display: flex;
+            flex-direction: column;
+
+            &.--active {
+                .services__article-category-title {
+                    margin-bottom: 2.8rem;
+
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+
+                @include small-tablet{
+                    margin-bottom: 3.7rem;
+                }
+            }
+
+            &-title {
+                display: inline-flex;
+                align-items: center;
+                gap: 1.5rem;
+                @include h2;
+                cursor: pointer;
+                will-change: margin-bottom;
+                transition:
+                    color 0.3s ease-out,
+                    margin-bottom 0.3s ease;
+                user-select: none;
+
+                &:hover {
+                    color: $sky-primary;
+                }
+
+                svg {
+                    max-width: 1.2rem;
+                    width: 100%;
+                    height: 1.2rem;
+
+                    @include transition(transform);
+                }
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+            }
+
+            &-item {
+                max-height: 0;
+                overflow: hidden;
+                margin-bottom: 0;
+                will-change: max-height, margin-bottom;
+                transition:
+                    max-height 0.3s cubic-bezier(0, 1, 0, 1),
+                    margin-bottom 0.3s ease;
+
+                &.--active {
+                    max-height: 100rem;
+                    margin-bottom: 2.17rem;
+
+                    @include small-tablet {
+                        margin-bottom: 1.45rem;
+                    }
+                }
+
+                &-link {
+                    @include h3;
+                    @include transition(color);
+
+                    &:hover {
+                        color: $sky-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    &__info {
+        padding: 4.5rem;
+        border-radius: 5rem;
+        background: $white;
+        max-width: 93.4rem;
+        width: 100%;
+
+        @include small-tablet {
+            max-width: 100%;
+            background: transparent;
+            border-radius: 0;
+            padding: 0;
+        }
+
+        &-title {
+            @include h1;
+            margin-bottom: 2.1rem;
+
+            @include small-tablet {
+                @include h2;
+                margin-bottom: 3.1rem;
+            }
+        }
+
+        &-description {
+            @include p;
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+
+                @include small-tablet {
+                    margin-bottom: 6rem;
+                }
+            }
+
+            @include small-tablet {
+                &.--hidden {
+                    display: none;
+                }
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+
+            &.--wrapped {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(31.3rem, 41.6rem));
+                gap: 1.5rem 1.2rem;
+            }
+
+            @include small-tablet {
+                &.--hidden {
+                    display: none;
+                }
+            }
+        }
+
+        &-item {
+            @include p;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+            .circle {
+                border-radius: 50%;
+                max-width: 0.9rem;
+                width: 100%;
+                height: 0.9rem;
+                background: #a0a3cf;
+            }
+        }
+
+        &-button {
+            width: 100%;
+            margin: 4.2rem 0 1rem;
+        }
+    }
+}
