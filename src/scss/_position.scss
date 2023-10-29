@@ -1,5 +1,150 @@
 .position {
+    @include swiper-navigation(hidden, 20rem);
+
     &__title {
         margin-bottom: 7rem;
+
+        @include small-tablet {
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__map {
+        margin-bottom: 4rem;
+
+        @include small-tablet {
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    &__item {
+        padding: 1.5rem 4.6rem 1.6rem 1.6rem;
+        border-radius: 5rem;
+        border: 0.2rem solid #dee5f8;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(0.75rem);
+        display: flex;
+        align-items: center;
+        gap: 2.54rem;
+        @include transition(background);
+
+        @include small-tablet {
+            padding: 4.6rem 3.8rem;
+            border-radius: 8rem;
+            gap: 2rem;
+        }
+
+        &.active {
+            background: $white;
+        }
+
+        &-image {
+            max-width: 14.2rem;
+            width: 100%;
+            height: 14rem;
+            border-radius: 4rem;
+
+            @include small-tablet {
+                max-width: 26.4rem;
+                height: 24.8rem;
+                border-radius: 8rem;
+            }
+
+            img,
+            picture,
+            source {
+                border-radius: inherit;
+            }
+        }
+
+        &-info {
+            width: 100%;
+            margin-top: 1rem;
+
+            @include small-tablet {
+                margin-top: 0;
+            }
+
+            &-heading {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 1em;
+
+                @include small-tablet {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 2rem;
+                }
+
+                &-title {
+                    @include h2;
+                }
+
+                &-price {
+                    @include h3 {
+                        color: $sky-primary;
+                    }
+
+                    @include small-tablet {
+                        @include p1 {
+                            color: $sky-primary;
+                        }
+                    }
+                }
+            }
+
+            &-address {
+                @include p;
+                font-style: normal;
+                margin-bottom: 1.5rem;
+            }
+
+            &-rating {
+                color: $sky-primary;
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 2rem;
+                margin-bottom: 0.9rem;
+
+                @include small-tablet {
+                    @include p;
+                }
+
+                span {
+                    color: $text-primary;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 2rem;
+
+                    @include h3;
+                }
+
+                &-bar {
+                    border-radius: 0.9rem;
+                    background: $white;
+                    max-width: 18.5rem;
+                    width: 100%;
+                    height: 0.7rem;
+
+                    @include small-tablet {
+                        max-width: 20rem;
+                        height: 1.4rem;
+                        border-radius: 1.8rem;
+                    }
+
+                    .line {
+                        display: block;
+                        height: 100%;
+                        border-radius: 0.9rem;
+                        background: linear-gradient(90deg, #cccef1 5.49%, #e3edff 100%);
+
+                        @include small-tablet {
+                            border-radius: 1.8rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
