@@ -26,6 +26,70 @@
         }
     }
 
+    &.--people {
+        .treatment__content {
+            padding: 6rem 5rem;
+
+            @include small-tablet{
+                padding-bottom: 0;
+                overflow: hidden;
+            }
+        }
+
+        .treatment__content-block {
+            @include small-tablet{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+       .treatment__poster {
+           max-width: 42.2rem;
+           width: 100%;
+           height: 46.1rem;
+           top: -13.4rem;
+           right: 7rem;
+           order: 10;
+
+           @include small-tablet{
+               transform: translate(9rem, 19rem) scale(1.5);
+           }
+       }
+    }
+
+    &.--doctor {
+        margin-top: 20rem;
+
+        .treatment__content-block {
+            @include small-tablet{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .treatment__content {
+            padding: 6rem 5rem;
+
+            @include small-tablet{
+                padding-bottom: 0;
+                overflow: hidden;
+            }
+        }
+
+        .treatment__poster {
+            max-width: 43.5rem;
+            width: 100%;
+            height: 41.1rem;
+            right: 8.6rem;
+            top: -8.4rem;
+
+            @include small-tablet{
+                order: 10;
+                transform: translate(2rem, 6rem) scale(.9);
+            }
+        }
+    }
+
     &.--wire {
         .treatment__content {
             padding-bottom: 3.5rem;
@@ -106,6 +170,10 @@
         @include p;
         margin-bottom: 3.2rem;
         max-width: 70.7rem;
+
+        span {
+            color: $sky-primary;
+        }
     }
 
     &__licenses {
@@ -228,6 +296,8 @@
 
         &-button {
             padding: 1.3rem;
+            display: inline-block;
+            width: fit-content;
 
             @include small-tablet {
                 padding: 3rem;

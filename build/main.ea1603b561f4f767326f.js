@@ -20217,7 +20217,6 @@ function showMore(_a) {
         return;
     childrenNodes.forEach(function (children, index) {
         if (index + 1 > COUNT_ELEMENTS) {
-            console.log('asd', childrenNodes);
             jquery_default()(children).fadeOut('slow');
         }
     });

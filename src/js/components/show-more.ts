@@ -18,7 +18,6 @@ export function showMore({ parent, showButton, hideButton, COUNT_ELEMENTS = 3 }:
 
     childrenNodes.forEach((children, index) => {
         if (index + 1 > COUNT_ELEMENTS) {
-            console.log('asd', childrenNodes);
             $(children).fadeOut('slow');
         }
     });
