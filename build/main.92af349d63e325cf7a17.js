@@ -20236,9 +20236,9 @@ function showMore(_a) {
             jquery_default()(hideButton).fadeIn('fast').css('display', 'block');
             jquery_default()(showButton).fadeOut('fast');
         }
-        if (showButton) {
-            jquery_default()(showButton).hide('fast');
-        }
+        // if (showButton) {
+        //     $(showButton).hide('fast');
+        // }
     }
     function hideElements() {
         childrenNodes.forEach(function (children, index) {
@@ -20248,7 +20248,7 @@ function showMore(_a) {
         });
         if (hideButton && showButton) {
             jquery_default()(hideButton).fadeOut('fast');
-            jquery_default()(hideButton).fadeIn('fast').css('display', 'block');
+            jquery_default()(showButton).fadeIn('fast').css('display', 'block');
         }
         window.scrollTo({ top: jquery_default()(parent).offset().top - 200, behavior: 'smooth' });
     }

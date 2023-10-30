@@ -42,9 +42,9 @@ export function showMore({ parent, showButton, hideButton, COUNT_ELEMENTS = 3 }:
             $(showButton).fadeOut('fast');
         }
 
-        if (showButton) {
-            $(showButton).hide('fast');
-        }
+        // if (showButton) {
+        //     $(showButton).hide('fast');
+        // }
     }
 
     function hideElements() {
@@ -56,7 +56,7 @@ export function showMore({ parent, showButton, hideButton, COUNT_ELEMENTS = 3 }:
 
         if (hideButton && showButton) {
             $(hideButton).fadeOut('fast');
-            $(hideButton).fadeIn('fast').css('display', 'block');
+            $(showButton).fadeIn('fast').css('display', 'block');
         }
 
         window.scrollTo({ top: $(parent).offset()!.top - 200, behavior: 'smooth' });
