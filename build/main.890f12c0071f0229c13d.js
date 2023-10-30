@@ -20348,59 +20348,61 @@ function yandex_map_slideTo(index) {
   jquery_default()('.position__item').removeClass('active');
   jquery_default()(`[data-swiper-slide-index=${index}]`).find('.position__item').addClass('active');
 }
-ymaps.ready(init);
-function init() {
-  let map = new ymaps.Map('position-map', {
-    center: [55.75244503863624, 37.619346417968764],
-    zoom: 10
-  });
-  removeControls(map);
-  const swiper = new Swiper('.position__swiper', swiperDefaultSetting('position', {
-    modules: [Navigation],
-    slideToClickedSlide: true,
-    breakpoints: {
-      0: {
-        slidesPerView: 1
-      },
-      768: {
-        spaceBetween: rem(3.5),
-        slidesPerView: '2',
-        grabCursor: true
-      }
-    },
-    on: {
-      slideChange(_ref) {
-        let {
-          realIndex
-        } = _ref;
-        map.geoObjects.each(function (geoObject) {
-          if (geoObject.properties.get('attribute') == realIndex) {
-            geoObject.balloon.open();
-            animationMap(geoObject.geometry._coordinates, map);
-          }
-        });
-        yandex_map_slideTo(realIndex);
-      }
-    }
-  }));
-  PLACEMARKS.forEach(_ref2 => {
-    let {
-      longitude,
-      lalitude,
-      balloonContent,
-      index
-    } = _ref2;
-    const placemark = new ymaps.Placemark([lalitude, longitude], {
-      balloonContent: generateBalloon(balloonContent),
-      attribute: index
-    }, placemarkOptions);
-    map.geoObjects.add(placemark);
-    placemark.events.add('click', () => {
-      swiper.slideTo(index);
-      yandex_map_slideTo(index);
-      animationMap([lalitude, longitude], map);
+if (document.querySelector('.position')) {
+  ymaps.ready(init);
+  function init() {
+    let map = new ymaps.Map('position-map', {
+      center: [55.75244503863624, 37.619346417968764],
+      zoom: 10
     });
-  });
+    removeControls(map);
+    const swiper = new Swiper('.position__swiper', swiperDefaultSetting('position', {
+      modules: [Navigation],
+      slideToClickedSlide: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 1
+        },
+        768: {
+          spaceBetween: rem(3.5),
+          slidesPerView: '2',
+          grabCursor: true
+        }
+      },
+      on: {
+        slideChange(_ref) {
+          let {
+            realIndex
+          } = _ref;
+          map.geoObjects.each(function (geoObject) {
+            if (geoObject.properties.get('attribute') == realIndex) {
+              geoObject.balloon.open();
+              animationMap(geoObject.geometry._coordinates, map);
+            }
+          });
+          yandex_map_slideTo(realIndex);
+        }
+      }
+    }));
+    PLACEMARKS.forEach(_ref2 => {
+      let {
+        longitude,
+        lalitude,
+        balloonContent,
+        index
+      } = _ref2;
+      const placemark = new ymaps.Placemark([lalitude, longitude], {
+        balloonContent: generateBalloon(balloonContent),
+        attribute: index
+      }, placemarkOptions);
+      map.geoObjects.add(placemark);
+      placemark.events.add('click', () => {
+        swiper.slideTo(index);
+        yandex_map_slideTo(index);
+        animationMap([lalitude, longitude], map);
+      });
+    });
+  }
 }
 // EXTERNAL MODULE: ./src/js/components/services.ts
 var services = __webpack_require__(625);
