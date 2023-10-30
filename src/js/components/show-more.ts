@@ -12,7 +12,7 @@ interface showMoreProps {
 }
 
 export function showMore({ parent, showButton, hideButton, COUNT_ELEMENTS = 3 }: showMoreProps) {
-    const childrenNodes = Array.from(parent.childNodes).filter((_, index) => index % 2 !== 0);
+    const childrenNodes = Array.from(parent.children);
 
     if (window.innerWidth > DESKTOP_WIDTH) return;
 

@@ -20212,7 +20212,7 @@ var jquery_default = /*#__PURE__*/__webpack_require__.n(jquery);
 var DESKTOP_WIDTH = parseInt(rem(48));
 function showMore(_a) {
     var parent = _a.parent, showButton = _a.showButton, hideButton = _a.hideButton, _b = _a.COUNT_ELEMENTS, COUNT_ELEMENTS = _b === void 0 ? 3 : _b;
-    var childrenNodes = Array.from(parent.childNodes).filter(function (_, index) { return index % 2 !== 0; });
+    var childrenNodes = Array.from(parent.children);
     if (window.innerWidth > DESKTOP_WIDTH)
         return;
     childrenNodes.forEach(function (children, index) {
