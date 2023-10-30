@@ -1,4 +1,4 @@
-function accordion(trigger, selector) {
+function accordion(trigger: string, selector: string) {
     const items = document.querySelectorAll(trigger);
 
     items.forEach((item) => {
@@ -10,7 +10,9 @@ function accordion(trigger, selector) {
             if (parent.classList.contains('--active')) {
                 parent.classList.remove('--active');
             } else {
-                document.querySelectorAll(selector).forEach((child) => child.classList.remove('--active'));
+                document
+                    .querySelectorAll(selector)
+                    .forEach((child) => child.classList.remove('--active'));
                 parent.classList.add('--active');
             }
         });

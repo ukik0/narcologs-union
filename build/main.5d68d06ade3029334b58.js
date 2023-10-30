@@ -1,78 +1,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 595:
-/***/ (() => {
-
-function accordion(trigger, selector) {
-  const items = document.querySelectorAll(trigger);
-  items.forEach(item => {
-    item.addEventListener('click', () => {
-      const parent = item.parentElement;
-      if (!parent) return;
-      if (parent.classList.contains('--active')) {
-        parent.classList.remove('--active');
-      } else {
-        document.querySelectorAll(selector).forEach(child => child.classList.remove('--active'));
-        parent.classList.add('--active');
-      }
-    });
-  });
-}
-if (document.querySelector('.faq')) {
-  accordion('.faq__questions-item-heading', '.faq__questions-item');
-}
-
-/***/ }),
-
-/***/ 813:
-/***/ (() => {
-
-function showElements(_ref) {
-  let {
-    triggers,
-    itemSelector
-  } = _ref;
-  function checkActiveCategories() {
-    triggers.forEach(category => {
-      const parent = category.parentElement;
-      if (!parent.classList.contains('--active') || !parent) return;
-      const categories = parent.querySelectorAll(itemSelector);
-      setActiveCategories(categories);
-    });
-  }
-  checkActiveCategories();
-  function setActiveCategories(categories) {
-    categories.forEach(category => {
-      category.classList.add('--active');
-    });
-  }
-  triggers.forEach(category => {
-    category.addEventListener('click', () => {
-      const parent = category.parentElement;
-      const triggers = parent.querySelectorAll(itemSelector);
-      triggers.forEach(item => {
-        item.classList.toggle('--active');
-        parent.classList.toggle('--active');
-      });
-    });
-  });
-}
-if (document.querySelector('.services')) {
-  const triggers = document.querySelectorAll('.services__article-category-title');
-  showElements({
-    triggers,
-    itemSelector: '.services__article-category-item'
-  });
-}
-const triggers = document.querySelectorAll('.footer__nav-block-title');
-showElements({
-  triggers,
-  itemSelector: '.footer__nav-item'
-});
-
-/***/ }),
-
 /***/ 755:
 /***/ (function(module, exports) {
 
@@ -10795,6 +10723,80 @@ return jQuery;
 } );
 
 
+/***/ }),
+
+/***/ 557:
+/***/ (() => {
+
+"use strict";
+
+function accordion(trigger, selector) {
+    var items = document.querySelectorAll(trigger);
+    items.forEach(function (item) {
+        item.addEventListener('click', function () {
+            var parent = item.parentElement;
+            if (!parent)
+                return;
+            if (parent.classList.contains('--active')) {
+                parent.classList.remove('--active');
+            }
+            else {
+                document
+                    .querySelectorAll(selector)
+                    .forEach(function (child) { return child.classList.remove('--active'); });
+                parent.classList.add('--active');
+            }
+        });
+    });
+}
+if (document.querySelector('.faq')) {
+    accordion('.faq__questions-item-heading', '.faq__questions-item');
+}
+
+
+/***/ }),
+
+/***/ 625:
+/***/ (() => {
+
+"use strict";
+
+function showElements(_a) {
+    var triggers = _a.triggers, itemSelector = _a.itemSelector;
+    function checkActiveCategories() {
+        triggers.forEach(function (category) {
+            var parent = category.parentElement;
+            if (!parent.classList.contains('--active') || !parent)
+                return;
+            var categories = parent.querySelectorAll(itemSelector);
+            setActiveCategories(categories);
+        });
+    }
+    checkActiveCategories();
+    function setActiveCategories(categories) {
+        categories.forEach(function (category) {
+            category.classList.add('--active');
+        });
+    }
+    triggers.forEach(function (category) {
+        category.addEventListener('click', function () {
+            var parent = category.parentElement;
+            var triggers = parent.querySelectorAll(itemSelector);
+            triggers.forEach(function (item) {
+                item.classList.toggle('--active');
+                parent.classList.toggle('--active');
+            });
+        });
+    });
+}
+if (document.querySelector('.services')) {
+    var triggers_1 = document.querySelectorAll('.services__article-category-title');
+    showElements({ triggers: triggers_1, itemSelector: '.services__article-category-item' });
+}
+var triggers = document.querySelectorAll('.footer__nav-block-title');
+showElements({ triggers: triggers, itemSelector: '.footer__nav-item' });
+
+
 /***/ })
 
 /******/ 	});
@@ -20204,76 +20206,73 @@ new Swiper('.reviews__swiper', swiperDefaultSetting('reviews', {
 // EXTERNAL MODULE: ./node_modules/jquery/dist/jquery.js
 var jquery = __webpack_require__(755);
 var jquery_default = /*#__PURE__*/__webpack_require__.n(jquery);
-;// CONCATENATED MODULE: ./src/js/components/show-more.js
+;// CONCATENATED MODULE: ./src/js/components/show-more.ts
 
 
-const DESKTOP_WIDTH = parseInt(rem(48));
-function showMore(_ref) {
-  let {
-    parent,
-    showButton,
-    hideButton,
-    COUNT_ELEMENTS = 3
-  } = _ref;
-  const childrenNodes = parent.childNodes;
-  if (window.innerWidth > DESKTOP_WIDTH) return;
-  childrenNodes.forEach((children, index) => {
-    if (index > COUNT_ELEMENTS) {
-      jquery_default()(children).fadeOut('slow');
-    }
-  });
-  if (showButton) {
-    showButton.addEventListener('click', showElements);
-  }
-  if (hideButton) {
-    hideButton.addEventListener('click', hideElements);
-  }
-  function showElements() {
-    childrenNodes.forEach(children => {
-      jquery_default()(children).fadeIn('fast');
+var DESKTOP_WIDTH = parseInt(rem(48));
+function showMore(_a) {
+    var parent = _a.parent, showButton = _a.showButton, hideButton = _a.hideButton, _b = _a.COUNT_ELEMENTS, COUNT_ELEMENTS = _b === void 0 ? 3 : _b;
+    var childrenNodes = Array.from(parent.childNodes).filter(function (_, index) { return index % 2 !== 0; });
+    if (window.innerWidth > DESKTOP_WIDTH)
+        return;
+    childrenNodes.forEach(function (children, index) {
+        if (index + 1 > COUNT_ELEMENTS) {
+            console.log('asd', childrenNodes);
+            jquery_default()(children).fadeOut('slow');
+        }
     });
-    if (hideButton && showButton) {
-      jquery_default()(hideButton).fadeIn('fast').css('display', 'block');
-      jquery_default()(showButton).fadeOut('fast');
+    if (showButton) {
+        showButton.addEventListener('click', showElements);
     }
-
-    // if (showButton) {
-    //     $(showButton).hide('fast');
-    // }
-  }
-
-  function hideElements() {
-    childrenNodes.forEach((children, index) => {
-      if (index < COUNT_ELEMENTS) return;
-      jquery_default()(children).fadeOut('fast');
-    });
-    if (hideButton && showButton) {
-      jquery_default()(hideButton).fadeOut('fast');
-      jquery_default()(showButton).fadeIn('fast').css('display', 'block');
+    if (hideButton) {
+        hideButton.addEventListener('click', hideElements);
     }
-    window.scrollTo({
-      top: jquery_default()(parent).offset().top - 200,
-      behavior: 'smooth'
-    });
-  }
+    function showElements() {
+        childrenNodes.forEach(function (children) {
+            jquery_default()(children).fadeIn('fast');
+        });
+        if (hideButton && showButton) {
+            jquery_default()(hideButton).fadeIn('fast').css('display', 'block');
+            jquery_default()(showButton).fadeOut('fast');
+        }
+        else {
+            if (showButton) {
+                jquery_default()(showButton).hide('fast');
+            }
+        }
+    }
+    function hideElements() {
+        childrenNodes.forEach(function (children, index) {
+            if (index < COUNT_ELEMENTS)
+                return;
+            jquery_default()(children).fadeOut('fast');
+        });
+        if (hideButton && showButton) {
+            jquery_default()(hideButton).fadeOut('fast');
+            jquery_default()(showButton).fadeIn('fast').css('display', 'block');
+        }
+        window.scrollTo({ top: jquery_default()(parent).offset().top - 200, behavior: 'smooth' });
+    }
 }
 if (document.querySelector('.features')) {
-  const showMoreButton = document.querySelector('.features-show-more');
-  const hideButton = document.querySelector('.features-hide');
-  showMore({
-    parent: document.querySelector('.features__list'),
-    hideButton,
-    showButton: showMoreButton
-  });
+    var showMoreButton = document.querySelector('.features-show-more');
+    var hideButton = document.querySelector('.features-hide');
+    showMore({
+        parent: document.querySelector('.features__list'),
+        hideButton: hideButton,
+        showButton: showMoreButton,
+        COUNT_ELEMENTS: 3
+    });
 }
 if (document.querySelector('.services')) {
-  const showButton = document.querySelector('.services__info-button');
-  showMore({
-    parent: document.querySelector('.services__info-content'),
-    showButton: showButton,
-    COUNT_ELEMENTS: 5
-  });
+    var showButton = document.querySelector('.services__info-button');
+    showMore({
+        parent: document.querySelector('.services__info-content'),
+        showButton: showButton,
+        COUNT_ELEMENTS: 4
+    });
 }
+
 ;// CONCATENATED MODULE: ./src/js/components/yandex-map.js
 
 
@@ -20404,10 +20403,10 @@ function init() {
     });
   });
 }
-// EXTERNAL MODULE: ./src/js/components/services.js
-var services = __webpack_require__(813);
-// EXTERNAL MODULE: ./src/js/components/accordion.js
-var accordion = __webpack_require__(595);
+// EXTERNAL MODULE: ./src/js/components/services.ts
+var services = __webpack_require__(625);
+// EXTERNAL MODULE: ./src/js/components/accordion.ts
+var accordion = __webpack_require__(557);
 ;// CONCATENATED MODULE: ./src/js/components/index.js
 
 
