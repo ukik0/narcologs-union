@@ -10725,6 +10725,37 @@ return jQuery;
 
 /***/ }),
 
+/***/ 557:
+/***/ (() => {
+
+"use strict";
+
+function accordion(trigger, selector) {
+    var items = document.querySelectorAll(trigger);
+    items.forEach(function (item) {
+        item.addEventListener('click', function () {
+            var parent = item.parentElement;
+            if (!parent)
+                return;
+            if (parent.classList.contains('--active')) {
+                parent.classList.remove('--active');
+            }
+            else {
+                document
+                    .querySelectorAll(selector)
+                    .forEach(function (child) { return child.classList.remove('--active'); });
+                parent.classList.add('--active');
+            }
+        });
+    });
+}
+if (document.querySelector('.faq')) {
+    accordion('.faq__questions-item-heading', '.faq__questions-item');
+}
+
+
+/***/ }),
+
 /***/ 625:
 /***/ (() => {
 
@@ -20362,7 +20393,10 @@ function init() {
 }
 // EXTERNAL MODULE: ./src/js/components/services.ts
 var services = __webpack_require__(625);
+// EXTERNAL MODULE: ./src/js/components/accordion.ts
+var accordion = __webpack_require__(557);
 ;// CONCATENATED MODULE: ./src/js/components/index.js
+
 
 
 
