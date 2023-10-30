@@ -1,14 +1,9 @@
-interface showElementsProps {
-    triggers: NodeListOf<Element>;
-    itemSelector: string;
-}
-
-function showElements({ triggers, itemSelector }: showElementsProps) {
+function showElements({ triggers, itemSelector }) {
     function checkActiveCategories() {
         triggers.forEach((category) => {
             const parent = category.parentElement;
 
-            if (!parent!.classList.contains('--active') || !parent) return;
+            if (!parent.classList.contains('--active') || !parent) return;
 
             const categories = parent.querySelectorAll(itemSelector);
             setActiveCategories(categories);
@@ -17,7 +12,7 @@ function showElements({ triggers, itemSelector }: showElementsProps) {
 
     checkActiveCategories();
 
-    function setActiveCategories(categories: NodeListOf<Element>) {
+    function setActiveCategories(categories) {
         categories.forEach((category) => {
             category.classList.add('--active');
         });
@@ -27,11 +22,11 @@ function showElements({ triggers, itemSelector }: showElementsProps) {
         category.addEventListener('click', () => {
             const parent = category.parentElement;
 
-            const triggers = parent!.querySelectorAll(itemSelector);
+            const triggers = parent.querySelectorAll(itemSelector);
 
             triggers.forEach((item) => {
                 item.classList.toggle('--active');
-                parent!.classList.toggle('--active');
+                parent.classList.toggle('--active');
             });
         });
     });
