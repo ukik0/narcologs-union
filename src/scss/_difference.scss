@@ -1,0 +1,272 @@
+.difference {
+    &__content {
+        @include small-tablet {
+            padding: 4.6rem 5rem 4.6rem 4rem;
+            border-radius: 10rem;
+            border: 0.2rem solid #dee5f8;
+            background: linear-gradient(
+                214deg,
+                rgba(255, 255, 255, 0.4) 36.29%,
+                rgba(209, 228, 240, 0.4) 130.68%
+            );
+            backdrop-filter: blur(0.75rem);
+        }
+    }
+
+    &__title {
+        margin-bottom: 2.1rem;
+    }
+
+    &__description {
+        @include p;
+        margin-bottom: 2.7rem;
+        max-width: 58.9rem;
+        width: 100%;
+
+        @include small-tablet {
+            max-width: 100%;
+            margin-bottom: 4.7rem;
+        }
+    }
+
+    &__tables {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2.5rem;
+
+        @include small-tablet {
+            flex-direction: column;
+            justify-content: initial;
+            gap: 3.2rem;
+
+            .description{
+                max-width: 27rem;
+                width: 100%;
+            }
+
+            .short {
+                max-width: 14rem;
+                width: 100%;
+            }
+
+            &-list {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1.8rem;
+
+                .short {
+                    max-width: 12rem;
+                    width: 100%;
+                    height: 12rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    border-radius: 50%;
+                }
+            }
+
+            &-item {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .description {
+                    @include p;
+                    border-radius: 6rem;
+                    padding: 2.8rem .5rem 2.8rem 2.8rem;
+                }
+
+                &:nth-child(2n + 1) {
+                    .description {
+                        background: $white;
+                    }
+
+                    .short {
+                        background: $white;
+                    }
+                }
+            }
+        }
+
+        &-heading {
+            @include small-tablet{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
+
+        &-description {
+            padding: 7rem 5.6rem 6.5rem;
+            max-width: 71.9rem;
+            width: 100%;
+
+            @include small-tablet {
+                padding: 4rem 0;
+                max-width: 30rem;
+            }
+
+            &-title {
+                @include h2;
+                display: block;
+                margin-bottom: 3.5rem;
+
+                @include small-tablet {
+                    margin-bottom: 0;
+                }
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 0.4rem;
+
+                @include small-tablet {
+                    gap: 1.8rem;
+                }
+            }
+
+            &-item {
+                color: $text-secondary;
+                font-size: 1.8rem;
+                font-weight: 400;
+                line-height: 3.2rem;
+                padding: 1.4rem 3rem;
+                background: transparent;
+                border-radius: 3rem;
+
+                @include small-tablet {
+                    @include p;
+                    padding: 2.8rem 0 2.8rem 1.3rem;
+                    border-radius: 6rem;
+                    width: 27rem;
+                }
+
+                &:nth-child(2n + 1) {
+                    background: $white;
+                }
+            }
+        }
+
+        &-short {
+            padding: 2.4rem 2.1rem 5.6rem;
+            max-width: 28.2rem;
+            width: 100%;
+
+            @include small-tablet {
+                max-width: 14rem;
+                padding: 0;
+            }
+
+            &-icon {
+                background: $white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 1.2rem;
+                max-width: 6.6rem;
+                width: 100%;
+                height: 6.6rem;
+
+                @include small-tablet {
+                    padding: 0;
+                    max-width: 12rem;
+                    height: 12rem;
+                    margin-bottom: 1.6rem;
+                }
+
+                img {
+                    max-width: 2.4rem;
+                    width: 100%;
+                    height: 2.4rem;
+
+                    @include small-tablet {
+                        max-width: 4.8rem;
+                        height: 4.8rem;
+                    }
+                }
+            }
+
+            &-title {
+                color: #272727;
+                text-align: center;
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 2.2rem;
+                display: block;
+                margin-bottom: 2rem;
+
+                @include small-tablet {
+                    @include h3;
+                    margin-bottom: 0;
+                }
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 0.4rem;
+
+                @include small-tablet {
+                    gap: 4.2rem;
+                }
+            }
+
+            &-item {
+                border-radius: 3rem;
+                background: transparent;
+                padding: 1.4rem 3rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-height: 6rem;
+
+                @include small-tablet {
+                    padding: 0;
+                    max-height: initial;
+                    max-width: 14rem;
+                    height: 12rem;
+                    border-radius: 50%;
+                    margin-top: 0.5rem;
+                }
+
+                &:nth-child(2n + 1) {
+                    background: $white;
+                }
+
+                &-marker {
+                    max-width: 3.8rem;
+                    width: 100%;
+                    height: 3.8rem;
+
+                    @include small-tablet {
+                        max-width: 8.6rem;
+                        width: 100%;
+                        height: 8.6rem;
+                        transform: translate(1.5rem, 0rem);
+                    }
+                }
+            }
+        }
+    }
+
+    .table {
+        @media (min-width: 48em) {
+            border-radius: 5rem;
+            border: 0.2rem solid #dee5f8;
+            background: linear-gradient(
+                214deg,
+                rgba(255, 255, 255, 0.4) 36.29%,
+                rgba(209, 228, 240, 0.4) 130.68%
+            );
+            backdrop-filter: blur(0.75rem);
+        }
+    }
+}

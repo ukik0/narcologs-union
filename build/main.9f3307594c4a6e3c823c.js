@@ -20210,15 +20210,13 @@ var jquery_default = /*#__PURE__*/__webpack_require__.n(jquery);
 
 
 var DESKTOP_WIDTH = parseInt(rem(48));
-var showMoreButton = document.querySelector('.features-show-more');
-var hideButton = document.querySelector('.features-hide');
 function showMore(_a) {
     var parent = _a.parent, showButton = _a.showButton, hideButton = _a.hideButton, _b = _a.COUNT_ELEMENTS, COUNT_ELEMENTS = _b === void 0 ? 3 : _b;
     var childrenNodes = parent.childNodes;
     if (window.innerWidth > DESKTOP_WIDTH)
         return;
     childrenNodes.forEach(function (children, index) {
-        if (index > COUNT_ELEMENTS + 2) {
+        if (index > COUNT_ELEMENTS) {
             jquery_default()(children).fadeOut('slow');
         }
     });
@@ -20242,7 +20240,7 @@ function showMore(_a) {
     }
     function hideElements() {
         childrenNodes.forEach(function (children, index) {
-            if (index < COUNT_ELEMENTS + 3)
+            if (index < COUNT_ELEMENTS)
                 return;
             jquery_default()(children).fadeOut('fast');
         });
@@ -20254,6 +20252,8 @@ function showMore(_a) {
     }
 }
 if (document.querySelector('.features')) {
+    var showMoreButton = document.querySelector('.features-show-more');
+    var hideButton = document.querySelector('.features-hide');
     showMore({ parent: document.querySelector('.features__list'), hideButton: hideButton, showButton: showMoreButton });
 }
 if (document.querySelector('.services')) {

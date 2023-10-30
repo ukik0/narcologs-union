@@ -3,8 +3,6 @@ import $ from 'jquery';
 import { rem } from '../utils/index';
 
 const DESKTOP_WIDTH = parseInt(rem(48));
-const showMoreButton = document.querySelector('.features-show-more')!;
-const hideButton = document.querySelector('.features-hide')!;
 
 interface showMoreProps {
     parent: HTMLElement;
@@ -19,7 +17,7 @@ export function showMore({ parent, showButton, hideButton, COUNT_ELEMENTS = 3 }:
     if (window.innerWidth > DESKTOP_WIDTH) return;
 
     childrenNodes.forEach((children, index) => {
-        if (index > COUNT_ELEMENTS + 2) {
+        if (index > COUNT_ELEMENTS) {
             $(children).fadeOut('slow');
         }
     });
@@ -49,7 +47,7 @@ export function showMore({ parent, showButton, hideButton, COUNT_ELEMENTS = 3 }:
 
     function hideElements() {
         childrenNodes.forEach((children, index) => {
-            if (index < COUNT_ELEMENTS + 3) return;
+            if (index < COUNT_ELEMENTS) return;
 
             $(children).fadeOut('fast');
         });
@@ -64,6 +62,10 @@ export function showMore({ parent, showButton, hideButton, COUNT_ELEMENTS = 3 }:
 }
 
 if (document.querySelector('.features')) {
+    const showMoreButton = document.querySelector('.features-show-more')!;
+    const hideButton = document.querySelector('.features-hide')!;
+
+
     showMore({ parent: document.querySelector('.features__list')!, hideButton, showButton: showMoreButton });
 }
 
