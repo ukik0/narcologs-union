@@ -38,10 +38,10 @@ export function showMore({ parent, showButton, hideButton, COUNT_ELEMENTS = 3 }:
         if (hideButton && showButton) {
             $(hideButton).fadeIn('fast').css('display', 'block');
             $(showButton).fadeOut('fast');
-        } else {
-            if (showButton) {
-                $(showButton).hide('fast');
-            }
+        }
+
+        if (showButton && !hideButton) {
+            $(showButton).hide();
         }
     }
 
@@ -62,14 +62,13 @@ export function showMore({ parent, showButton, hideButton, COUNT_ELEMENTS = 3 }:
 }
 
 if (document.querySelector('.features')) {
-    const showMoreButton = document.querySelector('.features-show-more')!;
+    const showButton = document.querySelector('.features-show-more')!;
     const hideButton = document.querySelector('.features-hide')!;
 
     showMore({
         parent: document.querySelector('.features__list')!,
         hideButton,
-        showButton: showMoreButton,
-        COUNT_ELEMENTS: 3
+        showButton
     });
 }
 
@@ -80,5 +79,15 @@ if (document.querySelector('.services')) {
         parent: document.querySelector('.services__info-content')!,
         showButton: showButton,
         COUNT_ELEMENTS: 4
+    });
+}
+
+if (document.querySelector('.specialists')) {
+    const showButton = document.querySelector('.specialists__button')!;
+
+    showMore({
+        parent: document.querySelector('.specialists .swiper-wrapper')!,
+        showButton,
+        COUNT_ELEMENTS: 2
     });
 }

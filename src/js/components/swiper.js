@@ -44,3 +44,19 @@ new Swiper(
         }
     })
 );
+
+new Swiper(
+    '.specialists__swiper',
+    swiperDefaultSetting('specialists', {
+        modules: [Navigation],
+        enabled: false,
+        breakpoints: {
+            768: {
+                spaceBetween: rem(4.1),
+                slidesPerView: '2',
+                grabCursor: true,
+                enabled: true,
+            }
+        }
+    })
+);

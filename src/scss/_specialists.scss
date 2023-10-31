@@ -1,0 +1,111 @@
+.specialists {
+    @include swiper-navigation();
+
+    &__title {
+        margin-bottom: 7rem;
+
+        @include small-tablet{
+            text-align: center;
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__item {
+        padding: 3.2rem 2.4rem;
+        display: flex;
+        align-items: flex-start;
+        border-radius: 5rem;
+        border: 0.1rem solid $white;
+        background: $white;
+        justify-content: space-between;
+
+        @include small-tablet{
+            border-radius: 10rem;
+            padding: 5rem 7rem;
+            gap: 3.8rem;
+            justify-content: initial;
+            flex-direction: column;
+        }
+
+        &-image {
+            max-width: 22rem;
+            width: 100%;
+            height: 100%;
+            border-radius: 5rem;
+
+            picture, img, source {
+                border-radius: inherit;
+            }
+
+            @include small-tablet{
+                max-width: 100%;
+                height: 50.2rem;
+                border-radius: 10rem;
+            }
+        }
+
+        &-info {
+            padding: 0.5rem 2.1rem 0 0;
+
+            @include small-tablet{
+                padding: 0;
+            }
+
+            &-title {
+                @include h2;
+                display: block;
+                margin-bottom: 3.1rem;
+                max-width: 28.4rem;
+                width: 100%;
+
+                @include small-tablet{
+                    margin-bottom: 3.2rem;
+                    max-width: 90%;
+                }
+            }
+
+            &-description {
+                color: $text-secondary;
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 3rem;
+                margin-bottom: 0.4rem;
+
+                @include small-tablet{
+                    @include p;
+                    margin-bottom: 0rem;
+                }
+            }
+
+            &-experience {
+                display: block;
+                margin-bottom: 2.2rem;
+                color: #777;
+                font-size: 1.6rem;
+                font-weight: 350;
+                line-height: 2.4rem;
+
+                @include small-tablet{
+                    @include p;
+                }
+            }
+        }
+    }
+
+    &__button {
+        @include small-tablet{
+            display: block;
+            margin: 0 auto;
+            width: fit-content;
+        }
+    }
+
+    .swiper-wrapper {
+        @include small-tablet{
+            display: flex;
+            gap: 4.2rem;
+            flex-direction: column;
+            margin-bottom: 5.4rem;
+        }
+    }
+}

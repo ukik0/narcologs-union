@@ -20142,6 +20142,9 @@ function EffectCards(_ref) {
 
 
 
+// EXTERNAL MODULE: ./node_modules/jquery/dist/jquery.js
+var jquery = __webpack_require__(755);
+var jquery_default = /*#__PURE__*/__webpack_require__.n(jquery);
 ;// CONCATENATED MODULE: ./src/js/utils/index.ts
 var __assign = (undefined && undefined.__assign) || function () {
     __assign = Object.assign || function(t) {
@@ -20154,8 +20157,14 @@ var __assign = (undefined && undefined.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
+
 function rem(rem) {
-    return Math.round(rem * 10) + 'px';
+    if (jquery_default()(window).width() > 768) {
+        return (0.005208335 * jquery_default()(window).width() * rem).toString();
+    }
+    else {
+        return ((100 / 375) * (0.1 * jquery_default()(window).width()) * rem).toString();
+    }
 }
 function swiperDefaultSetting(init, payload) {
     return __assign({ loop: true, speed: 1500, keyboard: {
@@ -20203,9 +20212,18 @@ new Swiper('.reviews__swiper', swiperDefaultSetting('reviews', {
     }
   }
 }));
-// EXTERNAL MODULE: ./node_modules/jquery/dist/jquery.js
-var jquery = __webpack_require__(755);
-var jquery_default = /*#__PURE__*/__webpack_require__.n(jquery);
+new Swiper('.specialists__swiper', swiperDefaultSetting('specialists', {
+  modules: [Navigation],
+  enabled: false,
+  breakpoints: {
+    768: {
+      spaceBetween: rem(4.1),
+      slidesPerView: '2',
+      grabCursor: true,
+      enabled: true
+    }
+  }
+}));
 ;// CONCATENATED MODULE: ./src/js/components/show-more.ts
 
 
@@ -20234,10 +20252,8 @@ function showMore(_a) {
             jquery_default()(hideButton).fadeIn('fast').css('display', 'block');
             jquery_default()(showButton).fadeOut('fast');
         }
-        else {
-            if (showButton) {
-                jquery_default()(showButton).hide('fast');
-            }
+        if (showButton && !hideButton) {
+            jquery_default()(showButton).hide();
         }
     }
     function hideElements() {
@@ -20254,13 +20270,12 @@ function showMore(_a) {
     }
 }
 if (document.querySelector('.features')) {
-    var showMoreButton = document.querySelector('.features-show-more');
+    var showButton = document.querySelector('.features-show-more');
     var hideButton = document.querySelector('.features-hide');
     showMore({
         parent: document.querySelector('.features__list'),
         hideButton: hideButton,
-        showButton: showMoreButton,
-        COUNT_ELEMENTS: 3
+        showButton: showButton
     });
 }
 if (document.querySelector('.services')) {
@@ -20269,6 +20284,14 @@ if (document.querySelector('.services')) {
         parent: document.querySelector('.services__info-content'),
         showButton: showButton,
         COUNT_ELEMENTS: 4
+    });
+}
+if (document.querySelector('.specialists')) {
+    var showButton = document.querySelector('.specialists__button');
+    showMore({
+        parent: document.querySelector('.specialists .swiper-wrapper'),
+        showButton: showButton,
+        COUNT_ELEMENTS: 2
     });
 }
 
