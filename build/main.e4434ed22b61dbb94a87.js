@@ -20233,6 +20233,11 @@ function showMore(_a) {
     var childrenNodes = Array.from(parent.children);
     if (window.innerWidth > DESKTOP_WIDTH)
         return;
+    if (showButton) {
+        if (childrenNodes.length <= 1) {
+            jquery_default()(showButton).fadeOut('fast');
+        }
+    }
     childrenNodes.forEach(function (children, index) {
         if (index + 1 > COUNT_ELEMENTS) {
             jquery_default()(children).fadeOut('slow');
@@ -20292,6 +20297,18 @@ if (document.querySelector('.specialists')) {
         parent: document.querySelector('.specialists .swiper-wrapper'),
         showButton: showButton,
         COUNT_ELEMENTS: 2
+    });
+}
+if (document.querySelector('.steps')) {
+    var steps = document.querySelectorAll('.steps__item');
+    steps.forEach(function (step) {
+        var showButton = step.querySelector('.steps__item-show-button');
+        var parent = step.querySelector('.steps__item-wrapper');
+        showMore({
+            parent: parent,
+            showButton: showButton,
+            COUNT_ELEMENTS: 1
+        });
     });
 }
 

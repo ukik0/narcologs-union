@@ -5,7 +5,7 @@ import { rem } from '../utils/index';
 const DESKTOP_WIDTH = parseInt(rem(48));
 
 interface showMoreProps {
-    parent: HTMLElement;
+    parent: Element;
     showButton?: Element;
     hideButton?: Element;
     COUNT_ELEMENTS?: number;
@@ -15,6 +15,12 @@ export function showMore({ parent, showButton, hideButton, COUNT_ELEMENTS = 3 }:
     const childrenNodes = Array.from(parent.children);
 
     if (window.innerWidth > DESKTOP_WIDTH) return;
+
+    if (showButton) {
+        if (childrenNodes.length <= 1) {
+            $(showButton).fadeOut('fast');
+        }
+    }
 
     childrenNodes.forEach((children, index) => {
         if (index + 1 > COUNT_ELEMENTS) {
@@ -89,5 +95,20 @@ if (document.querySelector('.specialists')) {
         parent: document.querySelector('.specialists .swiper-wrapper')!,
         showButton,
         COUNT_ELEMENTS: 2
+    });
+}
+
+if (document.querySelector('.steps')) {
+    const steps = document.querySelectorAll('.steps__item');
+
+    steps.forEach((step) => {
+        const showButton = step.querySelector('.steps__item-show-button')!;
+        const parent = step.querySelector('.steps__item-wrapper')!;
+
+        showMore({
+            parent,
+            showButton,
+            COUNT_ELEMENTS: 1
+        });
     });
 }
