@@ -1,0 +1,105 @@
+.phase {
+    &__title {
+        margin-bottom: 7rem;
+    }
+
+    &__blocks {
+        display: flex;
+        flex-direction: column;
+        gap: 4.5rem;
+    }
+
+    &__block {
+        &-title {
+            @include h2;
+            display: block;
+            margin-bottom: 3.5rem;
+        }
+
+        &-articles {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+        }
+
+        &-article {
+            padding: 5.5rem 2rem 5.5rem 5.5rem;
+            border-radius: 5rem;
+            border: 0.2rem solid #dee5f8;
+            background: rgba(255, 255, 255, 0.28);
+            display: flex;
+            align-items: flex-start;
+            gap: 15.5rem;
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+                @include pseudo {
+                    top: 0;
+                    left: -26rem;
+                    bottom: 0;
+                    background: url('../images/phase-background.svg') no-repeat center;
+                    background-size: contain;
+                    width: 100%;
+                    z-index: -1;
+                    height: 100%;
+                }
+            }
+
+            &-info {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                gap: 1.2rem;
+                max-width: 20.1rem;
+                width: 100%;
+
+                &-icon {
+                    max-width: 6.6rem;
+                    width: 100%;
+                    height: 6.6rem;
+                }
+
+                &-title {
+                    @include h2;
+                }
+
+                &-description {
+                    @include p;
+                }
+            }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 2.4rem;
+                width: 100%;
+
+                &-item {
+                    color: $text-secondary;
+                    font-size: 1.8rem;
+                    font-weight: 350;
+                    line-height: normal;
+                    position: relative;
+
+                    &::after {
+                        @include pseudo {
+                            top: 0.5rem;
+                            width: 0.9rem;
+                            height: 0.9rem;
+                            background: #a0a3cf;
+                            border-radius: 50%;
+                            left: -2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
