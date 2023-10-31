@@ -1,0 +1,115 @@
+.understand {
+    &__content {
+        display: flex;
+        align-items: flex-start;
+        gap: 3.3rem;
+
+        @include small-tablet{
+            flex-direction: column;
+            gap: 5rem;
+        }
+
+        &-image {
+            border-radius: 5rem;
+            border: 0.2rem solid #dee5f8;
+            background: linear-gradient(
+                214deg,
+                rgba(255, 255, 255, 0.4) 36.29%,
+                rgba(209, 228, 240, 0.4) 130.68%
+            );
+            backdrop-filter: blur(0.75rem);
+            padding: 2.65rem 4.75rem;
+            max-width: 64.2rem;
+            width: 100%;
+
+            @include small-tablet{
+                max-width: 100%;
+                padding: 2.4rem 4.6rem;
+                border-radius: 8rem;
+                height: 36rem;
+            }
+
+            picture,
+            img,
+            source {
+                border-radius: inherit;
+            }
+
+        }
+
+        &-text {
+            max-width: 61.8rem;
+            width: 100%;
+
+            @include small-tablet{
+                max-width: 100%;
+            }
+
+
+            &-title {
+                @include h1;
+                margin-bottom: 1.2rem;
+
+                @include small-tablet{
+                    margin-bottom: 0;
+                }
+            }
+
+            &-description {
+                @include p;
+                margin-bottom: 2.1rem;
+
+                @include small-tablet{
+                    margin-bottom: 3.5rem;
+                }
+            }
+
+            &-block {
+                border-radius: 5rem;
+                border: .1rem solid #e8edfa;
+                background: linear-gradient(180deg, $white 0%, $white 100%);
+                padding: 2.55rem 2.85rem;
+                display: flex;
+                align-items: center;
+                gap: 2.73rem;
+
+                @include small-tablet{
+                    padding: 4.2rem 2.2rem;
+                    border-radius: 10rem;
+                    gap: 2.2rem;
+                }
+
+                &-icon {
+                    max-width: 7.47rem;
+                    width: 100%;
+                    height: 7.47rem;
+                    border-radius: 50%;
+
+                    @include small-tablet{
+                        max-width: 14.8rem;
+                        height: 14.8rem;
+                    }
+                }
+
+                &-info {
+                    &-title {
+                        color: $text-primary;
+                        font-size: 2.5rem;
+                        font-weight: 700;
+                        line-height: 3rem;
+                        display: block;
+                        margin-bottom: .6rem;
+
+                        @include small-tablet{
+                            @include h2;
+                        }
+                    }
+
+                    &-subtitle {
+                        @include p;
+                    }
+                }
+            }
+        }
+    }
+}
