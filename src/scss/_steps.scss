@@ -2,7 +2,7 @@
     &__title {
         margin-bottom: 7rem;
 
-        @include small-tablet{
+        @include small-tablet {
             margin-bottom: 6rem;
         }
     }
@@ -12,10 +12,37 @@
         grid-template-columns: repeat(3, 42.9rem);
         gap: 3rem;
 
-        @include small-tablet{
+        @include small-tablet {
             display: flex;
             flex-direction: column;
             gap: 7.2rem;
+        }
+
+        &.--gambling {
+            .steps__item {
+                @media (min-width: 48em) {
+                    &:first-child {
+                        grid-row: span 2;
+                        position: relative;
+                    }
+
+                    &-button {
+                        margin-top: 13.4rem;
+                    }
+                }
+
+                &-image {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 52rem;
+                    height: 46.1rem;
+
+                    @include small-tablet {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 
@@ -30,7 +57,7 @@
         min-height: 46.5rem;
         position: relative;
 
-        @include small-tablet{
+        @include small-tablet {
             max-width: 100%;
             width: 100%;
             max-height: initial;
@@ -47,6 +74,10 @@
             }
         }
 
+        &:last-child {
+            grid-column: span 2;
+        }
+
         &-content {
             display: flex;
             flex-direction: column;
@@ -55,13 +86,9 @@
             max-width: 41.7rem;
             width: 100%;
 
-            @include small-tablet{
+            @include small-tablet {
                 max-width: 100%;
             }
-        }
-
-        &:last-child{
-            grid-column: span 2;
         }
 
         &-heading {
@@ -73,7 +100,7 @@
             border-bottom: 0.1rem solid #e3edff;
             width: 100%;
 
-            @include small-tablet{
+            @include small-tablet {
                 gap: 4.2rem;
                 padding-bottom: 3.2rem;
                 margin-bottom: 3.5rem;
@@ -84,7 +111,7 @@
                 width: 100%;
                 height: 6.6511rem;
 
-                @include small-tablet{
+                @include small-tablet {
                     max-width: 11.4rem;
                     height: auto;
                 }
@@ -104,9 +131,9 @@
             max-width: 39.2rem;
             width: 100%;
 
-            @include small-tablet{
+            @include small-tablet {
                 max-width: 100%;
-                padding: .5rem .5rem .5rem 2rem;
+                padding: 0.5rem 0.5rem 0.5rem 2rem;
                 font-size: 3.4rem;
                 font-weight: 400;
                 line-height: 5.2rem;
@@ -114,19 +141,20 @@
             }
         }
 
-        &-button, &-link {
+        &-button,
+        &-link {
             margin-top: auto;
         }
 
         &-button {
-            @include small-tablet{
+            @include small-tablet {
                 margin-left: 3rem;
                 margin-bottom: -9rem;
             }
         }
 
         &-link {
-            @include small-tablet{
+            @include small-tablet {
                 margin-left: 2rem;
             }
         }
@@ -140,7 +168,7 @@
             width: 100%;
             height: 26.2425rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 display: none;
             }
         }
