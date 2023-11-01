@@ -1,12 +1,20 @@
 .phase {
     &__title {
         margin-bottom: 7rem;
+
+        @include small-tablet {
+            margin-bottom: 5rem;
+        }
     }
 
     &__blocks {
         display: flex;
         flex-direction: column;
         gap: 4.5rem;
+
+        @include small-tablet {
+            gap: 6rem;
+        }
     }
 
     &__block {
@@ -14,12 +22,20 @@
             @include h2;
             display: block;
             margin-bottom: 3.5rem;
+
+            @include small-tablet {
+                margin-bottom: 6rem;
+            }
         }
 
         &-articles {
             display: flex;
             flex-direction: column;
             gap: 3.5rem;
+
+            @include small-tablet {
+                gap: 5rem;
+            }
         }
 
         &-article {
@@ -33,6 +49,14 @@
             position: relative;
             overflow: hidden;
 
+            @include small-tablet {
+                flex-direction: column;
+                gap: 9rem;
+                background: transparent;
+                border: 0;
+                padding: 0;
+            }
+
             &::after {
                 @include pseudo {
                     top: 0;
@@ -43,6 +67,14 @@
                     width: 100%;
                     z-index: -1;
                     height: 100%;
+
+                    @include small-tablet {
+                        background: url('../images/phase-bacgkround-mobile.svg') no-repeat center;
+                        top: -27rem;
+                        right: 0;
+                        left: auto;
+                        height: 91rem;
+                    }
                 }
             }
 
@@ -51,6 +83,11 @@
                 display: flex;
                 align-items: flex-start;
                 gap: 1.5rem;
+
+                @include small-tablet {
+                    flex-direction: column;
+                    gap: 2rem;
+                }
             }
 
             &-text {
@@ -60,18 +97,37 @@
                 max-width: 20.1rem;
                 width: 100%;
 
+                @include small-tablet {
+                    max-width: 100%;
+                    gap: 3rem;
+                    padding: 4rem 8rem 0;
+                }
+
                 &-icon {
                     max-width: 6.6rem;
                     width: 100%;
                     height: 6.6rem;
+
+                    @include small-tablet {
+                        max-width: 12rem;
+                        height: 12rem;
+                    }
                 }
 
                 &-title {
-                    @include h2;
+                    @include h2 {
+                        @include small-tablet {
+                            font-size: 4rem;
+                        }
+                    }
                 }
 
                 &-description {
-                    @include p;
+                    @include p {
+                        @include small-tablet {
+                            font-size: 3.25rem;
+                        }
+                    }
                 }
             }
 
@@ -81,12 +137,21 @@
                 gap: 2.4rem;
                 width: 100%;
 
+                @include small-tablet {
+                    gap: 2.1rem;
+                    padding-left: 7rem;
+                }
+
                 &-item {
                     color: $text-secondary;
                     font-size: 1.8rem;
                     font-weight: 350;
                     line-height: normal;
                     position: relative;
+
+                    @include small-tablet {
+                        @include p;
+                    }
 
                     &::after {
                         @include pseudo {
@@ -96,6 +161,12 @@
                             background: #a0a3cf;
                             border-radius: 50%;
                             left: -2rem;
+
+                            @include small-tablet {
+                                width: 1.8rem;
+                                height: 1.8rem;
+                                left: -4rem;
+                            }
                         }
                     }
                 }
