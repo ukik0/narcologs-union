@@ -10752,6 +10752,9 @@ function accordion(trigger, selector) {
 if (document.querySelector('.faq')) {
     accordion('.faq__questions-item-heading', '.faq__questions-item');
 }
+if (document.querySelector('.goals')) {
+    accordion('.goals__item-heading', '.goals__item');
+}
 
 
 /***/ }),
