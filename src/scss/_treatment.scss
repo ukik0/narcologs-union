@@ -150,6 +150,33 @@
         }
     }
 
+    &.--grandfather {
+        .treatment__poster {
+            max-width: 61.7rem;
+            width: 100%;
+            height: 50rem;
+            top: auto;
+            bottom: 0;
+
+            @include small-tablet {
+                order: 10;
+            }
+        }
+
+        .treatment__content {
+            @include small-tablet{
+                overflow: hidden;
+            }
+        }
+
+        .treatment__content-block {
+            @include small-tablet {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
     &.--wire {
         .treatment__content {
             padding-bottom: 3.5rem;
