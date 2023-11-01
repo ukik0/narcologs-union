@@ -146,6 +146,14 @@
         }
     }
 
+    &.--home {
+        overflow: hidden;
+
+        @include small-tablet{
+            overflow: initial;
+        }
+    }
+
     &__content {
         border-radius: 5rem;
         border: 0.1rem solid $white;
