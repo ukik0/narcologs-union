@@ -1,0 +1,71 @@
+.education {
+    &__title {
+        margin-bottom: 7rem;
+
+        @include small-tablet{
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__content {
+        border-radius: 5rem;
+        border: 0.2rem solid #dee5f8;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 7.5rem 0 5.8rem 0;
+
+        @include small-tablet{
+            padding: 5rem 3rem;
+            border-radius: 8rem;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @include small-tablet{
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 25%;
+        width: 100%;
+
+        @include small-tablet{
+            max-width: 100%;
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        &-icon {
+            max-width: 32.9036rem;
+            width: 100%;
+            height: 35.4515rem;
+
+            @include small-tablet{
+                max-width: 30rem;
+                height: 31rem;
+            }
+        }
+
+        &-title {
+            @include h2;
+            margin-top: -3rem;
+            width: 70%;
+
+            @include small-tablet{
+                width: 100%;
+                margin-top: 0;
+                transform: translate(-1rem, -2rem);
+                text-align: start;
+            }
+        }
+    }
+}
