@@ -126,3 +126,20 @@
 
     @content;
 }
+
+@mixin pseudo-icon() {
+    top: 0.5rem;
+    left: -1.5rem;
+    border-radius: 50%;
+    background: #a0a3cf;
+    width: 0.9rem;
+    height: 0.9rem;
+
+    @include small-tablet {
+        width: 1.8rem;
+        height: 1.8rem;
+        top: 1rem;
+    }
+
+    @content;
+}
