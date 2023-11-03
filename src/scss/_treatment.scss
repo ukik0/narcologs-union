@@ -209,6 +209,16 @@
         }
     }
 
+    &.--ampoule {
+        .treatment__poster {
+            max-width: 41.3rem;
+            width: 100%;
+            top: auto;
+            bottom: 0;
+            height: 35.6rem;
+        }
+    }
+
     &__content {
         border-radius: 5rem;
         border: 0.1rem solid $white;
@@ -222,7 +232,7 @@
         }
 
         &-block {
-            max-width: 86.4rem;
+            max-width: 84.4rem;
             width: 100%;
 
             @include small-tablet {
