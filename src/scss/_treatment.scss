@@ -91,7 +91,7 @@
 
         &-full {
             .treatment__content {
-                @include small-tablet{
+                @include small-tablet {
                     overflow: hidden;
                 }
             }
@@ -126,7 +126,7 @@
             .treatment__content {
                 padding: 5rem;
 
-                @include small-tablet{
+                @include small-tablet {
                     padding-bottom: 0;
                     overflow: hidden;
                 }
@@ -142,7 +142,7 @@
             .treatment__poster {
                 top: -8rem;
                 right: -1rem;
-                @include small-tablet{
+                @include small-tablet {
                     margin-top: 4rem;
                     order: 10;
                 }
@@ -164,7 +164,7 @@
         }
 
         .treatment__content {
-            @include small-tablet{
+            @include small-tablet {
                 overflow: hidden;
             }
         }
@@ -204,7 +204,7 @@
     &.--home {
         overflow: hidden;
 
-        @include small-tablet{
+        @include small-tablet {
             overflow: initial;
         }
     }
@@ -216,6 +216,58 @@
             top: auto;
             bottom: 0;
             height: 35.6rem;
+        }
+    }
+
+    &.--consultant {
+        .treatment__poster {
+            max-width: 62.3rem;
+            width: 100%;
+            height: 55.2rem;
+            top: auto;
+            bottom: -0.1rem;
+
+            @include small-tablet {
+                order: 10;
+                max-width: 50.3rem;
+                width: 100%;
+                height: 44.2rem;
+                transform: translate(0, 4rem);
+            }
+        }
+
+        .treatment__content {
+            @include small-tablet{
+                overflow: hidden;
+            }
+        }
+
+        .treatment__stages-list {
+            @include small-tablet {
+                gap: 1.5rem;
+            }
+        }
+
+        .treatment__content-block {
+            max-width: 88.4rem;
+            width: 100%;
+
+            @include small-tablet {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .treatment__stages-list {
+            gap: 2rem;
+        }
+
+        .treatment__title {
+            margin-bottom: 2rem;
+
+            @include small-tablet {
+                margin-bottom: 3rem;
+            }
         }
     }
 
@@ -276,6 +328,11 @@
         @include p;
         margin-bottom: 3.2rem;
         max-width: 70.7rem;
+        font-weight: 700;
+
+        @include small-tablet {
+            font-weight: 700;
+        }
 
         span {
             color: $sky-primary;
@@ -432,14 +489,26 @@
             @include p;
             padding-left: 1.5rem;
             position: relative;
+            display: flex;
+            flex-direction: column;
 
             @include small-tablet {
                 padding-left: 2rem;
             }
 
+            span {
+                font-size: 1.8rem;
+                font-weight: 700;
+                line-height: 3rem;
+
+                @include small-tablet {
+                    @include h3;
+                }
+            }
+
             &::after {
                 @include pseudo {
-                    top: 0.5rem;
+                    top: 0.7rem;
                     left: -0.5rem;
                     border-radius: 50%;
                     background: #a0a3cf;
@@ -449,7 +518,8 @@
                     @include small-tablet {
                         width: 1.8rem;
                         height: 1.8rem;
-                        top: 1rem;
+                        top: 1.5rem;
+                        left: 0rem;
                     }
                 }
             }
