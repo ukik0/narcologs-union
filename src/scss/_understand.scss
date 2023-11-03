@@ -62,11 +62,14 @@
                 display: flex;
                 align-items: center;
                 gap: 2.73rem;
+                max-width: 61.8rem;
+                width: 100%;
 
                 @include small-tablet {
                     padding: 4.2rem 2.2rem;
                     border-radius: 10rem;
                     gap: 2.2rem;
+                    max-width: 100%;
                 }
 
                 &-icon {
