@@ -1,7 +1,6 @@
 .understand {
     &__content {
         display: flex;
-        align-items: flex-start;
         gap: 3.3rem;
 
         @include small-tablet {
