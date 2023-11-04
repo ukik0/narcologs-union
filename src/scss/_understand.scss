@@ -153,6 +153,37 @@
             &-text {
                 @include h3;
             }
+
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+                margin-top: 1.5rem;
+                padding-left: 2rem;
+
+                @include small-tablet{
+                    padding-left: 4rem;
+                    gap: 2.6rem;
+                }
+            }
+
+            &-item {
+                position: relative;
+                @include p;
+
+                &::after{
+                    @include pseudo{
+                        @include pseudo-icon {
+                            top: 1rem;
+                            left: -2rem;
+
+                            @include small-tablet{
+                                left: -4rem;
+                            }
+                        };
+                    }
+                }
+            }
         }
     }
 }
