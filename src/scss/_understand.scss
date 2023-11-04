@@ -8,6 +8,14 @@
             gap: 6rem;
         }
 
+        &-poster {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 64.2rem;
+            width: 100%;
+        }
+
         &-image {
             border-radius: 5rem;
             border: 0.2rem solid #dee5f8;
