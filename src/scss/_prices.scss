@@ -116,6 +116,12 @@
 
             will-change: backdrop-filter;
 
+            &-features {
+                display: flex;
+                flex-direction: column;
+                gap: 8.2rem;
+            }
+
             @include small-tablet {
                 border-radius: 8rem;
                 padding: 6rem 6rem 6.2rem;
