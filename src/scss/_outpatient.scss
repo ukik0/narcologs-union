@@ -1,0 +1,92 @@
+.outpatient {
+    &__content {
+        display: flex;
+        gap: 3.3rem;
+        justify-content: space-between;
+
+        @include small-tablet {
+            flex-direction: column-reverse;
+            gap: 5rem;
+        }
+    }
+
+    &__info {
+        max-width: 70.7rem;
+        width: 100%;
+
+        &-title {
+            margin-bottom: 3rem;
+
+            @include small-tablet {
+                margin-bottom: 5rem;
+            }
+        }
+
+        &-description {
+            @include p;
+            margin-bottom: 2.5rem;
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            padding-left: 1.5rem;
+
+            @include small-tablet {
+                padding-left: 3rem;
+                gap: 2.2rem;
+            }
+        }
+
+        &-item {
+            @include p;
+            position: relative;
+
+            &::after {
+                @include pseudo {
+                    @include pseudo-icon {
+                        @include small-tablet{
+                            left: -3rem;
+                        }
+                    };
+                }
+            }
+        }
+    }
+
+    &__poster {
+        max-width: 61.1rem;
+        width: 100%;
+        padding: 2rem 3.5rem;
+        position: relative;
+        border-radius: 5rem;
+        border: 0.2rem solid #dee5f8;
+        background: linear-gradient(
+            214deg,
+            rgba(255, 255, 255, 0.4) 36.29%,
+            rgba(209, 228, 240, 0.4) 130.68%
+        );
+        backdrop-filter: blur(0.75rem);
+        height: 30.4rem;
+
+        @include small-tablet {
+            max-width: 100%;
+            border-radius: 8rem;
+            padding: 3rem 5rem;
+            height: 38rem;
+        }
+
+        picture,
+        source,
+        img {
+            border-radius: inherit;
+        }
+
+        &-button {
+            position: absolute;
+            bottom: -2.5rem;
+            right: 9.7rem;
+        }
+    }
+}
