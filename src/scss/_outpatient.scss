@@ -46,10 +46,10 @@
             &::after {
                 @include pseudo {
                     @include pseudo-icon {
-                        @include small-tablet{
+                        @include small-tablet {
                             left: -3rem;
                         }
-                    };
+                    }
                 }
             }
         }
