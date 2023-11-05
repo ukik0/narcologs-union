@@ -237,7 +237,7 @@
         }
 
         .treatment__content {
-            @include small-tablet{
+            @include small-tablet {
                 overflow: hidden;
             }
         }
@@ -267,6 +267,26 @@
 
             @include small-tablet {
                 margin-bottom: 3rem;
+            }
+        }
+    }
+
+    &.--clean {
+        .treatment__poster {
+            top: auto;
+            bottom: 0;
+
+            @include small-tablet {
+                order: 10;
+                margin-top: 9rem;
+                transform: translate(1rem, 0rem);
+            }
+        }
+
+        .treatment__content-block {
+            @include small-tablet {
+                display: flex;
+                flex-direction: column;
             }
         }
     }
