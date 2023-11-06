@@ -1,0 +1,110 @@
+.attendance {
+    &__content {
+        display: flex;
+        gap: 4.1rem;
+
+        @include small-tablet {
+            flex-direction: column-reverse;
+            gap: 10rem;
+        }
+    }
+
+    &__info {
+        margin-top: 3.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 7rem;
+
+        &-title {
+            @include small-tablet {
+                margin-bottom: 5rem;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: 2.6rem;
+
+        @include small-tablet {
+            gap: 3.5rem;
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 1.1rem;
+        max-width: 30.4rem;
+        width: 100%;
+
+        @include small-tablet {
+            max-width: 100%;
+            gap: 2rem;
+        }
+
+        &-heading {
+            padding: 4.5rem 5.7rem 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            border-radius: 5rem;
+            border: 0.1rem solid #e4eaf9;
+            background: $white;
+
+            @include small-tablet {
+                border-radius: 8rem;
+                gap: 4rem;
+                padding: 8.5rem 24rem 8rem 8.5rem;
+            }
+
+            &-icon {
+                max-width: 4.7rem;
+                width: 100%;
+                height: 4.7rem;
+
+                @include small-tablet {
+                    max-width: 9rem;
+                    height: 9rem;
+                }
+            }
+
+            &-title {
+                @include h2;
+            }
+        }
+
+        &-features {
+            &-list {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+                border-radius: 5rem;
+                border: 0.2rem solid #dee5f8;
+                background: rgba(255, 255, 255, 0.28);
+                padding: 4rem 4rem 4rem 4.5rem;
+
+                @include small-tablet {
+                    border-radius: 8rem;
+                    padding: 9rem;
+                    gap: 5.7rem;
+                }
+            }
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                &-title {
+                    @include h3;
+                }
+
+                &-description {
+                    @include p;
+                }
+            }
+        }
+    }
+}
