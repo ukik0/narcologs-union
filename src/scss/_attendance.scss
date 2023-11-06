@@ -1,11 +1,17 @@
 .attendance {
+    margin-bottom: 17.2rem;
+
+    @include small-tablet{
+        margin-bottom: 16.2rem;
+    }
+
     &__content {
         display: flex;
         gap: 4.1rem;
 
         @include small-tablet {
             flex-direction: column-reverse;
-            gap: 10rem;
+            gap: 8rem;
         }
     }
 

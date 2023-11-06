@@ -20185,6 +20185,7 @@ function swiperDefaultSetting(init, payload) {
 
 
 
+
 new Swiper('.gallery__swiper', swiperDefaultSetting('gallery', {
   modules: [Navigation],
   breakpoints: {
@@ -20224,6 +20225,26 @@ new Swiper('.specialists__swiper', swiperDefaultSetting('specialists', {
       slidesPerView: '2',
       grabCursor: true,
       enabled: true
+    }
+  }
+}));
+new Swiper('.centers__swiper.desktop', swiperDefaultSetting('centers', {
+  modules: [Navigation],
+  breakpoints: {
+    768: {
+      spaceBetween: rem(3.6),
+      slidesPerView: 1,
+      grabCursor: true
+    }
+  }
+}));
+new Swiper('.centers__swiper.mobile', swiperDefaultSetting('centers', {
+  modules: [Navigation],
+  breakpoints: {
+    0: {
+      spaceBetween: rem(3.6),
+      slidesPerView: 1,
+      grabCursor: true
     }
   }
 }));

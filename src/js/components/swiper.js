@@ -6,6 +6,7 @@ import { rem, swiperDefaultSetting } from '../utils';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/grid';
 
 new Swiper(
     '.gallery__swiper',
@@ -55,7 +56,35 @@ new Swiper(
                 spaceBetween: rem(4.1),
                 slidesPerView: '2',
                 grabCursor: true,
-                enabled: true,
+                enabled: true
+            }
+        }
+    })
+);
+
+new Swiper(
+    '.centers__swiper.desktop',
+    swiperDefaultSetting('centers', {
+        modules: [Navigation],
+        breakpoints: {
+            768: {
+                spaceBetween: rem(3.6),
+                slidesPerView: 1,
+                grabCursor: true
+            }
+        }
+    })
+);
+
+new Swiper(
+    '.centers__swiper.mobile',
+    swiperDefaultSetting('centers', {
+        modules: [Navigation],
+        breakpoints: {
+            0: {
+                spaceBetween: rem(3.6),
+                slidesPerView: 1,
+                grabCursor: true
             }
         }
     })
