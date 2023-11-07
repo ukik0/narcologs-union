@@ -1,6 +1,22 @@
 .treatment {
     &.--car {
         margin-bottom: 11.2rem;
+
+        .treatment__poster {
+            @media (min-width: 48em) {
+                position: absolute;
+                max-width: 55.5694rem;
+                width: 100%;
+                height: auto;
+                right: 1rem;
+                top: auto;
+            }
+
+            @include small-tablet {
+                max-width: 54.8rem;
+                height: auto;
+            }
+        }
     }
 
     &.--bg-white {
@@ -330,6 +346,40 @@
             bottom: 0;
             margin-top: 9rem;
             transform: translateX(9rem);
+        }
+    }
+
+    &.--loved {
+        .treatment__poster {
+            top: auto;
+            bottom: 0;
+            max-width: 72rem;
+            height: 50rem;
+
+            @include small-tablet {
+                order: 10;
+                max-width: 72rem;
+                height: 46rem;
+                margin-top: 6rem;
+            }
+        }
+
+        .treatment__title {
+            max-width: 62.3rem;
+            width: 100%;
+        }
+
+        .treatment__content-block {
+            @include small-tablet {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .treatment__content {
+            @include small-tablet {
+                padding-bottom: 2rem;
+            }
         }
     }
 

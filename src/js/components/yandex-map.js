@@ -1,5 +1,7 @@
 import Swiper from 'swiper';
+
 import { Navigation } from 'swiper/modules';
+
 import $ from 'jquery';
 
 import { rem, swiperDefaultSetting } from '../utils';
@@ -105,7 +107,7 @@ if (document.querySelector('.position')) {
                 slideToClickedSlide: true,
                 breakpoints: {
                     0: {
-                        slidesPerView: 1,
+                        slidesPerView: 1
                     },
                     768: {
                         spaceBetween: rem(3.5),
@@ -144,6 +146,32 @@ if (document.querySelector('.position')) {
                 slideTo(index);
                 animationMap([lalitude, longitude], map);
             });
+        });
+    }
+}
+
+if (document.querySelector('.clinics')) {
+    ymaps.ready(init);
+
+    function init() {
+        let map = new ymaps.Map('clinics-map', {
+            center: [55.75244503863624, 37.619346417968764],
+            zoom: 10
+        });
+
+        removeControls(map);
+
+        PLACEMARKS.forEach(({ longitude, lalitude, balloonContent, index }) => {
+            const placemark = new ymaps.Placemark(
+                [lalitude, longitude],
+                {
+                    balloonContent: generateBalloon(balloonContent),
+                    attribute: index
+                },
+                placemarkOptions
+            );
+
+            map.geoObjects.add(placemark);
         });
     }
 }

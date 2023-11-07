@@ -108,3 +108,31 @@ new Swiper(
         }
     })
 );
+
+new Swiper(
+    '.clinics__swiper.desktop',
+    swiperDefaultSetting('clinics', {
+        modules: [Navigation],
+        breakpoints: {
+            768: {
+                spaceBetween: rem(3.6),
+                slidesPerView: 1,
+                grabCursor: true
+            }
+        }
+    })
+);
+
+new Swiper(
+    '.clinics__swiper.mobile',
+    swiperDefaultSetting('clinics', {
+        modules: [Navigation],
+        breakpoints: {
+            0: {
+                spaceBetween: rem(3.6),
+                slidesPerView: 1,
+                grabCursor: true
+            }
+        }
+    })
+);

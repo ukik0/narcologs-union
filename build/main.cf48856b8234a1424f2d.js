@@ -1,6 +1,117 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ 407:
+/***/ (() => {
+
+document.addEventListener('DOMContentLoaded', () => {
+  const isSelectMult = elem => {
+    if (elem.classList.contains('select-mult')) {
+      return true;
+    }
+    return false;
+  };
+  const focusSearch = search => {
+    if (search) {
+      search.focus();
+    }
+  };
+  const deleteValueSearch = search => {
+    if (search) {
+      search.value = '';
+    }
+  };
+  const toggleShowEmptyMsg = (isFind, empty) => {
+    if (isFind && empty) {
+      empty.classList.remove('active');
+    } else {
+      empty.classList.add('active');
+    }
+  };
+  const showAllItems = (items, empty) => {
+    if (empty) {
+      empty.classList.remove('active');
+    }
+    items.forEach(item => {
+      item.style.display = 'block';
+    });
+  };
+  const selects = document.querySelectorAll('.js-select');
+  if (selects) {
+    selects.forEach(select => {
+      const inner = select.querySelector('.js-select-inner');
+      const title = select.querySelector('.js-select-value');
+      const items = select.querySelectorAll('.js-select-item');
+      const labels = select.querySelectorAll('.js-select-item label');
+      const search = select.querySelector('.js-select-search');
+      const empty = select.querySelector('.js-select-empty');
+      inner.addEventListener('click', event => {
+        if (event.target.closest('.js-select-search') && select.closest('.js-select.active')) {
+          focusSearch(search);
+        } else {
+          deleteValueSearch(search);
+          if (select.classList.contains('active')) {
+            select.classList.remove('active');
+            showAllItems(items, empty);
+          } else {
+            select.classList.add('active');
+            focusSearch(search);
+          }
+        }
+      });
+      if (search) {
+        search.addEventListener('input', () => {
+          let isFind = false;
+          const inputValue = search.value.toLowerCase().trim();
+          items.forEach(item => {
+            const label = item.querySelector('label').textContent.toLowerCase().trim();
+            if (label.indexOf(inputValue) === 0) {
+              item.style.display = 'block';
+              isFind = true;
+            } else {
+              item.style.display = 'none';
+            }
+            toggleShowEmptyMsg(isFind, empty);
+          });
+        });
+      }
+      for (let index = 0; index < labels.length; index += 1) {
+        labels[index].addEventListener('click', e => {
+          if (title) {
+            title.textContent = e.target.textContent;
+            if (document.querySelector('.select-sort') && window.innerWidth < 768) {
+              document.querySelector('.select-sort .select__content').classList.remove('active');
+            }
+            if (document.querySelector('.catalog__header-bottom-txt')) {
+              document.querySelector('.catalog__header-bottom-txt').innerHTML = title.textContent;
+            }
+          }
+          if (!isSelectMult(select)) {
+            select.classList.remove('active');
+          }
+        });
+      }
+      if (document.querySelector('.select-sort') && window.innerWidth < 768) {
+        document.addEventListener('click', event => {
+          if (event.target.closest('.select__content')) {
+            document.querySelector('.select-sort .select__content').classList.remove('active');
+            document.querySelector('.select-sort').classList.remove('active');
+          }
+        });
+      }
+      document.addEventListener('click', event => {
+        if (!event.target.closest('.js-select')) {
+          select.classList.remove('active');
+          deleteValueSearch(search);
+          showAllItems(items, empty);
+        }
+      });
+    });
+  }
+});
+
+/***/ }),
+
 /***/ 755:
 /***/ (function(module, exports) {
 
@@ -20263,6 +20374,26 @@ new Swiper('.history__swiper', swiperDefaultSetting('history', {
     }
   }
 }));
+new Swiper('.clinics__swiper.desktop', swiperDefaultSetting('clinics', {
+  modules: [Navigation],
+  breakpoints: {
+    768: {
+      spaceBetween: rem(3.6),
+      slidesPerView: 1,
+      grabCursor: true
+    }
+  }
+}));
+new Swiper('.clinics__swiper.mobile', swiperDefaultSetting('clinics', {
+  modules: [Navigation],
+  breakpoints: {
+    0: {
+      spaceBetween: rem(3.6),
+      slidesPerView: 1,
+      grabCursor: true
+    }
+  }
+}));
 ;// CONCATENATED MODULE: ./src/js/components/show-more.ts
 
 
@@ -20483,11 +20614,37 @@ if (document.querySelector('.position')) {
     });
   }
 }
+if (document.querySelector('.clinics')) {
+  ymaps.ready(init);
+  function init() {
+    let map = new ymaps.Map('clinics-map', {
+      center: [55.75244503863624, 37.619346417968764],
+      zoom: 10
+    });
+    removeControls(map);
+    PLACEMARKS.forEach(_ref3 => {
+      let {
+        longitude,
+        lalitude,
+        balloonContent,
+        index
+      } = _ref3;
+      const placemark = new ymaps.Placemark([lalitude, longitude], {
+        balloonContent: generateBalloon(balloonContent),
+        attribute: index
+      }, placemarkOptions);
+      map.geoObjects.add(placemark);
+    });
+  }
+}
 // EXTERNAL MODULE: ./src/js/components/services.ts
 var services = __webpack_require__(625);
 // EXTERNAL MODULE: ./src/js/components/accordion.ts
 var accordion = __webpack_require__(557);
+// EXTERNAL MODULE: ./src/js/components/select.js
+var components_select = __webpack_require__(407);
 ;// CONCATENATED MODULE: ./src/js/components/index.js
+
 
 
 
