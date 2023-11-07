@@ -89,3 +89,22 @@ new Swiper(
         }
     })
 );
+
+new Swiper(
+    '.history__swiper',
+    swiperDefaultSetting('history', {
+        modules: [Navigation],
+        breakpoints: {
+            0: {
+                spaceBetween: rem(1.6),
+                slidesPerView: 1.3,
+                centeredSlides: true
+            },
+            768: {
+                spaceBetween: rem(7.7),
+                slidesPerView: 3,
+                grabCursor: true
+            }
+        }
+    })
+);

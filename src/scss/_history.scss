@@ -1,0 +1,104 @@
+.history {
+    @include swiper-navigation();
+
+    &__heading {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 7rem;
+
+        @include small-tablet {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__item {
+        padding: 3.8rem 5rem 5.8rem;
+        border-radius: 5rem;
+        border: 0.2rem solid #dee5f8;
+        background: rgba(255, 255, 255, 0.28);
+
+        @include small-tablet {
+            border-radius: 6rem;
+            padding: 4rem;
+        }
+
+        &-image {
+            position: relative;
+            max-height: 21.6rem;
+            border-radius: inherit;
+            margin-bottom: 3.5rem;
+
+            @include small-tablet {
+                height: 28rem;
+                max-height: initial;
+            }
+
+            picture,
+            img,
+            source {
+                border-radius: inherit;
+            }
+        }
+
+        &-name {
+            display: block;
+            @include h2;
+            margin-bottom: 1.5rem;
+
+            @include small-tablet {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        &-category {
+            @include h3;
+            color: $sky-primary;
+            margin-bottom: 0.7rem;
+        }
+
+        &-time {
+            @include p;
+            display: block;
+            margin-bottom: 0.5rem;
+            color: $text-primary;
+        }
+
+        &-description {
+            @include p;
+            color: rgba(41, 52, 74, 0.7);
+        }
+
+        &-play-button {
+            position: absolute;
+            right: 3rem;
+            bottom: 2.8rem;
+            border-radius: 50%;
+            max-width: 4.6rem;
+            width: 100%;
+            height: 4.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $sky-primary;
+
+            @include small-tablet {
+                max-width: 8.5rem;
+                height: 8.5rem;
+                right: 3rem;
+                bottom: 1.5rem;
+            }
+
+            img {
+                max-width: 1.7rem;
+                width: 100%;
+                height: 2.3rem;
+
+                @include small-tablet {
+                    max-width: 3rem;
+                    height: 4rem;
+                }
+            }
+        }
+    }
+}
