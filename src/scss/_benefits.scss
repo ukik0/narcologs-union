@@ -3,6 +3,23 @@
         margin-bottom: 12rem;
     }
 
+    &__heading {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 4.5rem;
+
+        @include small-tablet{
+            margin-bottom: 0;
+        }
+
+        &-button {
+            @include small-tablet{
+                margin-top: 6rem;
+            }
+        }
+    }
+
     &__title {
         @include h1;
         margin-bottom: 3.5rem;
@@ -68,6 +85,10 @@
                     line-height: normal;
                 }
             }
+
+            span {
+                font-weight: 700;
+            }
         }
     }
 
@@ -79,7 +100,7 @@
             justify-content: space-between;
             gap: 3rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 flex-direction: column;
                 gap: 3rem;
                 margin-top: 3rem;
@@ -97,7 +118,7 @@
             align-items: flex-start;
             gap: 2.6rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 padding: 8rem 6.2rem 6rem;
                 gap: 3rem;
                 border-radius: 8rem;
@@ -108,7 +129,7 @@
                 width: 100%;
                 height: 6.6rem;
 
-                @include small-tablet{
+                @include small-tablet {
                     max-width: 12rem;
                     height: 12rem;
                 }

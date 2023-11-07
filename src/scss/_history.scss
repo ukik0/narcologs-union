@@ -1,6 +1,10 @@
 .history {
     @include swiper-navigation();
 
+    @include small-tablet{
+        margin-bottom: 11rem;
+    }
+
     &__heading {
         display: flex;
         align-items: flex-start;
@@ -13,7 +17,7 @@
     }
 
     &__item {
-        padding: 3.8rem 5rem 5.8rem;
+        padding: 3.8rem 5rem 4.8rem;
         border-radius: 5rem;
         border: 0.2rem solid #dee5f8;
         background: rgba(255, 255, 255, 0.28);

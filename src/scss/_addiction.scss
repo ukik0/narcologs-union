@@ -1,6 +1,10 @@
 .addiction {
     margin-bottom: 11.5rem;
 
+    @include small-tablet{
+        margin-bottom: 8.5rem;
+    }
+
     &__title {
         margin-bottom: 7rem;
 
