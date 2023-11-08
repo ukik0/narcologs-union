@@ -1,0 +1,19 @@
+.firman {
+    @include swiper-navigation(hidden);
+
+    &__content {
+        padding: 0 7.5rem;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 7rem;
+    }
+
+    .guarantees__license {
+        @include small-tablet{
+            padding: 5.2rem 3.6rem 4.3rem;
+        }
+    }
+
+}

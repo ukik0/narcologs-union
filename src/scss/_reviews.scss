@@ -2,9 +2,33 @@
     @include swiper-navigation {
         &__navigation {
             margin-top: 7rem;
-            margin-left: 20rem;
         }
     };
+
+    &__empty {
+        display: flex;
+        align-items: center;
+        gap: 2.1rem;
+
+        @include small-tablet{
+            gap: 1.5rem;
+        }
+
+        &-icon {
+            max-width: 6.4rem;
+            width: 100%;
+            height: auto;
+
+            @include small-tablet{
+                max-width: 10rem;
+                height: auto;
+            }
+        }
+
+        &-text {
+            @include p;
+        }
+    }
 
     &__heading {
         display: flex;

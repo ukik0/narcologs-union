@@ -176,3 +176,25 @@ new Swiper(
         }
     })
 );
+
+new Swiper(
+    '.firman__swiper',
+    swiperDefaultSetting('firman', {
+        modules: [Navigation, Grid],
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: rem(1.1),
+                grid: {
+                    rows: 2,
+                    fill: 'row'
+                }
+            },
+            768: {
+                spaceBetween: rem(7.55),
+                slidesPerView: 3,
+                grabCursor: true,
+            }
+        }
+    })
+);

@@ -306,12 +306,12 @@
                                     заявку. Мы свяжемся с вами в течение дня!
                                 </p>
 
-                                <button class='center__offer-request-button button-sky'>
+                                <button class="center__offer-request-button button-sky">
                                     Оставить заявку
                                 </button>
-                                
-                                <div class='center__offer-request-icon'>
-                                    <img src='./images/phone-icon.svg' alt=''>
+
+                                <div class="center__offer-request-icon">
+                                    <img src="./images/phone-icon.svg" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -326,63 +326,861 @@
                 </div>
             </section>
 
-            <section class="better">
+            <section class="location">
                 <div class="container">
-                    <div class="better__content">
-                        <article class="better__article">
-                            <h2 class="better__article-title section-title">
-                                Стремимся быть лучшим агрегатором для зависимых и их близких
-                            </h2>
+                    <div class="location__content">
+                        <h2 class="location__title section-title">На карте</h2>
 
-                            <span class="better__article-subtitle"> Наши ценности </span>
+                        <div id="location-map" class="map position__map"></div>
+                    </div>
+                </div>
+            </section>
 
-                            <div class="better__article-text-block">
-                                <span class="better__article-text-block-title">
-                                    «Центр Восстановления» стремится быть лучшим информационным порталом для
-                                    зависимых и их близких в области лечения наркомании, алкоголизма и других
-                                    типов зависимостей
-                                </span>
+            <section class="gallery">
+                <div class="container">
+                    <div class="gallery__content">
+                        <h2 class="gallery__title section-title">Фотогалерея</h2>
 
-                                <p class="better__article-text-block-description">
-                                    Мы здесь по нескольким причинам: заботиться о зависимых, оказывать первую
-                                    психологическую и юридическую помощь, консультировать по вопросам лечения,
-                                    реабилитации и социальной адаптации. Мы стремимся спасти больше жизней,
-                                    помогаем каждому найти профессиональную помощь и обеспечить устойчивую
-                                    базу для будущего без психотропных веществ
-                                </p>
+                        <div class="swiper gallery__swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide gallery__slide">
+                                    <div class="gallery__item">
+                                        <div class="gallery__item-image">
+                                            <picture>
+                                                <source
+                                                    srcset="./images/gallery/gallery-1.webp"
+                                                    type="image/webp"
+                                                />
+                                                <img
+                                                    loading="lazy"
+                                                    src="./images/gallery/gallery-1.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide gallery__slide">
+                                    <div class="gallery__item">
+                                        <div class="gallery__item-image">
+                                            <picture>
+                                                <source
+                                                    srcset="./images/gallery/gallery-2.webp"
+                                                    type="image/webp"
+                                                />
+                                                <img
+                                                    loading="lazy"
+                                                    src="./images/gallery/gallery-2.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide gallery__slide">
+                                    <div class="gallery__item">
+                                        <div class="gallery__item-image">
+                                            <picture>
+                                                <source
+                                                    srcset="./images/gallery/gallery-3.webp"
+                                                    type="image/webp"
+                                                />
+                                                <img
+                                                    loading="lazy"
+                                                    src="./images/gallery/gallery-3.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide gallery__slide">
+                                    <div class="gallery__item">
+                                        <div class="gallery__item-image">
+                                            <picture>
+                                                <source
+                                                    srcset="./images/gallery/gallery-4.webp"
+                                                    type="image/webp"
+                                                />
+                                                <img
+                                                    loading="lazy"
+                                                    src="./images/gallery/gallery-4.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide gallery__slide">
+                                    <div class="gallery__item">
+                                        <div class="gallery__item-image">
+                                            <picture>
+                                                <source
+                                                    srcset="./images/gallery/gallery-1.webp"
+                                                    type="image/webp"
+                                                />
+                                                <img
+                                                    loading="lazy"
+                                                    src="./images/gallery/gallery-1.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="better__article-text-block">
-                                <span class="better__article-text-block-title"
-                                    >Наши ценности при подходе к работе:
-                                </span>
-
-                                <p class="better__article-text-block-description">
-                                    Прозрачность – мы считаем, что участники рынка, оказывающие медицинские
-                                    услуги должны работать честно, открыто во избежание мошенничества с целью
-                                    наживы за счет пострадавших людей. Качество – высокие моральные принципы,
-                                    честность и открытость позволяют обеспечить высокие стандарты по отношению
-                                    к медицинским учреждениям и их сотрудникам. Это улучшит качество
-                                    предоставляемых медицинских услуг по отношению к зависимым – что является
-                                    большой проблемой в России. Помощь – любой человек может, в силу различных
-                                    обстоятельств, пойти по неправильному пути зависимости. Мы хотим
-                                    обеспечить каждого такого человека высококачественной помощью, поддержать
-                                    и предложить другой путь без приема психоактивных веществ. Безопасность –
-                                    каждый человек имеет право на качественное оказание услуг, связанных со
-                                    здоровьем и личной жизнью. Мы стремимся защитить зависимых и их
-                                    родственников от недобросовестных реабилитационных центров и клиник.
-                                    Понимание - мы понимаем, что переживает зависимый и его близкие, поэтому
-                                    мы работаем над тем, чтобы каждому была оказана необходимая помощь.
-                                    Анонимность – не каждый готов предать огласке свои проблемы. Мы стремимся
-                                    построить наши отношения с зависимыми и их родственниками на принципах
-                                    честности, конфиденциальности и доверия. Каждый человек – личность и
-                                    заслуживает к по отношению к себе достойного отношения. Мы заботимся о
-                                    зависимых и их родственниках как о своей семье
-                                </p>
+                            <div class="gallery__navigation">
+                                <div class="swiper-button-prev gallery__prev">
+                                    <svg
+                                        width="7"
+                                        height="13"
+                                        viewBox="0 0 7 13"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.659302 6.10741L5.55975 1.16238C5.77478 0.945873 6.12316 0.945873 6.33873 1.16238C6.55376 1.37889 6.55376 1.73056 6.33873 1.94706L1.82698 6.49973L6.33819 11.0524C6.55321 11.2689 6.55321 11.6206 6.33819 11.8376C6.12316 12.0541 5.77423 12.0541 5.55921 11.8376L0.658759 6.89259C0.446989 6.67832 0.446989 6.32113 0.659302 6.10741Z"
+                                            fill="#323232"
+                                            stroke="#323232"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next gallery__next">
+                                    <svg
+                                        width="7"
+                                        height="13"
+                                        viewBox="0 0 7 13"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M6.3407 6.10741L1.44025 1.16238C1.22522 0.945873 0.876843 0.945873 0.661271 1.16238C0.446243 1.37889 0.446243 1.73056 0.661271 1.94706L5.17302 6.49973L0.661814 11.0524C0.446786 11.2689 0.446786 11.6206 0.661814 11.8376C0.876843 12.0541 1.22577 12.0541 1.44079 11.8376L6.34124 6.89259C6.55301 6.67832 6.55301 6.32113 6.3407 6.10741Z"
+                                            fill="#323232"
+                                            stroke="#323232"
+                                        />
+                                    </svg>
+                                </div>
                             </div>
-                        </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                        <aside class="better__guarantees">
+            <section class="reviews">
+                <div class="container">
+                    <div class="reviews__content">
+                        <div class="reviews__heading">
+                            <h2 class="reviews__heading-title">Отзывы</h2>
+
+                            <button class="reviews__heading-button button-grey">Оставить комментарий</button>
+                        </div>
+
+                        <div class="swiper reviews__swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="reviews__item">
+                                        <div class="reviews__item-author">
+                                            <div class="reviews__item-author-image">
+                                                <picture>
+                                                    <source
+                                                        srcset="./images/reviews/author-image.webp"
+                                                        type="image/webp"
+                                                    />
+                                                    <img
+                                                        loading="lazy"
+                                                        src="./images/reviews/author-image.png"
+                                                        alt=""
+                                                    />
+                                                </picture>
+                                            </div>
+
+                                            <div class="reviews__item-author-info">
+                                                <p class="reviews__item-author-name">Антон Михайлов</p>
+
+                                                <span class="reviews__item-author-category"> Наркоман </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="reviews__item-info">
+                                            <p class="reviews__item-info-description">
+                                                Мефедрон – психоактивное вещество со сти эффектом. Способы
+                                                определения мефедрона в организме: виды тестов. Мефедрон –
+                                                психоактивное вещество со стимулирующим
+                                            </p>
+
+                                            <a href="#" class="reviews__item-info-link link-arrow">
+                                                Весь отзыв
+                                                <svg
+                                                    width="8"
+                                                    height="13"
+                                                    viewBox="0 0 8 13"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M6.8407 6.10741L1.94025 1.16238C1.72522 0.945873 1.37684 0.945873 1.16127 1.16238C0.946243 1.37889 0.946243 1.73056 1.16127 1.94706L5.67302 6.49973L1.16181 11.0524C0.946786 11.2689 0.946786 11.6206 1.16181 11.8376C1.37684 12.0541 1.72577 12.0541 1.94079 11.8376L6.84124 6.89259C7.05301 6.67832 7.05301 6.32113 6.8407 6.10741Z"
+                                                        fill="#00A2E5"
+                                                        stroke="#00A2E5"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="reviews__item">
+                                        <div class="reviews__item-author">
+                                            <div class="reviews__item-author-image">
+                                                <picture>
+                                                    <source
+                                                        srcset="./images/reviews/author-image.webp"
+                                                        type="image/webp"
+                                                    />
+                                                    <img
+                                                        loading="lazy"
+                                                        src="./images/reviews/author-image.png"
+                                                        alt=""
+                                                    />
+                                                </picture>
+                                            </div>
+
+                                            <div class="reviews__item-author-info">
+                                                <p class="reviews__item-author-name">Антон Михайлов</p>
+
+                                                <span class="reviews__item-author-category"> Наркоман </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="reviews__item-info">
+                                            <p class="reviews__item-info-description">
+                                                Мефедрон – психоактивное вещество со сти эффектом. Способы
+                                                определения мефедрона в организме: виды тестов. Мефедрон –
+                                                психоактивное вещество со стимулирующим
+                                            </p>
+
+                                            <a href="#" class="reviews__item-info-link link-arrow">
+                                                Весь отзыв
+                                                <svg
+                                                    width="8"
+                                                    height="13"
+                                                    viewBox="0 0 8 13"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M6.8407 6.10741L1.94025 1.16238C1.72522 0.945873 1.37684 0.945873 1.16127 1.16238C0.946243 1.37889 0.946243 1.73056 1.16127 1.94706L5.67302 6.49973L1.16181 11.0524C0.946786 11.2689 0.946786 11.6206 1.16181 11.8376C1.37684 12.0541 1.72577 12.0541 1.94079 11.8376L6.84124 6.89259C7.05301 6.67832 7.05301 6.32113 6.8407 6.10741Z"
+                                                        fill="#00A2E5"
+                                                        stroke="#00A2E5"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="reviews__item">
+                                        <div class="reviews__item-author">
+                                            <div class="reviews__item-author-image">
+                                                <picture>
+                                                    <source
+                                                        srcset="./images/reviews/author-image.webp"
+                                                        type="image/webp"
+                                                    />
+                                                    <img
+                                                        loading="lazy"
+                                                        src="./images/reviews/author-image.png"
+                                                        alt=""
+                                                    />
+                                                </picture>
+                                            </div>
+
+                                            <div class="reviews__item-author-info">
+                                                <p class="reviews__item-author-name">Антон Михайлов</p>
+
+                                                <span class="reviews__item-author-category"> Наркоман </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="reviews__item-info">
+                                            <p class="reviews__item-info-description">
+                                                Мефедрон – психоактивное вещество со сти эффектом. Способы
+                                                определения мефедрона в организме: виды тестов. Мефедрон –
+                                                психоактивное вещество со стимулирующим
+                                            </p>
+
+                                            <a href="#" class="reviews__item-info-link link-arrow">
+                                                Весь отзыв
+                                                <svg
+                                                    width="8"
+                                                    height="13"
+                                                    viewBox="0 0 8 13"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M6.8407 6.10741L1.94025 1.16238C1.72522 0.945873 1.37684 0.945873 1.16127 1.16238C0.946243 1.37889 0.946243 1.73056 1.16127 1.94706L5.67302 6.49973L1.16181 11.0524C0.946786 11.2689 0.946786 11.6206 1.16181 11.8376C1.37684 12.0541 1.72577 12.0541 1.94079 11.8376L6.84124 6.89259C7.05301 6.67832 7.05301 6.32113 6.8407 6.10741Z"
+                                                        fill="#00A2E5"
+                                                        stroke="#00A2E5"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide reviews__slide">
+                                    <div class="reviews__item">
+                                        <div class="reviews__item-author">
+                                            <div class="reviews__item-author-image">
+                                                <picture>
+                                                    <source
+                                                        srcset="./images/reviews/author-image.webp"
+                                                        type="image/webp"
+                                                    />
+                                                    <img
+                                                        loading="lazy"
+                                                        src="./images/reviews/author-image.png"
+                                                        alt=""
+                                                    />
+                                                </picture>
+                                            </div>
+
+                                            <div class="reviews__item-author-info">
+                                                <p class="reviews__item-author-name">Антон Михайлов</p>
+
+                                                <span class="reviews__item-author-category"> Наркоман </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="reviews__item-info">
+                                            <p class="reviews__item-info-description">
+                                                Мефедрон – психоактивное вещество со сти эффектом. Способы
+                                                определения мефедрона в организме: виды тестов. Мефедрон –
+                                                психоактивное вещество со стимулирующим
+                                            </p>
+
+                                            <a href="#" class="reviews__item-info-link link-arrow">
+                                                Весь отзыв
+                                                <svg
+                                                    width="8"
+                                                    height="13"
+                                                    viewBox="0 0 8 13"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M6.8407 6.10741L1.94025 1.16238C1.72522 0.945873 1.37684 0.945873 1.16127 1.16238C0.946243 1.37889 0.946243 1.73056 1.16127 1.94706L5.67302 6.49973L1.16181 11.0524C0.946786 11.2689 0.946786 11.6206 1.16181 11.8376C1.37684 12.0541 1.72577 12.0541 1.94079 11.8376L6.84124 6.89259C7.05301 6.67832 7.05301 6.32113 6.8407 6.10741Z"
+                                                        fill="#00A2E5"
+                                                        stroke="#00A2E5"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="reviews__navigation">
+                                <div class="swiper-button-prev reviews__prev">
+                                    <svg
+                                        width="7"
+                                        height="13"
+                                        viewBox="0 0 7 13"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.659302 6.10741L5.55975 1.16238C5.77478 0.945873 6.12316 0.945873 6.33873 1.16238C6.55376 1.37889 6.55376 1.73056 6.33873 1.94706L1.82698 6.49973L6.33819 11.0524C6.55321 11.2689 6.55321 11.6206 6.33819 11.8376C6.12316 12.0541 5.77423 12.0541 5.55921 11.8376L0.658759 6.89259C0.446989 6.67832 0.446989 6.32113 0.659302 6.10741Z"
+                                            fill="#323232"
+                                            stroke="#323232"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next reviews__next">
+                                    <svg
+                                        width="7"
+                                        height="13"
+                                        viewBox="0 0 7 13"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M6.3407 6.10741L1.44025 1.16238C1.22522 0.945873 0.876843 0.945873 0.661271 1.16238C0.446243 1.37889 0.446243 1.73056 0.661271 1.94706L5.17302 6.49973L0.661814 11.0524C0.446786 11.2689 0.446786 11.6206 0.661814 11.8376C0.876843 12.0541 1.22577 12.0541 1.44079 11.8376L6.34124 6.89259C6.55301 6.67832 6.55301 6.32113 6.3407 6.10741Z"
+                                            fill="#323232"
+                                            stroke="#323232"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reviews__empty">
+                            <div class="reviews__empty-icon">
+                                <img src="./images/reviews/chat-icon.svg" alt="" />
+                            </div>
+
+                            <span class="reviews__empty-text">
+                                Оставьте свой отзыв первым и поделитесь вашим мнением
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class='firman'>
+                <div class='container'>
+                    <div class='firman__content'>
+                        <h2 class='firman__title section-title'>
+                            Лицензии
+                        </h2>
+
+                        <div class="swiper firman__swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide firman__slide">
+                                    <div class="guarantees__license">
+                                        <div class="guarantees__license-image">
+                                            <picture>
+                                                <source srcset="./images/guarantees/license.webp" type="image/webp" />
+                                                <img
+                                                    data-fancybox="license-1"
+                                                    loading="lazy"
+                                                    src="./images/guarantees/license.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+
+                                        <button
+                                            data-fancybox-trigger="license-1"
+                                            class="guarantees__license-image-button"
+                                        >
+                                            <img src="./images/search-icon.svg" alt="" />
+                                        </button>
+
+                                        <span class="guarantees__license-title">
+                                    Медицинская лицензия по&nbsp;психиатрии-наркологии
+                                </span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide firman__slide">
+                                    <div class="guarantees__license">
+                                        <div class="guarantees__license-image">
+                                            <picture>
+                                                <source srcset="./images/guarantees/license.webp" type="image/webp" />
+                                                <img
+                                                    data-fancybox="license-2"
+                                                    loading="lazy"
+                                                    src="./images/guarantees/license.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+
+                                        <button
+                                            data-fancybox-trigger="license-2"
+                                            class="guarantees__license-image-button"
+                                        >
+                                            <img src="./images/search-icon.svg" alt="" />
+                                        </button>
+
+                                        <span class="guarantees__license-title">
+                                    Медицинская лицензия по&nbsp;психиатрии-наркологии
+                                </span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide firman__slide">
+                                    <div class="guarantees__license">
+                                        <div class="guarantees__license-image">
+                                            <picture>
+                                                <source srcset="./images/guarantees/license.webp" type="image/webp" />
+                                                <img
+                                                    data-fancybox="license-3"
+                                                    loading="lazy"
+                                                    src="./images/guarantees/license.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+
+                                        <button
+                                            data-fancybox-trigger="license-3"
+                                            class="guarantees__license-image-button"
+                                        >
+                                            <img src="./images/search-icon.svg" alt="" />
+                                        </button>
+
+                                        <span class="guarantees__license-title">
+                                    Медицинская лицензия по&nbsp;психиатрии-наркологии
+                                </span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide firman__slide">
+                                    <div class="guarantees__license">
+                                        <div class="guarantees__license-image">
+                                            <picture>
+                                                <source srcset="./images/guarantees/license.webp" type="image/webp" />
+                                                <img
+                                                    data-fancybox="license-4"
+                                                    loading="lazy"
+                                                    src="./images/guarantees/license.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+
+                                        <button
+                                            data-fancybox-trigger="license-4"
+                                            class="guarantees__license-image-button"
+                                        >
+                                            <img src="./images/search-icon.svg" alt="" />
+                                        </button>
+
+                                        <span class="guarantees__license-title">
+                                    Медицинская лицензия по&nbsp;психиатрии-наркологии
+                                </span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide firman__slide">
+                                    <div class="guarantees__license">
+                                        <div class="guarantees__license-image">
+                                            <picture>
+                                                <source srcset="./images/guarantees/license.webp" type="image/webp" />
+                                                <img
+                                                    data-fancybox="license-4"
+                                                    loading="lazy"
+                                                    src="./images/guarantees/license.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+
+                                        <button
+                                            data-fancybox-trigger="license-4"
+                                            class="guarantees__license-image-button"
+                                        >
+                                            <img src="./images/search-icon.svg" alt="" />
+                                        </button>
+
+                                        <span class="guarantees__license-title">
+                                    Медицинская лицензия по&nbsp;психиатрии-наркологии
+                                </span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide firman__slide">
+                                    <div class="guarantees__license">
+                                        <div class="guarantees__license-image">
+                                            <picture>
+                                                <source srcset="./images/guarantees/license.webp" type="image/webp" />
+                                                <img
+                                                    data-fancybox="license-4"
+                                                    loading="lazy"
+                                                    src="./images/guarantees/license.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+
+                                        <button
+                                            data-fancybox-trigger="license-4"
+                                            class="guarantees__license-image-button"
+                                        >
+                                            <img src="./images/search-icon.svg" alt="" />
+                                        </button>
+
+                                        <span class="guarantees__license-title">
+                                    Медицинская лицензия по&nbsp;психиатрии-наркологии
+                                </span>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide firman__slide">
+                                    <div class="guarantees__license">
+                                        <div class="guarantees__license-image">
+                                            <picture>
+                                                <source srcset="./images/guarantees/license.webp" type="image/webp" />
+                                                <img
+                                                    data-fancybox="license-4"
+                                                    loading="lazy"
+                                                    src="./images/guarantees/license.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+
+                                        <button
+                                            data-fancybox-trigger="license-4"
+                                            class="guarantees__license-image-button"
+                                        >
+                                            <img src="./images/search-icon.svg" alt="" />
+                                        </button>
+
+                                        <span class="guarantees__license-title">
+                                    Медицинская лицензия по&nbsp;психиатрии-наркологии
+                                </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="firman__navigation">
+                                <div class="swiper-button-prev firman__prev">
+                                    <svg
+                                        width="7"
+                                        height="13"
+                                        viewBox="0 0 7 13"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.659302 6.10741L5.55975 1.16238C5.77478 0.945873 6.12316 0.945873 6.33873 1.16238C6.55376 1.37889 6.55376 1.73056 6.33873 1.94706L1.82698 6.49973L6.33819 11.0524C6.55321 11.2689 6.55321 11.6206 6.33819 11.8376C6.12316 12.0541 5.77423 12.0541 5.55921 11.8376L0.658759 6.89259C0.446989 6.67832 0.446989 6.32113 0.659302 6.10741Z"
+                                            fill="#323232"
+                                            stroke="#323232"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next firman__next">
+                                    <svg
+                                        width="7"
+                                        height="13"
+                                        viewBox="0 0 7 13"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M6.3407 6.10741L1.44025 1.16238C1.22522 0.945873 0.876843 0.945873 0.661271 1.16238C0.446243 1.37889 0.446243 1.73056 0.661271 1.94706L5.17302 6.49973L0.661814 11.0524C0.446786 11.2689 0.446786 11.6206 0.661814 11.8376C0.876843 12.0541 1.22577 12.0541 1.44079 11.8376L6.34124 6.89259C6.55301 6.67832 6.55301 6.32113 6.3407 6.10741Z"
+                                            fill="#323232"
+                                            stroke="#323232"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="specialists">
+                <div class="container">
+                    <div class="specialists__content">
+                        <h2 class="specialists__title section-title">Наши специалисты</h2>
+
+                        <div class="swiper specialists__swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide specialists__slide">
+                                    <div class="specialists__item">
+                                        <div class="specialists__item-image">
+                                            <picture>
+                                                <source
+                                                    srcset="./images/specialists/specialist-1.webp"
+                                                    type="image/webp"
+                                                />
+                                                <img
+                                                    data-fancybox="license"
+                                                    loading="lazy"
+                                                    src="./images/specialists/specialist-1.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+
+                                        <div class="specialists__item-info">
+                                            <span class="specialists__item-info-title">
+                                                Тихонова Светлана Сергеевна
+                                            </span>
+
+                                            <p class="specialists__item-info-description">
+                                                Психолог, телесно-ориентированный терапевт
+                                            </p>
+
+                                            <span class="specialists__item-info-experience">
+                                                Опыт работы 4 года
+                                            </span>
+
+                                            <a href="#" class="specialists__item-info-link link-arrow">
+                                                Подробнее о специалисте
+                                                <svg
+                                                    width="8"
+                                                    height="13"
+                                                    viewBox="0 0 8 13"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M6.8407 5.62611L1.94025 0.681089C1.72522 0.46458 1.37684 0.46458 1.16127 0.681089C0.946243 0.897597 0.946243 1.24926 1.16127 1.46577L5.67302 6.01843L1.16181 10.5711C0.946786 10.7876 0.946786 11.1393 1.16181 11.3563C1.37684 11.5728 1.72577 11.5728 1.94079 11.3563L6.84124 6.4113C7.05301 6.19703 7.05301 5.83984 6.8407 5.62611Z"
+                                                        fill="#00A2E5"
+                                                        stroke="#00A2E5"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide specialists__slide">
+                                    <div class="specialists__item">
+                                        <div class="specialists__item-image">
+                                            <picture>
+                                                <source
+                                                    srcset="./images/specialists/specialist-2.webp"
+                                                    type="image/webp"
+                                                />
+                                                <img
+                                                    data-fancybox="license"
+                                                    loading="lazy"
+                                                    src="./images/specialists/specialist-2.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+
+                                        <div class="specialists__item-info">
+                                            <span class="specialists__item-info-title">
+                                                Перевозчиков Николай Вячеславович
+                                            </span>
+
+                                            <p class="specialists__item-info-description">
+                                                Консультант по химической зависимости
+                                            </p>
+
+                                            <span class="specialists__item-info-experience">
+                                                Опыт работы 2 года
+                                            </span>
+
+                                            <a href="#" class="specialists__item-info-link link-arrow">
+                                                Подробнее о специалисте
+                                                <svg
+                                                    width="8"
+                                                    height="13"
+                                                    viewBox="0 0 8 13"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M6.8407 5.62611L1.94025 0.681089C1.72522 0.46458 1.37684 0.46458 1.16127 0.681089C0.946243 0.897597 0.946243 1.24926 1.16127 1.46577L5.67302 6.01843L1.16181 10.5711C0.946786 10.7876 0.946786 11.1393 1.16181 11.3563C1.37684 11.5728 1.72577 11.5728 1.94079 11.3563L6.84124 6.4113C7.05301 6.19703 7.05301 5.83984 6.8407 5.62611Z"
+                                                        fill="#00A2E5"
+                                                        stroke="#00A2E5"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide specialists__slide">
+                                    <div class="specialists__item">
+                                        <div class="specialists__item-image">
+                                            <picture>
+                                                <source
+                                                    srcset="./images/specialists/specialist-1.webp"
+                                                    type="image/webp"
+                                                />
+                                                <img
+                                                    data-fancybox="license"
+                                                    loading="lazy"
+                                                    src="./images/specialists/specialist-1.png"
+                                                    alt=""
+                                                />
+                                            </picture>
+                                        </div>
+
+                                        <div class="specialists__item-info">
+                                            <span class="specialists__item-info-title">
+                                                Тихонова Светлана Сергеевна
+                                            </span>
+
+                                            <p class="specialists__item-info-description">
+                                                Психолог, телесно-ориентированный терапевт
+                                            </p>
+
+                                            <span class="specialists__item-info-experience">
+                                                Опыт работы 4 года
+                                            </span>
+
+                                            <a href="#" class="specialists__item-info-link link-arrow">
+                                                Подробнее о специалисте
+                                                <svg
+                                                    width="8"
+                                                    height="13"
+                                                    viewBox="0 0 8 13"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M6.8407 5.62611L1.94025 0.681089C1.72522 0.46458 1.37684 0.46458 1.16127 0.681089C0.946243 0.897597 0.946243 1.24926 1.16127 1.46577L5.67302 6.01843L1.16181 10.5711C0.946786 10.7876 0.946786 11.1393 1.16181 11.3563C1.37684 11.5728 1.72577 11.5728 1.94079 11.3563L6.84124 6.4113C7.05301 6.19703 7.05301 5.83984 6.8407 5.62611Z"
+                                                        fill="#00A2E5"
+                                                        stroke="#00A2E5"
+                                                    />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="specialists__button mobile button-grey">Показать еще</button>
+
+                            <div class="specialists__navigation">
+                                <div class="swiper-button-prev specialists__prev">
+                                    <svg
+                                        width="7"
+                                        height="13"
+                                        viewBox="0 0 7 13"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.659302 6.10741L5.55975 1.16238C5.77478 0.945873 6.12316 0.945873 6.33873 1.16238C6.55376 1.37889 6.55376 1.73056 6.33873 1.94706L1.82698 6.49973L6.33819 11.0524C6.55321 11.2689 6.55321 11.6206 6.33819 11.8376C6.12316 12.0541 5.77423 12.0541 5.55921 11.8376L0.658759 6.89259C0.446989 6.67832 0.446989 6.32113 0.659302 6.10741Z"
+                                            fill="#323232"
+                                            stroke="#323232"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next specialists__next">
+                                    <svg
+                                        width="7"
+                                        height="13"
+                                        viewBox="0 0 7 13"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M6.3407 6.10741L1.44025 1.16238C1.22522 0.945873 0.876843 0.945873 0.661271 1.16238C0.446243 1.37889 0.446243 1.73056 0.661271 1.94706L5.17302 6.49973L0.661814 11.0524C0.446786 11.2689 0.446786 11.6206 0.661814 11.8376C0.876843 12.0541 1.22577 12.0541 1.44079 11.8376L6.34124 6.89259C6.55301 6.67832 6.55301 6.32113 6.3407 6.10741Z"
+                                            fill="#323232"
+                                            stroke="#323232"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="prices">
+                <div class="container">
+                    <div class="prices__content">
+                        <div class="prices__block">
+                            <div class="prices__block-table">
+                                <h2 class="prices__block-table-title">Стоимость детоксикации на дому</h2>
+
+                                <ul class="prices__block-table-list">
+                                    <li class="prices__block-table-item">
+                                        <p class="prices__block-table-item-title">Выезд нарколога эконом</p>
+                                        <span class="prices__block-table-item-price"> 1 000 руб. </span>
+                                    </li>
+                                    <li class="prices__block-table-item">
+                                        <p class="prices__block-table-item-title">Выезд нарколога эконом</p>
+                                        <span class="prices__block-table-item-price">1 000 руб.</span>
+                                    </li>
+                                    <li class="prices__block-table-item">
+                                        <p class="prices__block-table-item-title">
+                                            Капельница от наркотиков Стандарт
+                                        </p>
+                                        <span class="prices__block-table-item-price">от 3 200 руб.</span>
+                                    </li>
+                                    <li class="prices__block-table-item">
+                                        <p class="prices__block-table-item-title">Тройное очищение</p>
+                                        <span class="prices__block-table-item-price">1 000 руб.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
                             <div class="guarantees__license">
                                 <div class="guarantees__license-image">
                                     <picture>
@@ -407,766 +1205,90 @@
                                     Медицинская лицензия по&nbsp;психиатрии-наркологии
                                 </span>
                             </div>
-
-                            <div class="faq__info">
-                                <div class="faq__info-poster">
-                                    <picture>
-                                        <source srcset="./images/faq/car-image.webp" type="image/webp" />
-                                        <img loading="lazy" src="./images/faq/car-image.png" alt="" />
-                                    </picture>
-                                </div>
-
-                                <div class="faq__info-subtitle">Анонимно и круглосуточно</div>
-
-                                <div class="faq__info-title">
-                                    Бесплатная консультация
-                                    <span>до 2-х часов</span>
-                                </div>
-
-                                <p class="faq__info-description">
-                                    Консультируем по всем видам зависимостей. Звоните сейчас и мы найдем
-                                    решение вашей проблемы!
-                                </p>
-
-                                <span class="faq__info-text">
-                                    Работаем с зависимыми <span> от 15 до 85 лет </span>
-                                </span>
-
-                                <button class="faq__info-button button-sky">Оставить заявку</button>
-                            </div>
-                        </aside>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="features">
+            <section class="treatment --car">
                 <div class="container">
-                    <div class="features__content">
-                        <h2 class="features__title section-title">Преимущества нашего лечения</h2>
+                    <div class="treatment__content">
+                        <div class="treatment__poster desktop">
+                            <picture>
+                                <source srcset="./images/treatment/car.webp" type="image/webp" />
+                                <img loading="lazy" src="./images/treatment/car.png" alt="" />
+                            </picture>
+                        </div>
 
-                        <ul class="features__list">
-                            <li class="features__item">
-                                <div class="features__item-heading">
-                                    <div class="features__item-heading-icon">
-                                        <img src="./images/features/digit-1.svg" alt="" />
-                                    </div>
-                                    <span class="features__item-heading-title"> Работаем 24/7 </span>
-                                </div>
-                                <p class="features__item-description">
-                                    Доезжаем до любой точки города за 30 мин
-                                </p>
-                            </li>
-                            <li class="features__item">
-                                <div class="features__item-heading">
-                                    <div class="features__item-heading-icon">
-                                        <img src="./images/features/digit-2.svg" alt="" />
-                                    </div>
-                                    <span class="features__item-heading-title"> Медицинская лицензия </span>
-                                </div>
-                                <p class="features__item-description">
-                                    Клиника лицензирована по 26 специальностям, в том числе на оказание
-                                    медицинской помощи вне стационара (на дому)
-                                </p>
-                            </li>
-                            <li class="features__item">
-                                <div class="features__item-heading">
-                                    <div class="features__item-heading-icon">
-                                        <img src="./images/features/digit-3.svg" alt="" />
-                                    </div>
-                                    <span class="features__item-heading-title">Работаем 24/7</span>
-                                </div>
-                                <p class="features__item-description">
-                                    В нашем штате более 4-х врачей высшей категории, а также реаниматологи,
-                                    психотерапевты
-                                </p>
-                            </li>
-                            <li class="features__item">
-                                <div class="features__item-heading">
-                                    <div class="features__item-heading-icon">
-                                        <img src="./images/features/digit-4.svg" alt="" />
-                                    </div>
-                                    <span class="features__item-heading-title">Врачи высшей категории</span>
-                                </div>
-                                <p class="features__item-description">
-                                    Подберите наиболее близкий к Вам филиал
-                                </p>
-                            </li>
-                            <li class="features__item">
-                                <div class="features__item-heading">
-                                    <div class="features__item-heading-icon">
-                                        <img src="./images/features/digit-5.svg" alt="" />
-                                    </div>
-                                    <span class="features__item-heading-title"
-                                        >Анонимность —  наш приоритет</span
-                                    >
-                                </div>
-                                <p class="features__item-description">
-                                    Лечение проходят многие медийные личности, инкогнито гарантировано
-                                </p>
-                            </li>
-                            <li class="features__item">
-                                <div class="features__item-heading">
-                                    <div class="features__item-heading-icon">
-                                        <img src="./images/features/digit-6.svg" alt="" />
-                                    </div>
-                                    <span class="features__item-heading-title"
-                                        >Эффективность гарантирована</span
-                                    >
-                                </div>
-                                <p class="features__item-description">
-                                    При комлексном лечении результативность гарантирована
-                                </p>
-                            </li>
-                            <li class="features__item">
-                                <div class="features__item-heading">
-                                    <div class="features__item-heading-icon">
-                                        <img src="./images/features/digit-7.svg" alt="" />
-                                    </div>
-                                    <span class="features__item-heading-title"
-                                        >Клиника в здании больницы</span
-                                    >
-                                </div>
-                                <p class="features__item-description">
-                                    Медицинская помощь любой сложности оказывается круглосуточно
-                                </p>
-                            </li>
-                            <li class="features__item">
-                                <div class="features__item-heading">
-                                    <div class="features__item-heading-icon">
-                                        <img src="./images/features/digit-8.svg" alt="" />
-                                    </div>
-                                    <span class="features__item-heading-title">Гибкая ценовая политика</span>
-                                </div>
-                                <p class="features__item-description">
-                                    На любой кошелек мы подберем оптимальное лечение. Финансовые средства не
-                                    главное в вопросах жизни и смертиz
-                                </p>
-                            </li>
-                        </ul>
-
-                        <button class="features__button button-grey mobile features-show-more">
-                            Показать еще
-                        </button>
-
-                        <button class="features__button button-grey mobile features-hide hidden">
-                            Скрыть
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            <section class="better">
-                <div class="container">
-                    <div class="better__content">
-                        <article class="better__article">
-                            <h2 class="better__article-title section-title">
-                                Анонимные, бесплатные консультации 24/7
+                        <div class="treatment__content-block">
+                            <h2 class="treatment__title section-title">
+                                <span>Не хочет лечиться?</span> Мы поможем уговорить на лечение
                             </h2>
 
-                            <span class="better__article-subtitle">Наша миссия</span>
-
-                            <ul class="better__article-list">
-                                <li class="better__article-item">
-                                    <p class="better__article-item-text">
-                                        Повысить качество оказываемых медицинских услуг по отношению к
-                                        зависимым и их родственникам
-                                    </p>
-                                </li>
-                                <li class="better__article-item">
-                                    <p class="better__article-item-text">
-                                        Большая часть рынка реабилитационных центров и клиник продает за
-                                        большие деньги свою некомпетентность. Мы регулярно проводим аудит
-                                        центров и стремимся предложить вам добросовестных, готовых нести
-                                        ответственность за свою деятельность
-                                    </p>
-                                </li>
-                                <li class="better__article-item">
-                                    <p class="better__article-item-text">
-                                        Разработка комплексных программ подросткового лечения и реабилитации
-                                        от зависимостей
-                                    </p>
-                                </li>
-                                <li class="better__article-item">
-                                    <p class="better__article-item-text">
-                                        Освещение последних исследований о вреде психотропов, событий в
-                                        области борьбы с наркоманией, алкоголизмом, другими типами
-                                        зависимостей и сопутствующими заболеваниями
-                                    </p>
-                                </li>
-                                <li class="better__article-item">
-                                    <p class="better__article-item-text">
-                                        Мы стремимся донести до людей, находящихся на стадии зависимости,
-                                        какие последствия их ждут и как начать бороться с этим уже сейчас
-                                    </p>
-                                </li>
-                                <li class="better__article-item">
-                                    <p class="better__article-item-text">
-                                        Консультация – помогаем выяснить причины зависимости и наиболее
-                                        эффективные способы ее предотвращения
-                                    </p>
-                                </li>
-                                <li class="better__article-item">
-                                    <p class="better__article-item-text">
-                                        Привнесение новых знаний о наркомании и алкоголизме, чтобы спасти
-                                        больше жизней и уменьшить количество срывов
-                                    </p>
-                                </li>
-                                <li class="better__article-item">
-                                    <p class="better__article-item-text">
-                                        Разработка новых программ лечения и реабилитации для решения самых
-                                        серьезных проблем со здоровьем, вызывающих смерть и инвалидность как
-                                        последствие приема психотропных веществ
-                                    </p>
-                                </li>
-                                <li class="better__article-item">
-                                    <p class="better__article-item-text">
-                                        Стремимся внести вклад в укрепление здравоохранения - создание сильных
-                                        лидеров общественного здравоохранения и возможностей на национальном и
-                                        местном уровнях для защиты людей от угроз здоровью от незаконного
-                                        приема психотропов
-                                    </p>
-                                </li>
-                            </ul>
-                        </article>
-
-                        <aside class="better__guarantees">
-                            <div class="guarantees__license">
-                                <div class="guarantees__license-image">
-                                    <picture>
-                                        <source srcset="./images/guarantees/license.webp" type="image/webp" />
-                                        <img
-                                            data-fancybox="license"
-                                            loading="lazy"
-                                            src="./images/guarantees/license.png"
-                                            alt=""
-                                        />
-                                    </picture>
-                                </div>
-
-                                <button
-                                    data-fancybox-trigger="license"
-                                    class="guarantees__license-image-button"
-                                >
-                                    <img src="./images/search-icon.svg" alt="" />
-                                </button>
-
-                                <span class="guarantees__license-title">
-                                    Медицинская лицензия по&nbsp;психиатрии-наркологии
-                                </span>
-                            </div>
-                        </aside>
-                    </div>
-                </div>
-            </section>
-
-            <section class="call">
-                <div class="container">
-                    <div class="call__content">
-                        <button class="call__button button-grey">Заказать консультацию</button>
-
-                        <div class="call__info">
-                            <h2 class="call__title">
-                                Звоните, и вы <span>успеете спасти</span> своего близкого человека!
-                            </h2>
-
-                            <p class="call__description">
-                                Ежегодно помогаем более 25 000 зависимым начать новую жизнь
+                            <p class="treatment__description">
+                                Бесплатные консультации в РЦ, а так же наши специалисты приедут к вам и
+                                проведут бесплатную консультацию лично, чтобы уговорить на лечение вашего
+                                близкого
                             </p>
 
-                            <ul class="call__list">
-                                <li class="call__item">100% <span>Анонимно</span></li>
-                                <li class="call__item">24/7 <span>Круглосуточно</span></li>
-                                <li class="call__item">100% <span>Бесплатно</span></li>
+                            <ul class="treatment__list">
+                                <li class="treatment__item">
+                                    <div class="treatment__item-icon">
+                                        <img src="./images/treatment/home.svg" alt="" />
+                                    </div>
+
+                                    <p class="treatment__item-description">Проведение экскурсий в РЦ</p>
+                                </li>
+                                <li class="treatment__item">
+                                    <div class="treatment__item-icon">
+                                        <img src="./images/treatment/heart.svg" alt="" />
+                                    </div>
+
+                                    <p class="treatment__item-description">Классическая интервенция</p>
+                                </li>
+                                <li class="treatment__item">
+                                    <div class="treatment__item-icon">
+                                        <img src="./images/treatment/people.svg" alt="" />
+                                    </div>
+
+                                    <p class="treatment__item-description">Консультация нарколога в центре</p>
+                                </li>
                             </ul>
 
-                            <p class="call__text">
-                                Все консультации <span>бесплатные, анонимные, и круглосуточные</span>
-                            </p>
-
-                            <div class="treatment__contacts call__contacts">
+                            <div class="treatment__contacts">
                                 <a href="tel:8 (800) 600-39-60" class="treatment__contacts-link">
                                     <img src="./images/phone-icon.svg" alt="" />
                                     <span>8 (800) 600-39-60</span>
                                 </a>
 
-                                <button class="treatment__contacts-button button-sky">Оставить заявку</button>
-                            </div>
-                        </div>
-
-                        <div class="call__poster">
-                            <picture>
-                                <source srcset="./images/call/people.webp" type="image/webp" />
-                                <img loading="lazy" src="./images/call/people.png" alt="" />
-                            </picture>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="services">
-                <div class="container">
-                    <div class="services__content">
-                        <article class="services__article">
-                            <div class="services__article-heading">
-                                <div class="services__article-heading-image">
-                                    <img src="./images/services/article-logo.svg" alt="" />
-                                </div>
-                                <span class="services__article-heading-title"> Наши услуги </span>
-                            </div>
-
-                            <div class="services__article-category --active">
-                                <span class="services__article-category-title">
-                                    Наркомания
-                                    <img src="./images/arrow-down.svg" alt="" />
-                                </span>
-
-                                <ul class="services__article-category-list">
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Комплексное лечение наркомани
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Реабилитация наркозависимых
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Детоксикация от наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Кодирование от наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Нарколог на дом
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Снятие ломки
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Консультация нарколога
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link"> УБОД </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Чистка крови от наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Тестирование на наркотики
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Восстановление после наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Амбулаторное лечение наркомании
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Лечение несовершеннолетних
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Консультация нарколога дистанционно
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Родственникам
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="services__article-category">
-                                <span class="services__article-category-title">
-                                    Алкоголизм
-                                    <img src="./images/arrow-down.svg" alt="" />
-                                </span>
-
-                                <ul class="services__article-category-list">
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Комплексное лечение наркомани
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Реабилитация наркозависимых
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Детоксикация от наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Кодирование от наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Нарколог на дом
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Снятие ломки
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Консультация нарколога
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link"> УБОД </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Чистка крови от наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Тестирование на наркотики
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Восстановление после наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Амбулаторное лечение наркомании
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Лечение несовершеннолетних
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Консультация нарколога дистанционно
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Родственникам
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="services__article-category">
-                                <span class="services__article-category-title">
-                                    Игровая зависимость
-                                    <img src="./images/arrow-down.svg" alt="" />
-                                </span>
-
-                                <ul class="services__article-category-list">
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Комплексное лечение наркомани
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Реабилитация наркозависимых
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Детоксикация от наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Кодирование от наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Нарколог на дом
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Снятие ломки
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Консультация нарколога
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link"> УБОД </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Чистка крови от наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Тестирование на наркотики
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Восстановление после наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Амбулаторное лечение наркомании
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Лечение несовершеннолетних
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Консультация нарколога дистанционно
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Родственникам
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="services__article-category">
-                                <span class="services__article-category-title">
-                                    Интернет-зависимость
-                                    <img src="./images/arrow-down.svg" alt="" />
-                                </span>
-
-                                <ul class="services__article-category-list">
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Комплексное лечение наркомани
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Реабилитация наркозависимых
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Детоксикация от наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Кодирование от наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Нарколог на дом
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Снятие ломки
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Консультация нарколога
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link"> УБОД </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Чистка крови от наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Тестирование на наркотики
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Восстановление после наркотиков
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Амбулаторное лечение наркомании
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Лечение несовершеннолетних
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Консультация нарколога дистанционно
-                                        </a>
-                                    </li>
-                                    <li class="services__article-category-item">
-                                        <a href="#" class="services__article-category-item-link">
-                                            Родственникам
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </article>
-
-                        <div class="services__info">
-                            <h2 class="services__info-title">Когда необходима детоксикация от наркотиков</h2>
-
-                            <div class="services__info-content">
-                                <p class="services__info-description">
-                                    Детоксикация от наркотиков направлена на очищение организма от продуктов
-                                    распада запрещенных веществ. Метод помогает справиться с наркозависимостью
-                                    на физическом уровне. Адекватно подобранная схема детоксикационной терапии
-                                    нормализует все физиологические функции жизненно важных органов и систем,
-                                    на фоне чего они могут полноценно работать дальше без поступления
-                                    очередной дозы наркотического вещества.
-                                </p>
-                                <p class="services__info-description">
-                                    Детоксикация от наркозависимости — это начальный этап сложного лечения,
-                                    основанный на медикаментозных и немедикаментозных методиках. Вне
-                                    зависимости от того, кто обратился за наркологической помощью — сам
-                                    пациент или его близкие, в 70% случаев человек поступает в клинику либо в
-                                    состоянии наркотической интоксикации разной степени тяжести с характерным
-                                    симптоматическим комплексом, либо на фоне продолжительного и активного
-                                    употребления запрещенных веществ.
-                                </p>
-                                <p class="services__info-description">
-                                    Желая сохранить анонимность либо по другим мотивам, многие пациенты и их
-                                    родственники вызывают нарколога на дом в надежде получить быструю помощь.
-                                    Подобный подход оправдан при условии относительно недавнего применения
-                                    наркотических средств (стаж зависимости менее 1 года), употребления
-                                    растительных каннабиноидов — гашиша, конопли, марихуаны или спайса,
-                                    симптомов абстиненции, выраженных в легкой или умеренной степени тяжести.
-                                    То есть детоксикация на дому показана далеко не во всех случаях. Если у
-                                    наркозависимого имеются следующие состояния,
-                                </p>
-
-                                <button class="services__info-button mobile link-arrow">
-                                    Показать больше
-                                    <svg
-                                        width="8"
-                                        height="13"
-                                        viewBox="0 0 8 13"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M6.8407 6.10741L1.94025 1.16238C1.72522 0.945873 1.37684 0.945873 1.16127 1.16238C0.946243 1.37889 0.946243 1.73056 1.16127 1.94706L5.67302 6.49973L1.16181 11.0524C0.946786 11.2689 0.946786 11.6206 1.16181 11.8376C1.37684 12.0541 1.72577 12.0541 1.94079 11.8376L6.84124 6.89259C7.05301 6.67832 7.05301 6.32113 6.8407 6.10741Z"
-                                            fill="#00A2E5"
-                                            stroke="#00A2E5"
-                                        />
-                                    </svg>
+                                <button class="treatment__contacts-button button-sky desktop">
+                                    Оставить заявку
                                 </button>
-
-                                <ul class="services__info-list --wrapped">
-                                    <li class="services__info-item">
-                                        <div class="circle"></div>
-                                        Передозировка наркотиков
-                                    </li>
-                                    <li class="services__info-item">
-                                        <div class="circle"></div>
-                                        Острые психотические расстройства
-                                    </li>
-                                    <li class="services__info-item">
-                                        <div class="circle"></div>
-                                        Общее тяжелое состояние пациента
-                                    </li>
-
-                                    <li class="services__info-item">
-                                        <div class="circle"></div>
-                                        Стаж наркозависимости более года
-                                    </li>
-                                    <li class="services__info-item">
-                                        <div class="circle"></div>
-                                        Полинаркомания — смешивание нескольких ПАВ и алкоголя
-                                    </li>
-                                    <li class="services__info-item">
-                                        <div class="circle"></div>
-                                        Абстинентный синдром, ломка
-                                    </li>
-                                    <li class="services__info-item">
-                                        <div class="circle"></div>
-                                        Употребление опиатов, синтетических наркотиков и стимуляторов
-                                    </li>
-                                </ul>
-
-                                <p class="services__info-description">
-                                    Все эти клинические ситуации являются показаниями для госпитализации
-                                    наркозависимого в стационар. Также детоксикационная терапия от
-                                    наркотических веществ показана при наличии у человека самостоятельного
-                                    желания пройти лечение и справиться с зависимостью, имеющемся страхе перед
-                                    очередной «ломкой», выраженных соматических расстройствах на фоне
-                                    употребления ПАВ.
-                                </p>
-                                <p class="services__info-description">
-                                    Преимуществами проведения детоксикации в клиниках Москвы:
-                                </p>
-                                <p class="services__info-description">
-                                    В наркологических клиниках Москвы пациенту будет оказана
-                                    специализированная экстренная помощь, направленная на предупреждение
-                                    серьезных осложнений для здоровья. За ним устанавливается круглосуточное
-                                    наблюдение врачом-наркологом и психиатром, что позволяет отследить любые
-                                    изменения в психическом и физическом состоянии подопечного и в случае
-                                    необходимости принять соответствующие меры.
-                                </p>
-
-                                <ul class="services__info-list">
-                                    <li class="services__info-item">
-                                        <div class="circle"></div>
-                                        Индивидуальный подход, отсутствие стандартных и универсальных тактик
-                                        воздействия
-                                    </li>
-                                    <li class="services__info-item">
-                                        <div class="circle"></div>
-                                        Забота о пациенте — медицинские вмешательства будут проводиться
-                                        требуемое количество раз, метод «общепринятых двух капельниц» с
-                                        последующей выпиской из стационара исключен
-                                    </li>
-                                    <li class="services__info-item">
-                                        <div class="circle"></div>
-                                        Комплексное оказание помощи
-                                    </li>
-                                </ul>
                             </div>
+
+                            <div class="treatment__poster mobile">
+                                <picture>
+                                    <source srcset="./images/treatment/car.webp" type="image/webp" />
+                                    <img loading="lazy" src="./images/treatment/car.png" alt="" />
+                                </picture>
+                            </div>
+
+                            <button class="treatment__contacts-button button-sky mobile">
+                                Оставить заявку
+                            </button>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <section class='others'>
+                <div class='container'>
+                    <div class='others__content'>
+
+                    </div>
+                </div>
+            </section>
+
         </main>
 
         <footer class="footer">
@@ -1499,4 +1621,8 @@
             </div>
         </footer>
     </body>
+    <script
+        src="https://api-maps.yandex.ru/2.1/?apikey=c9e39c09-0f62-4828-b0ce-7ca99a606b15&lang=ru_RU"
+        type="text/javascript"
+    ></script>
 </html>

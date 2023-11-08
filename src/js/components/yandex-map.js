@@ -175,3 +175,29 @@ if (document.querySelector('.clinics')) {
         });
     }
 }
+
+if (document.querySelector('.location')) {
+    ymaps.ready(init);
+
+    function init() {
+        let map = new ymaps.Map('location-map', {
+            center: [55.75244503863624, 37.619346417968764],
+            zoom: 10
+        });
+
+        const placemark = new ymaps.Placemark(
+            map.getCenter(),
+            {
+                balloonContent: generateBalloon({
+                    title: 'Москва, Твой шанс',
+                    address: 'г. Москва, Одинцово'
+                })
+            },
+            placemarkOptions
+        );
+
+        map.geoObjects.add(placemark);
+
+        removeControls(map);
+    }
+}

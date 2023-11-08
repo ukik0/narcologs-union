@@ -20438,7 +20438,7 @@ function rem(rem) {
     }
 }
 function swiperDefaultSetting(init, payload) {
-    return __assign({ loop: true, speed: 1500, keyboard: {
+    return __assign({ speed: 1500, keyboard: {
             enabled: true
         }, navigation: {
             nextEl: ".".concat(init, "__next"),
@@ -20579,6 +20579,24 @@ new Swiper('.core__swiper', swiperDefaultSetting('core', {
     0: {
       spaceBetween: rem(3.6),
       slidesPerView: 1,
+      grabCursor: true
+    }
+  }
+}));
+new Swiper('.firman__swiper', swiperDefaultSetting('firman', {
+  modules: [Navigation, Grid],
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: rem(1.1),
+      grid: {
+        rows: 2,
+        fill: 'row'
+      }
+    },
+    768: {
+      spaceBetween: rem(7.55),
+      slidesPerView: 3,
       grabCursor: true
     }
   }
@@ -20824,6 +20842,23 @@ if (document.querySelector('.clinics')) {
       }, placemarkOptions);
       map.geoObjects.add(placemark);
     });
+  }
+}
+if (document.querySelector('.location')) {
+  ymaps.ready(init);
+  function init() {
+    let map = new ymaps.Map('location-map', {
+      center: [55.75244503863624, 37.619346417968764],
+      zoom: 10
+    });
+    const placemark = new ymaps.Placemark(map.getCenter(), {
+      balloonContent: generateBalloon({
+        title: 'Москва, Твой шанс',
+        address: 'г. Москва, Одинцово'
+      })
+    }, placemarkOptions);
+    map.geoObjects.add(placemark);
+    removeControls(map);
   }
 }
 // EXTERNAL MODULE: ./src/js/components/services.ts
