@@ -20588,15 +20588,37 @@ new Swiper('.firman__swiper', swiperDefaultSetting('firman', {
   breakpoints: {
     0: {
       slidesPerView: 1,
-      spaceBetween: rem(1.1),
+      spaceBetween: rem(3.6),
       grid: {
-        rows: 2,
+        rows: 3,
         fill: 'row'
       }
     },
     768: {
       spaceBetween: rem(7.55),
       slidesPerView: 3,
+      grabCursor: true
+    }
+  }
+}));
+new Swiper('.others__swiper', swiperDefaultSetting('others', {
+  modules: [Navigation, Grid],
+  breakpoints: {
+    0: {
+      spaceBetween: rem(3.6),
+      slidesPerView: 1,
+      grid: {
+        rows: 3,
+        fill: 'row'
+      }
+    },
+    768: {
+      spaceBetween: rem(3.6),
+      slidesPerView: 2,
+      grid: {
+        rows: 2,
+        fill: 'row'
+      },
       grabCursor: true
     }
   }
@@ -20845,9 +20867,15 @@ if (document.querySelector('.clinics')) {
   }
 }
 if (document.querySelector('.location')) {
+  initMap('location-map');
+}
+if (document.querySelector('.contacts')) {
+  initMap('contacts-map');
+}
+function initMap(mapId) {
   ymaps.ready(init);
   function init() {
-    let map = new ymaps.Map('location-map', {
+    let map = new ymaps.Map(mapId, {
       center: [55.75244503863624, 37.619346417968764],
       zoom: 10
     });

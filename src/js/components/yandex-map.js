@@ -177,10 +177,18 @@ if (document.querySelector('.clinics')) {
 }
 
 if (document.querySelector('.location')) {
+    initMap('location-map')
+}
+
+if (document.querySelector('.contacts')) {
+    initMap('contacts-map')
+}
+
+function initMap(mapId) {
     ymaps.ready(init);
 
     function init() {
-        let map = new ymaps.Map('location-map', {
+        let map = new ymaps.Map(mapId, {
             center: [55.75244503863624, 37.619346417968764],
             zoom: 10
         });

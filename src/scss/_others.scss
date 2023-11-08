@@ -1,0 +1,11 @@
+.others {
+    @include swiper-navigation();
+
+    &__title {
+        margin-bottom: 7rem;
+
+        @include small-tablet{
+            margin-bottom: 5rem;
+        }
+    }
+}
