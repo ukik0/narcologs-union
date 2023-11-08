@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Grid, Navigation } from 'swiper/modules';
 
 import { rem, swiperDefaultSetting } from '../utils';
 
@@ -7,6 +7,26 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/grid';
+
+new Swiper(
+    '.mySwiper',
+    swiperDefaultSetting('gallery', {
+        modules: [Navigation],
+        breakpoints: {
+            0: {
+                slidesPerView: 1.2,
+                spaceBetween: rem(1),
+                slideToClickedSlide: true
+            },
+            768: {
+                spaceBetween: rem(1.6),
+                slidesPerView: '4',
+                grabCursor: true,
+                setWrapperSize: true
+            }
+        }
+    })
+);
 
 new Swiper(
     '.gallery__swiper',
@@ -21,7 +41,8 @@ new Swiper(
             768: {
                 spaceBetween: rem(1.6),
                 slidesPerView: '4',
-                grabCursor: true
+                grabCursor: true,
+                setWrapperSize: true
             }
         }
     })
@@ -112,12 +133,17 @@ new Swiper(
 new Swiper(
     '.clinics__swiper.desktop',
     swiperDefaultSetting('clinics', {
-        modules: [Navigation],
+        modules: [Navigation, Grid],
         breakpoints: {
             768: {
                 spaceBetween: rem(3.6),
-                slidesPerView: 1,
-                grabCursor: true
+                slidesPerView: 3,
+                grabCursor: true,
+                grid: {
+                    rows: 2,
+                    fill: 'row'
+                },
+                loop: false
             }
         }
     })
