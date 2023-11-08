@@ -20394,6 +20394,16 @@ new Swiper('.clinics__swiper.mobile', swiperDefaultSetting('clinics', {
     }
   }
 }));
+new Swiper('.core__swiper', swiperDefaultSetting('core', {
+  modules: [Navigation],
+  breakpoints: {
+    0: {
+      spaceBetween: rem(3.6),
+      slidesPerView: 1,
+      grabCursor: true
+    }
+  }
+}));
 ;// CONCATENATED MODULE: ./src/js/components/show-more.ts
 
 

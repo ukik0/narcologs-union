@@ -117,10 +117,9 @@
         margin-top: 5rem;
 
         @include small-tablet {
-            margin-top: 4rem;
-            margin-left: $margin-left;
             gap: 6rem;
-            justify-content: initial;
+            justify-content: center;
+            margin-top: 4rem;
         }
     }
 

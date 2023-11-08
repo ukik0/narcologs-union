@@ -136,3 +136,17 @@ new Swiper(
         }
     })
 );
+
+new Swiper(
+    '.core__swiper',
+    swiperDefaultSetting('core', {
+        modules: [Navigation],
+        breakpoints: {
+            0: {
+                spaceBetween: rem(3.6),
+                slidesPerView: 1,
+                grabCursor: true
+            }
+        }
+    })
+);

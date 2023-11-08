@@ -15,9 +15,100 @@
         }
     }
 
+    &__subtitle {
+        @include p;
+        text-align: center;
+        display: block;
+        color: $sky-primary;
+
+        @include small-tablet{
+            text-align: start;
+            font-size: 3.2rem;
+        }
+    }
+
+    &.--rehabilitation {
+        margin-top: 23rem;
+
+        @include small-tablet{
+            margin-top: 14rem;
+        }
+
+        .clinics__title {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__filter {
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(28.3rem, 1fr));
+            gap: 2.63rem;
+            max-width: 120.2rem;
+            margin: 5rem auto;
+
+            @include small-tablet{
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+                max-width: 100%;
+                margin-top: 6rem;
+            }
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 0.5rem;
+            background: $white;
+            border-radius: 10rem;
+            border: 0.2rem solid transparent;
+            cursor: pointer;
+            padding: 1.5rem 2rem;
+
+            @include small-tablet{
+                padding: 1rem;
+                gap: 3.2rem;
+            }
+
+            @include transition($property: border background);
+
+            &.--active {
+                border: 0.2rem solid #dee5f8;
+                background: linear-gradient(
+                    214deg,
+                    rgba(255, 255, 255, 0.4) 36.29%,
+                    rgba(209, 228, 240, 0.4) 130.68%
+                );
+            }
+
+            &-category {
+                @include p;
+
+                @include small-tablet{
+                    font-size: 3rem;
+                }
+            }
+
+            &-description {
+                @include h3;
+
+                @include small-tablet{
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
     &__title {
         text-align: center;
         margin-bottom: 5rem;
+
+        @include small-tablet{
+            text-align: start;
+        }
     }
 
     &__search {
