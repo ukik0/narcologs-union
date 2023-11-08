@@ -1,4 +1,10 @@
 .about {
+    margin-bottom: 21.2rem;
+
+    @include small-tablet {
+        margin-bottom: 12.2rem;
+    }
+
     &__content {
         display: flex;
         align-items: flex-start;
