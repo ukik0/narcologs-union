@@ -1,0 +1,37 @@
+.pagination {
+    margin-top: 12rem;
+
+    @include small-tablet{
+        margin: 10rem 0;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__item {
+        a {
+            color: $text-primary;
+            font-size: 1.8rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 2.5rem;
+            @include transition(color);
+
+            @include small-tablet{
+                font-size: 3.4rem;
+                line-height: 4rem;
+            }
+        }
+
+        &.--active {
+            a {
+                @include h2;
+                color: $sky-primary;
+            }
+        }
+    }
+}
