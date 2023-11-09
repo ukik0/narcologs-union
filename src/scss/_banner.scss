@@ -1,0 +1,68 @@
+.banner {
+    margin-top: 8rem;
+
+    &__content {
+        display: flex;
+        gap: 4.2rem;
+        align-items: flex-start;
+
+        @include small-tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__difficult {
+        display: flex;
+        flex-direction: column;
+        gap: 5.6rem;
+        max-width: 65rem;
+        width: 100%;
+
+        @include small-tablet {
+            max-width: 100%;
+        }
+
+        &-helping {
+            padding: 2.4rem 3.5rem 2.4rem 13.4rem;
+            border-radius: 4rem;
+            border: 0.2rem solid #dee5f8;
+            background: linear-gradient(
+                214deg,
+                rgba(255, 255, 255, 0.4) 36.29%,
+                rgba(209, 228, 240, 0.4) 130.68%
+            );
+            backdrop-filter: blur(0.75rem);
+            display: flex;
+            flex-direction: column;
+
+            @include small-tablet {
+                border-radius: 8rem;
+                padding: 4rem 4rem 4rem 17rem;
+            }
+
+            &-title {
+                @include h2;
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            &-description {
+                @include p;
+            }
+
+            &-icon {
+                position: absolute;
+                max-width: 7.8rem;
+                width: 100%;
+                height: auto;
+                left: 3.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @include small-tablet {
+                    max-width: 11rem;
+                }
+            }
+        }
+    }
+}
