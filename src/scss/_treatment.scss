@@ -383,6 +383,36 @@
         }
     }
 
+    &.--doctor-man {
+        .treatment__poster {
+            max-width: 40.5694rem;
+            height: 48rem;
+            right: 6rem;
+            top: auto;
+            bottom: 0;
+
+            @include small-tablet {
+                order: 10;
+                max-width: 37rem;
+                height: 45rem;
+                margin: 6rem auto 0;
+            }
+        }
+
+        .treatment__content-block {
+            @include small-tablet {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .treatment__content {
+            @include small-tablet {
+                padding-bottom: 2rem;
+            }
+        }
+    }
+
     &__content {
         border-radius: 5rem;
         border: 0.1rem solid $white;
