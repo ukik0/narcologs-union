@@ -140,6 +140,14 @@
         width: 100%;
         padding: 4rem 3rem 1.5rem;
 
+        &.--warning {
+            .faq__info-subtitle {
+                @include h1;
+                margin-bottom: 2.1rem;
+                color: #ff6a62;
+            }
+        }
+
         @include small-tablet {
             max-width: 100%;
             border-radius: 10rem;
