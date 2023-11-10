@@ -268,7 +268,7 @@
                                     <img src="./images/phone.svg" alt="" />
                                     Вызвать врача
                                 </button>
-                                <button class="hero__content-text-button-secondary button-sky">
+                                <button class="hero__content-text-button-secondary button-sky request-button">
                                     Рассчитать стоимость
                                 </button>
                             </div>
@@ -2592,55 +2592,78 @@
         <div class="modal__wrapper" id="request-modal">
             <div class="modal">
                 <div class="modal__close">
-                    <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M18 18L6 6M18 6L6 18"
-                            stroke="#555760"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                    </svg>
+                    <img src="./images/close-icon.svg" alt="" />
                 </div>
-                <h2 class="modal__title">Заказать звонок</h2>
+                <h2 class="modal__title section-title">Оставить заявку</h2>
                 <div class="modal__body">
-                    <h3 class="modal__subtitle request__modal-subtitle">
-                        Оставьте свои данные и мы вам перезвоним
+                    <div class="request__modal-icon">
+                        <img src="./images/modals/chat-icon.svg" alt="" />
+                    </div>
+
+                    <h3 class="modal__description">
+                        Бесплатные поддержка и консультации зависимых Остатьвьте заяку и мы свяжемся с вами в
+                        течение дня!
                     </h3>
 
                     <form action="#" class="request__modal-form">
                         <div class="request__modal-fields">
-                            <label class="label" for="name">
-                                <span>Имя</span>
-                                <input
-                                    id="name"
-                                    placeholder="Ваше имя"
-                                    type="text"
-                                    class="input request__modal-input"
-                                />
-                            </label>
-
                             <label class="label" for="phone">
-                                <span>Номер телефона</span>
                                 <input
                                     id="phone"
-                                    placeholder="+ 7 (999) 999 99-99"
+                                    placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
                                     type="tel"
-                                    class="input request__modal-input"
+                                    class="request__modal-input --phone"
                                 />
                             </label>
-                        </div>
 
-                        <button type="submit" class="button request__modal-button request-success-button">
-                            Отправить заявку
-                        </button>
+                            <label class="label" for="comment">
+                                <textarea
+                                    id="comment"
+                                    placeholder="Сообщение"
+                                    class="request__modal-input --comment"
+                                ></textarea>
+                            </label>
+
+                            <button
+                                type="submit"
+                                class="request-success-button request__modal-button-icon link-circle-arrow-right desktop"
+                            >
+                                <svg
+                                    width="8"
+                                    height="13"
+                                    viewBox="0 0 8 13"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M7.08406 6.21164L1.97943 1.1657C1.75544 0.944768 1.39254 0.944768 1.16799 1.1657C0.944003 1.38662 0.944003 1.74547 1.16799 1.96639L5.86773 6.61197L1.16856 11.2575C0.944569 11.4785 0.944569 11.8373 1.16856 12.0588C1.39254 12.2797 1.75601 12.2797 1.97999 12.0588L7.08463 7.01285C7.30522 6.79421 7.30522 6.42972 7.08406 6.21164Z"
+                                        fill="white"
+                                        stroke="white"
+                                    />
+                                </svg>
+                            </button>
+
+                            <button type="submit" class="request-success-button request__modal-button button-sky mobile">
+                                Отправить
+                            </button>
+                        </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal__wrapper" id="request-modal-success">
+            <div class="modal">
+                <div class="modal__close">
+                    <img src="./images/close-icon.svg" alt="" />
+                </div>
+                <h2 class="modal__title section-title">Ваша заявка принята</h2>
+                <div class="modal__body">
+                    <div class="request__modal-icon">
+                        <img src="./images/modals/chat-icon.svg" alt="" />
+                    </div>
+
+                    <h3 class="modal__description">Мы свяжемся с вами в течение дня!</h3>
                 </div>
             </div>
         </div>
