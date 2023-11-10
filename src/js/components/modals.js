@@ -13,20 +13,19 @@ function bindModal(trigger, modal, close, callback = () => null) {
             e.preventDefault();
             modal.classList.add('--active');
             modalBody.classList.add('--active');
-            $('body').width($(document).width()).addClass('locked');
+            body.classList.add('locked');
         });
     });
     $(close).on('click', () => {
         modalBody.classList.remove('--active');
         modal.classList.remove('--active');
-        $('body').width('').removeClass('locked');
+        body.classList.remove('locked');
     });
     $(modal).on('click', (e) => {
         if (e.target === modal) {
             modalBody.classList.remove('--active');
             modal.classList.remove('--active');
             body.classList.remove('locked');
-            $('body').width('').removeClass('locked');
         }
     });
 
@@ -35,6 +34,8 @@ function bindModal(trigger, modal, close, callback = () => null) {
 
 bindModal('.request-button', '#request-modal', '#request-modal .modal__close');
 bindModal('.request-success-button', '#request-modal-success', '#request-modal-success .modal__close', bindSuccessModal);
+
+bindModal('.comment-button', '#comment-modal', '#comment-modal .modal__close');
 
 function bindSuccessModal() {
     $('.request-success-button').on('click', (event) => {

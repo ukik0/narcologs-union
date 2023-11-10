@@ -229,7 +229,6 @@
     }
 
     &-success {
-
         .modal {
             display: flex;
             flex-direction: column;
@@ -249,4 +248,91 @@
             }
         }
     }
+}
+
+#comment-modal {
+
+    .comment__modal {
+        &-icon {
+            position: absolute;
+            top: -6rem;
+            left: -1.7rem;
+            max-width: 13rem;
+            width: 100%;
+            height: 15rem;
+
+            @include small-tablet {
+                position: absolute;
+                top: -14rem;
+                left: 50%;
+                transform: translateX(-50%);
+                max-width: 24rem;
+                width: 100%;
+                height: 27rem;
+            }
+        }
+    }
+
+    .modal {
+        padding: 7.6rem 4.3rem;
+        max-width: 126.6rem;
+
+        @include small-tablet{
+            max-width: 100%;
+            padding: 6.3rem;
+        }
+    }
+
+    .reviews__item {
+        @include small-tablet{
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        &-author {
+            max-width: 25rem;
+            padding: 3.18rem 3.32rem 3.27rem 3.81rem;
+
+            @include small-tablet{
+                padding: 0;
+                border: 0;
+                max-width: 45rem;
+                gap: 2.6rem;
+            }
+
+            &-name {
+                @include h2;
+            }
+
+            &-category {
+                @include p;
+            }
+
+            &-image {
+                max-width: 10.3rem;
+                height: 10.3rem;
+
+                @include small-tablet{
+                    max-width: 14.3rem;
+                    height: 14.3rem;
+                }
+            }
+        }
+
+        &-info {
+            padding: 3.2rem 7rem;
+            max-width: 99.1rem;
+            width: 100%;
+            margin-top: -21rem;
+            margin-left: 19rem;
+
+            @include small-tablet{
+                margin: 0;
+                max-width: 100%;
+                padding: 0;
+                border: 0;
+            }
+        }
+    }
+
 }
