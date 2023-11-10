@@ -20623,6 +20623,23 @@ new Swiper('.others__swiper', swiperDefaultSetting('others', {
     }
   }
 }));
+new Swiper('.publication__swiper', swiperDefaultSetting('publication', {
+  modules: [Navigation, Grid],
+  spaceBetween: rem(4.6),
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      grid: {
+        rows: 2,
+        fill: 'row'
+      }
+    },
+    768: {
+      slidesPerView: 2,
+      grabCursor: true
+    }
+  }
+}));
 ;// CONCATENATED MODULE: ./src/js/components/show-more.ts
 
 

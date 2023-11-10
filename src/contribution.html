@@ -715,40 +715,481 @@
             </section>
 
             <section class="contribution__article-comment">
-               <div class='container'>
-                   <h1 class="contribution__article-comment-title section-title">Оставить комментарий</h1>
+                <div class="container">
+                    <h1 class="contribution__article-comment-title section-title">Оставить комментарий</h1>
 
-                   <p class="contribution__article-comment-description">
-                       Оставляя комментарий вы помогаете нам улучшать качество статей. Мы ценим ваше мнение!
-                   </p>
+                    <p class="contribution__article-comment-description">
+                        Оставляя комментарий вы помогаете нам улучшать качество статей. Мы ценим ваше мнение!
+                    </p>
 
-                   <form action="#" class="contribution__article-comment-form">
-                       <div class="contribution__article-comment-form-wrapper">
-                           <label for="name" class="contribution__article-comment-form-name">
-                               <input
-                                   id="name"
-                                   placeholder="Ваше имя"
-                                   type="text"
-                                   class="contribution__article-comment-form-input"
-                               />
-                           </label>
+                    <form action="#">
+                        <div class="contribution__article-comment-form">
+                            <div class="contribution__article-comment-form-wrapper">
+                                <label for="name" class="contribution__article-comment-form-name">
+                                    <input
+                                        id="name"
+                                        placeholder="Ваше имя"
+                                        type="text"
+                                        class="contribution__article-comment-form-input"
+                                    />
+                                </label>
 
-                           <label for="comment" class="contribution__article-comment-form-comment">
-                               <input
-                                   id="comment"
-                                   placeholder="Комментарий"
-                                   type="text"
-                                   class="contribution__article-comment-form-input"
-                               />
-                           </label>
+                                <label for="comment" class="contribution__article-comment-form-comment">
+                                    <textarea
+                                        id="comment"
+                                        placeholder="Комментарий"
+                                        class="contribution__article-comment-form-input"
+                                    ></textarea>
+                                </label>
 
-                           <button type="submit" class="contribution__article-comment-form-button button-sky">
-                               Отправить
-                           </button>
-                       </div>
-                   </form>
-               </div>
+                                <button
+                                    type="submit"
+                                    class="contribution__article-comment-form-button button-sky desktop"
+                                >
+                                    Отправить
+                                </button>
+                            </div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="contribution__article-comment-form-button button-sky mobile"
+                        >
+                            Отправить
+                        </button>
+                    </form>
+                </div>
             </section>
+
+            <section class="comments">
+                <div class="container">
+                    <div class="comments__content">
+                        <ul class="comments__list">
+                            <li class="comments__item">
+                                <p class="comments__item-author">Алексей <span>• 18.10.2023</span></p>
+
+                                <p class="comments__item-description">
+                                    Психическими расстройствами, поэтому человек без медицинского образования
+                                    наркоману ничем помочь не сможет. При подозрении на отравление альфа-ПВП
+                                    нужно немедленно вызывать скорую. До приезда врачей необходимо постоянно
+                                    следить за пациентом, поскольку, находясь в невменяемом состоянии, он
+                                    может нанести вред себе или окружающим
+                                </p>
+                            </li>
+                            <li class="comments__item">
+                                <p class="comments__item-author">Алексей <span>• 18.10.2023</span></p>
+
+                                <p class="comments__item-description">
+                                    Психическими расстройствами, поэтому человек без медицинского образования
+                                    наркоману ничем помочь не сможет. При подозрении на отравление альфа-ПВП
+                                    нужно немедленно вызывать скорую. До приезда врачей необходимо постоянно
+                                    следить за пациентом, поскольку, находясь в невменяемом состоянии, он
+                                    может нанести вред себе или окружающим
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="treatment --bg-white --consultant">
+                <div class="container">
+                    <div class="treatment__content">
+                        <div class="treatment__poster desktop">
+                            <picture>
+                                <source srcset="./images/treatment/consultant.webp" type="image/webp" />
+                                <img loading="lazy" src="./images/treatment/consultant.png" alt="" />
+                            </picture>
+                        </div>
+
+                        <div class="treatment__content-block">
+                            <h2 class="treatment__title section-title">
+                                Бесплатные консультации со специалистом <span>до 2-х часов</span>
+                            </h2>
+
+                            <ul class="treatment__stages-list">
+                                <li class="treatment__stages-item">
+                                    <span> Замотивируем зависимого на лечение </span>
+                                    Психологи поговорят с зависимым и убедят его пройти лечение
+                                </li>
+                                <li class="treatment__stages-item">
+                                    <span> Замотивируем зависимого на лечение </span>
+                                    Консультанты сами прошли реабилитацию, поэтому знают как вам помочь
+                                </li>
+                                <li class="treatment__stages-item">
+                                    <span>Бесплатно подберем реабилитационный центр и клинику</span>
+                                    Подбираем центр и клинику подходящие именно вам
+                                </li>
+                            </ul>
+
+                            <p class="treatment__description">
+                                Все консультации <span>бесплатные, анонимные, и круглосуточные</span>
+                            </p>
+
+                            <div class="treatment__contacts">
+                                <a href="tel:8 (800) 600-39-60" class="treatment__contacts-link">
+                                    <img src="./images/phone-icon.svg" alt="" />
+                                    <span>8 (800) 600-39-60</span>
+                                </a>
+
+                                <button class="treatment__contacts-button button-sky desktop">
+                                    Оставить заявку
+                                </button>
+                            </div>
+
+                            <div class="treatment__poster mobile">
+                                <picture>
+                                    <source srcset="./images/treatment/consultant.webp" type="image/webp" />
+                                    <img loading="lazy" src="./images/treatment/consultant.png" alt="" />
+                                </picture>
+                            </div>
+
+                            <button class="treatment__contacts-button button-sky mobile">
+                                Оставить заявку
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class='publication'>
+                <div class='container'>
+                    <div class='publication__content'>
+                        <h2 class='publication__title section-title'>
+                            Другие публикации
+                        </h2>
+
+                        <div class="swiper publication__swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide publication__slide">
+                                    <div class='news__item'>
+                                        <div class="news__item-image">
+                                            <picture>
+                                                <source srcset="./images/news/image.webp" type="image/webp" />
+                                                <img loading="lazy" src="./images/news/image.png" alt="" />
+                                            </picture>
+
+                                            <a href="#" class="news__item-image-link link-circle-arrow-down">
+                                                <svg
+                                                    class="arrow"
+                                                    width="9"
+                                                    height="15"
+                                                    viewBox="0 0 9 15"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M7.81415 7.03603L2.09696 1.19191C1.84609 0.936032 1.43965 0.936032 1.18815 1.19191C0.937283 1.44778 0.937283 1.86338 1.18815 2.11926L6.45186 7.49968L1.18878 12.8801C0.937916 13.136 0.937916 13.5516 1.18878 13.8081C1.43965 14.064 1.84673 14.064 2.09759 13.8081L7.81478 7.96397C8.06185 7.71074 8.06185 7.28861 7.81415 7.03603Z"
+                                                        fill="#00A2E5"
+                                                        stroke="#00A2E5"
+                                                        stroke-width="0.3"
+                                                    />
+                                                </svg>
+
+                                                <svg
+                                                    class="circle"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="46"
+                                                    height="47"
+                                                    viewBox="0 0 46 47"
+                                                    fill="none"
+                                                >
+                                                    <circle
+                                                        cx="23"
+                                                        cy="23.1992"
+                                                        r="22"
+                                                        transform="rotate(90 23 23.1992)"
+                                                        fill="white"
+                                                    />
+                                                    <circle
+                                                        cx="23"
+                                                        cy="23.1992"
+                                                        r="22"
+                                                        transform="rotate(90 23 23.1992)"
+                                                        fill="url(#paint0_linear_1201_112974)"
+                                                    />
+                                                    <circle
+                                                        cx="23"
+                                                        cy="23.1992"
+                                                        r="22"
+                                                        transform="rotate(90 23 23.1992)"
+                                                        stroke="url(#paint1_linear_1201_112974)"
+                                                        stroke-width="2"
+                                                    />
+                                                    <defs>
+                                                        <linearGradient
+                                                            id="paint0_linear_1201_112974"
+                                                            x1="53.5"
+                                                            y1="16.6992"
+                                                            x2="-77.9905"
+                                                            y2="69.1572"
+                                                            gradientUnits="userSpaceOnUse"
+                                                        >
+                                                            <stop stop-color="white" />
+                                                            <stop offset="1" stop-color="#E9F8FF" />
+                                                        </linearGradient>
+                                                        <linearGradient
+                                                            id="paint1_linear_1201_112974"
+                                                            x1="37.7529"
+                                                            y1="-11.1487"
+                                                            x2="6.87579"
+                                                            y2="27.6608"
+                                                            gradientUnits="userSpaceOnUse"
+                                                        >
+                                                            <stop stop-color="#DEE5F8" />
+                                                            <stop offset="1" stop-color="white" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                            </a>
+                                        </div>
+
+                                        <div class="news__item-info">
+                                            <time class="news__item-info-date"> 20.03.2020 </time>
+
+                                            <a href='#' class="news__item-info-title link">
+                                                Способы определения мефедрона в организме: виды тестов
+                                            </a>
+
+                                            <p class="news__item-info-description">
+                                                Мефедрон – психоактивное вещество со стимулирующим эффектом. Способы
+                                                определения мефедрона в организме: виды тестов
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide publication__slide">
+                                    <div class='news__item'>
+                                        <div class="news__item-image">
+                                            <picture>
+                                                <source srcset="./images/news/image.webp" type="image/webp" />
+                                                <img loading="lazy" src="./images/news/image.png" alt="" />
+                                            </picture>
+
+                                            <a href="#" class="news__item-image-link link-circle-arrow-down">
+                                                <svg
+                                                    class="arrow"
+                                                    width="9"
+                                                    height="15"
+                                                    viewBox="0 0 9 15"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M7.81415 7.03603L2.09696 1.19191C1.84609 0.936032 1.43965 0.936032 1.18815 1.19191C0.937283 1.44778 0.937283 1.86338 1.18815 2.11926L6.45186 7.49968L1.18878 12.8801C0.937916 13.136 0.937916 13.5516 1.18878 13.8081C1.43965 14.064 1.84673 14.064 2.09759 13.8081L7.81478 7.96397C8.06185 7.71074 8.06185 7.28861 7.81415 7.03603Z"
+                                                        fill="#00A2E5"
+                                                        stroke="#00A2E5"
+                                                        stroke-width="0.3"
+                                                    />
+                                                </svg>
+
+                                                <svg
+                                                    class="circle"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="46"
+                                                    height="47"
+                                                    viewBox="0 0 46 47"
+                                                    fill="none"
+                                                >
+                                                    <circle
+                                                        cx="23"
+                                                        cy="23.1992"
+                                                        r="22"
+                                                        transform="rotate(90 23 23.1992)"
+                                                        fill="white"
+                                                    />
+                                                    <circle
+                                                        cx="23"
+                                                        cy="23.1992"
+                                                        r="22"
+                                                        transform="rotate(90 23 23.1992)"
+                                                        fill="url(#paint0_linear_1201_112974)"
+                                                    />
+                                                    <circle
+                                                        cx="23"
+                                                        cy="23.1992"
+                                                        r="22"
+                                                        transform="rotate(90 23 23.1992)"
+                                                        stroke="url(#paint1_linear_1201_112974)"
+                                                        stroke-width="2"
+                                                    />
+                                                    <defs>
+                                                        <linearGradient
+                                                            id="paint0_linear_1201_112974"
+                                                            x1="53.5"
+                                                            y1="16.6992"
+                                                            x2="-77.9905"
+                                                            y2="69.1572"
+                                                            gradientUnits="userSpaceOnUse"
+                                                        >
+                                                            <stop stop-color="white" />
+                                                            <stop offset="1" stop-color="#E9F8FF" />
+                                                        </linearGradient>
+                                                        <linearGradient
+                                                            id="paint1_linear_1201_112974"
+                                                            x1="37.7529"
+                                                            y1="-11.1487"
+                                                            x2="6.87579"
+                                                            y2="27.6608"
+                                                            gradientUnits="userSpaceOnUse"
+                                                        >
+                                                            <stop stop-color="#DEE5F8" />
+                                                            <stop offset="1" stop-color="white" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                            </a>
+                                        </div>
+
+                                        <div class="news__item-info">
+                                            <time class="news__item-info-date"> 20.03.2020 </time>
+
+                                            <a href='#' class="news__item-info-title link">
+                                                Способы определения мефедрона в организме: виды тестов
+                                            </a>
+
+                                            <p class="news__item-info-description">
+                                                Мефедрон – психоактивное вещество со стимулирующим эффектом. Способы
+                                                определения мефедрона в организме: виды тестов
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide publication__slide">
+                                    <div class='news__item'>
+                                        <div class="news__item-image">
+                                            <picture>
+                                                <source srcset="./images/news/image.webp" type="image/webp" />
+                                                <img loading="lazy" src="./images/news/image.png" alt="" />
+                                            </picture>
+
+                                            <a href="#" class="news__item-image-link link-circle-arrow-down">
+                                                <svg
+                                                    class="arrow"
+                                                    width="9"
+                                                    height="15"
+                                                    viewBox="0 0 9 15"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                        d="M7.81415 7.03603L2.09696 1.19191C1.84609 0.936032 1.43965 0.936032 1.18815 1.19191C0.937283 1.44778 0.937283 1.86338 1.18815 2.11926L6.45186 7.49968L1.18878 12.8801C0.937916 13.136 0.937916 13.5516 1.18878 13.8081C1.43965 14.064 1.84673 14.064 2.09759 13.8081L7.81478 7.96397C8.06185 7.71074 8.06185 7.28861 7.81415 7.03603Z"
+                                                        fill="#00A2E5"
+                                                        stroke="#00A2E5"
+                                                        stroke-width="0.3"
+                                                    />
+                                                </svg>
+
+                                                <svg
+                                                    class="circle"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="46"
+                                                    height="47"
+                                                    viewBox="0 0 46 47"
+                                                    fill="none"
+                                                >
+                                                    <circle
+                                                        cx="23"
+                                                        cy="23.1992"
+                                                        r="22"
+                                                        transform="rotate(90 23 23.1992)"
+                                                        fill="white"
+                                                    />
+                                                    <circle
+                                                        cx="23"
+                                                        cy="23.1992"
+                                                        r="22"
+                                                        transform="rotate(90 23 23.1992)"
+                                                        fill="url(#paint0_linear_1201_112974)"
+                                                    />
+                                                    <circle
+                                                        cx="23"
+                                                        cy="23.1992"
+                                                        r="22"
+                                                        transform="rotate(90 23 23.1992)"
+                                                        stroke="url(#paint1_linear_1201_112974)"
+                                                        stroke-width="2"
+                                                    />
+                                                    <defs>
+                                                        <linearGradient
+                                                            id="paint0_linear_1201_112974"
+                                                            x1="53.5"
+                                                            y1="16.6992"
+                                                            x2="-77.9905"
+                                                            y2="69.1572"
+                                                            gradientUnits="userSpaceOnUse"
+                                                        >
+                                                            <stop stop-color="white" />
+                                                            <stop offset="1" stop-color="#E9F8FF" />
+                                                        </linearGradient>
+                                                        <linearGradient
+                                                            id="paint1_linear_1201_112974"
+                                                            x1="37.7529"
+                                                            y1="-11.1487"
+                                                            x2="6.87579"
+                                                            y2="27.6608"
+                                                            gradientUnits="userSpaceOnUse"
+                                                        >
+                                                            <stop stop-color="#DEE5F8" />
+                                                            <stop offset="1" stop-color="white" />
+                                                        </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                            </a>
+                                        </div>
+
+                                        <div class="news__item-info">
+                                            <time class="news__item-info-date"> 20.03.2020 </time>
+
+                                            <a href='#' class="news__item-info-title link">
+                                                Способы определения мефедрона в организме: виды тестов
+                                            </a>
+
+                                            <p class="news__item-info-description">
+                                                Мефедрон – психоактивное вещество со стимулирующим эффектом. Способы
+                                                определения мефедрона в организме: виды тестов
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="publication__navigation">
+                                <div class="swiper-button-prev publication__prev">
+                                    <svg
+                                        width="7"
+                                        height="13"
+                                        viewBox="0 0 7 13"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M0.659302 6.10741L5.55975 1.16238C5.77478 0.945873 6.12316 0.945873 6.33873 1.16238C6.55376 1.37889 6.55376 1.73056 6.33873 1.94706L1.82698 6.49973L6.33819 11.0524C6.55321 11.2689 6.55321 11.6206 6.33819 11.8376C6.12316 12.0541 5.77423 12.0541 5.55921 11.8376L0.658759 6.89259C0.446989 6.67832 0.446989 6.32113 0.659302 6.10741Z"
+                                            fill="#323232"
+                                            stroke="#323232"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next publication__next">
+                                    <svg
+                                        width="7"
+                                        height="13"
+                                        viewBox="0 0 7 13"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M6.3407 6.10741L1.44025 1.16238C1.22522 0.945873 0.876843 0.945873 0.661271 1.16238C0.446243 1.37889 0.446243 1.73056 0.661271 1.94706L5.17302 6.49973L0.661814 11.0524C0.446786 11.2689 0.446786 11.6206 0.661814 11.8376C0.876843 12.0541 1.22577 12.0541 1.44079 11.8376L6.34124 6.89259C6.55301 6.67832 6.55301 6.32113 6.3407 6.10741Z"
+                                            fill="#323232"
+                                            stroke="#323232"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <footer class="footer">

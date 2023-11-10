@@ -1,0 +1,57 @@
+.comments {
+    &__list {
+        padding: 8.8rem;
+        border-radius: 5rem;
+        border: 0.2rem solid #dee5f8;
+        background: rgba(255, 255, 255, 0.3);
+        display: flex;
+        flex-direction: column;
+        gap: 2.1rem;
+
+        @include small-tablet {
+            padding: 5rem;
+            border-radius: 8rem;
+        }
+    }
+
+    &__item {
+        padding: 6.2rem 7.3rem;
+        border-radius: 5rem;
+        background: $white;
+
+        @include small-tablet {
+            padding: 7.5rem 5rem;
+            border-radius: 8rem;
+        }
+
+        &-author {
+            display: flex;
+            align-items: center;
+            color: #29344a;
+            @include h2;
+            margin-bottom: 3rem;
+
+            @include small-tablet {
+                margin-bottom: 2.5rem;
+            }
+
+            span {
+                color: #bfbfbf;
+                font-size: 1.8rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 2.7rem;
+
+                @include small-tablet {
+                    @include p {
+                        color: #bfbfbf;
+                    }
+                }
+            }
+        }
+
+        &-description {
+            @include p;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.publication {
+    @include swiper-navigation();
+
+    &__title {
+        margin-bottom: 7rem;
+
+        @include small-tablet{
+            margin-bottom: 5rem;
+        }
+    }
+
+    .news__item {
+        margin-left: 8rem;
+
+        @include small-tablet{
+            margin-left: 0;
+        }
+    }
+}

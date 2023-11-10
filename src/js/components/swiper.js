@@ -188,7 +188,7 @@ new Swiper(
                 grid: {
                     rows: 3,
                     fill: 'row'
-                },
+                }
             },
             768: {
                 spaceBetween: rem(7.55),
@@ -210,7 +210,7 @@ new Swiper(
                 grid: {
                     rows: 3,
                     fill: 'row'
-                },
+                }
             },
             768: {
                 spaceBetween: rem(3.6),
@@ -219,6 +219,27 @@ new Swiper(
                     rows: 2,
                     fill: 'row'
                 },
+                grabCursor: true
+            }
+        }
+    })
+);
+
+new Swiper(
+    '.publication__swiper',
+    swiperDefaultSetting('publication', {
+        modules: [Navigation, Grid],
+        spaceBetween: rem(4.6),
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                grid: {
+                    rows: 2,
+                    fill: 'row'
+                }
+            },
+            768: {
+                slidesPerView: 2,
                 grabCursor: true
             }
         }

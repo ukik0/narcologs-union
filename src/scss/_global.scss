@@ -45,7 +45,7 @@ section {
     background: $white;
     width: 5rem;
     height: 5rem;
-    @include transition(background);
+    @include transition($property: background opacity);
     position: initial;
     margin: 0;
     padding: 0;

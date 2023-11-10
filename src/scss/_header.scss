@@ -152,7 +152,6 @@
                 &:hover {
                     .header__nav-item-dropdown-list {
                         opacity: 1;
-                        visibility: visible;
                         pointer-events: auto;
                         user-select: auto;
                     }
@@ -206,7 +205,6 @@
                     top: 3rem;
                     left: -6rem;
                     opacity: 0;
-                    visibility: hidden;
                     pointer-events: none;
                     user-select: none;
 

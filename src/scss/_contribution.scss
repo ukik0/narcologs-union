@@ -68,7 +68,7 @@
                 }
 
                 img {
-                    max-width: 3.6rem;
+                    max-width: 4.6rem;
                     width: 100%;
                     height: 2.6rem;
 
@@ -353,8 +353,7 @@
             @include small-tablet {
                 gap: 3rem;
                 border-radius: 8rem;
-                padding: 2rem 1rem 2rem 4rem;
-                width: 100%;
+                padding: 2rem 13rem 2rem 4rem;
                 white-space: nowrap;
             }
 
@@ -400,6 +399,10 @@
             &-description {
                 @include p;
                 margin-bottom: 3rem;
+
+                @include small-tablet {
+                    margin-bottom: 2.5rem;
+                }
             }
 
             &-form {
@@ -413,6 +416,12 @@
                 );
                 backdrop-filter: blur(0.75rem);
 
+                @include small-tablet {
+                    padding: 4rem;
+                    border-radius: 6rem;
+                    margin-bottom: 4rem;
+                }
+
                 &-wrapper {
                     padding: 1.5rem 3.9rem;
                     border-radius: 5rem;
@@ -420,10 +429,23 @@
                     display: flex;
                     align-items: center;
                     gap: 2rem;
+
+                    @include small-tablet {
+                        padding: 5.5rem 4.5rem;
+                        flex-direction: column;
+                        gap: 1.5rem;
+                        border-radius: 8rem;
+                    }
                 }
 
                 &-input {
                     @include p;
+
+                    @include small-tablet {
+                        padding: 3.3rem 5rem;
+                        border-radius: 3rem;
+                        border: 0.2rem solid #eeeff5;
+                    }
 
                     &::placeholder {
                         @include p;
@@ -437,6 +459,11 @@
                 label {
                     &:first-child {
                         max-width: 14rem;
+                        width: 100%;
+
+                        @include small-tablet {
+                            max-width: 100%;
+                        }
 
                         input {
                             width: 100%;
@@ -451,20 +478,53 @@
                             width: 100%;
                         }
                     }
+
+                    textarea {
+                        height: 2.7rem;
+                        resize: none;
+                        transform: translateY(0.2rem);
+                        width: 100%;
+
+                        @include small-tablet {
+                            height: 37.7rem;
+                        }
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                            width: 0;
+                        }
+                    }
                 }
 
                 &-name {
                     padding-right: 5rem;
                     border-right: 0.2rem solid #f0f3fc;
+
+                    @include small-tablet {
+                        border-right: 0;
+                        padding-right: 0;
+                    }
                 }
 
                 &-comment {
                     padding-left: 2rem;
+
+                    @include small-tablet {
+                        padding-left: 0;
+                    }
                 }
 
                 &-button {
                     display: block;
                     margin-left: auto;
+                    max-width: 17rem;
+                    width: 100%;
+                    text-align: center;
+
+                    @include small-tablet {
+                        margin: 0 auto;
+                        max-width: 33rem;
+                    }
                 }
             }
         }
