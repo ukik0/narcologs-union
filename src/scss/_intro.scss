@@ -189,9 +189,9 @@
                 }
 
                 &-icon {
-                    max-width: 11.0314rem;
+                    max-width: 10rem;
                     width: 100%;
-                    height: 6.9rem;
+                    height: auto;
                     margin-left: -3rem;
 
                     @include small-tablet {
