@@ -144,17 +144,32 @@
             width: 100%;
             z-index: 1;
             position: relative;
+            min-height: 20rem;
+            display: flex;
+            flex-direction: column;
 
             @include small-tablet {
                 margin: initial;
                 max-width: 100%;
                 border-radius: 8rem;
                 padding: 6rem 2.8rem 8rem;
+                min-height: 35rem;
             }
 
             &-description {
                 @include p;
                 margin-bottom: 2.8rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            &-button {
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+                margin-top: auto;
             }
         }
     }

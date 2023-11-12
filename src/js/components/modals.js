@@ -33,7 +33,12 @@ function bindModal(trigger, modal, close, callback = () => null) {
 }
 
 bindModal('.request-button', '#request-modal', '#request-modal .modal__close');
-bindModal('.request-success-button', '#request-modal-success', '#request-modal-success .modal__close', bindSuccessModal);
+bindModal(
+    '.request-success-button',
+    '#request-modal-success',
+    '#request-modal-success .modal__close',
+    bindSuccessModal
+);
 
 bindModal('.comment-button', '#comment-modal', '#comment-modal .modal__close');
 
@@ -50,3 +55,22 @@ function bindSuccessModal() {
         $('#request-modal-success .modal').addClass('--active');
     });
 }
+
+const reviewButtons = document.querySelectorAll('.reviews__item-info-button');
+
+reviewButtons.forEach((button, index) => {
+    button.addEventListener('click', (event) => {
+        const review = $(event.target).closest('.reviews__item-info')
+        const reviewText = review.find('.reviews__item-info-description').text();
+
+        const modal = $('#comment-modal')
+        const modalBody = modal.find('.modal')
+        const text = modalBody.find('.reviews__item-info-description');
+
+        modal.addClass('--active');
+        modalBody.addClass('--active');
+        document.body.classList.add('locked');
+
+        text.html(reviewText)
+    });
+});

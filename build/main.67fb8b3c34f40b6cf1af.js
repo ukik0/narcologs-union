@@ -20956,6 +20956,20 @@ function bindSuccessModal() {
     jquery_default()('#request-modal-success .modal').addClass('--active');
   });
 }
+const reviewButtons = document.querySelectorAll('.reviews__item-info-button');
+reviewButtons.forEach((button, index) => {
+  button.addEventListener('click', event => {
+    const review = jquery_default()(event.target).closest('.reviews__item-info');
+    const reviewText = review.find('.reviews__item-info-description').text();
+    const modal = jquery_default()('#comment-modal');
+    const modalBody = modal.find('.modal');
+    const text = modalBody.find('.reviews__item-info-description');
+    modal.addClass('--active');
+    modalBody.addClass('--active');
+    document.body.classList.add('locked');
+    text.html(reviewText);
+  });
+});
 ;// CONCATENATED MODULE: ./src/js/components/index.js
 
 
