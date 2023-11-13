@@ -264,7 +264,7 @@
                             </p>
 
                             <div class="hero__content-text-buttons">
-                                <button class="hero__content-text-button-primary button-grey comment-button">
+                                <button class="hero__content-text-button-primary button-grey calculate-button">
                                     <img src="./images/phone.svg" alt="" />
                                     Вызвать врача
                                 </button>
@@ -2711,6 +2711,166 @@
                                 сти эффектом. Способы определения мефедрона в организме: виды тестов. Мефедрон
                                 – психоактивное вещество со стимулирующим
                             </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal__wrapper" id="calculate-modal">
+            <div class="modal">
+                <div class="modal__close">
+                    <img src="./images/close-icon.svg" alt="" />
+                </div>
+                <div class="modal__body">
+                    <div class="steps" data-multi-step>
+                        <div data-step class="step">
+                            <h2 class="modal__title section-title">Калькулятор стоимости</h2>
+
+                            <p class="modal__description">
+                                Начните свой путь выздоравления прямо сейчас. Рассчитайте стоимость лечения
+                            </p>
+
+                            <ul class="calculate__steps">
+                                <li class="calculate__step">
+                                    <img src="./images/modals/modal-step-1-active.svg" alt="" />
+                                </li>
+                                <li class="calculate__step">
+                                    <img src="./images/modals/modal-step-2.svg" alt="" />
+                                </li>
+                                <li class="calculate__step">
+                                    <img src="./images/modals/modal-step-3.svg" alt="" />
+                                </li>
+                            </ul>
+
+                            <form action='#' class="calculate__form">
+                                <span class="calculate__form-title"
+                                    >Сколько времени употребляет (зависимость)?</span
+                                >
+
+                                <ul class="calculate__form-questions">
+                                    <li class="calculate__form-question">
+                                        <label for="first" class="radio">
+                                            <input required id="first" name="first" type="radio" />
+                                            <span>WhatsApp</span>
+                                        </label>
+                                    </li>
+                                    <li class="calculate__form-question">
+                                        <label for="second" class="radio">
+                                            <input required id="second" name="first" type="radio" />
+                                            <span>Отправить по СМС</span>
+                                        </label>
+                                    </li>
+                                    <li class="calculate__form-question">
+                                        <label for="third" class="radio">
+                                            <input required id="third" name="first" type="radio" />
+                                            <span>Отправить по СМС</span>
+                                        </label>
+                                    </li>
+                                    <li class="calculate__form-question">
+                                        <label for="four" class="radio">
+                                            <input required id="four" name="first" type="radio" />
+                                            <span>Больше года</span>
+                                        </label>
+                                    </li>
+                                </ul>
+
+                                <button type='submit' data-next class="calculate__form-button button-sky">Продолжить</button>
+                            </form>
+                        </div>
+
+                        <div data-step class="step">
+                            <h2 class="modal__title section-title">Калькулятор стоимости</h2>
+
+                            <p class="modal__description">
+                                Начните свой путь выздоравления прямо сейчас. Рассчитайте стоимость лечения
+                            </p>
+
+                            <ul class="calculate__steps">
+                                <li class="calculate__step">
+                                    <img src="./images/modals/modal-step-1-active.svg" alt="" />
+                                </li>
+                                <li class="calculate__step">
+                                    <img src="./images/modals/modal-step-2-active.svg" alt="" />
+                                </li>
+                                <li class="calculate__step">
+                                    <img src="./images/modals/modal-step-3.svg" alt="" />
+                                </li>
+                            </ul>
+
+                            <div class="calculate__form">
+                                <span class="calculate__form-title"
+                                    >Оставьте свои контакты, чтобы узнать результат там где Вам удобнее</span
+                                >
+
+                                <ul class="calculate__form-questions">
+                                    <li class="calculate__form-question">
+                                        <label for="WhatsApp" class="radio">
+                                            <input required id="WhatsApp" name="second" type="radio" />
+                                            <span>WhatsApp</span>
+                                        </label>
+                                    </li>
+                                    <li class="calculate__form-question">
+                                        <label for="sms" class="radio">
+                                            <input required id="sms" name="second" type="radio" />
+                                            <span>Отправить по СМС</span>
+                                        </label>
+                                    </li>
+                                    <li class="calculate__form-question">
+                                        <label for="send to sms" class="radio">
+                                            <input required id="send to sms" name="second" type="radio" />
+                                            <span>Отправить по СМС</span>
+                                        </label>
+                                    </li>
+                                </ul>
+
+                                <label for="calculate-phone" class="calculate__form-phone">
+                                    <input
+                                        required
+                                        placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+                                        id="calculate-phone"
+                                        type="tel"
+                                    />
+                                    <button
+                                        data-next
+                                        class="calculate__form-phone-button link-circle-arrow-right desktop"
+                                    >
+                                        <svg
+                                            width="8"
+                                            height="13"
+                                            viewBox="0 0 8 13"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M7.08406 6.21164L1.97943 1.1657C1.75544 0.944768 1.39254 0.944768 1.16799 1.1657C0.944003 1.38662 0.944003 1.74547 1.16799 1.96639L5.86773 6.61197L1.16856 11.2575C0.944569 11.4785 0.944569 11.8373 1.16856 12.0588C1.39254 12.2797 1.75601 12.2797 1.97999 12.0588L7.08463 7.01285C7.30522 6.79421 7.30522 6.42972 7.08406 6.21164Z"
+                                                fill="white"
+                                                stroke="white"
+                                            />
+                                        </svg>
+                                    </button>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div data-step class="step">
+                            <h2 class="modal__title section-title">
+                                Заявка отправлена. Ожидайте ответ на указанный Вами способ связи
+                            </h2>
+
+                            <p class="modal__description">Мы свяжемся с Вами с течение 2 минут</p>
+
+                            <ul class="calculate__steps">
+                                <li class="calculate__step">
+                                    <img src="./images/modals/modal-step-1-active.svg" alt="" />
+                                </li>
+                                <li class="calculate__step">
+                                    <img src="./images/modals/modal-step-2-active.svg" alt="" />
+                                </li>
+                                <li class="calculate__step">
+                                    <img src="./images/modals/modal-step-3-active.svg" alt="" />
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

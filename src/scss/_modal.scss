@@ -167,7 +167,7 @@
                     width: 100%;
 
                     @include small-tablet {
-                        height: 37.7rem;
+                        height: 20.7rem;
                     }
 
                     &::-webkit-scrollbar {
@@ -251,7 +251,6 @@
 }
 
 #comment-modal {
-
     .comment__modal {
         &-icon {
             position: absolute;
@@ -277,14 +276,14 @@
         padding: 7.6rem 4.3rem;
         max-width: 126.6rem;
 
-        @include small-tablet{
+        @include small-tablet {
             max-width: 100%;
             padding: 6.3rem;
         }
     }
 
     .reviews__item {
-        @include small-tablet{
+        @include small-tablet {
             flex-direction: column;
             gap: 2.5rem;
         }
@@ -293,7 +292,7 @@
             max-width: 25rem;
             padding: 3.18rem 3.32rem 3.27rem 3.81rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 padding: 0;
                 border: 0;
                 max-width: 45rem;
@@ -312,7 +311,7 @@
                 max-width: 10.3rem;
                 height: 10.3rem;
 
-                @include small-tablet{
+                @include small-tablet {
                     max-width: 14.3rem;
                     height: 14.3rem;
                 }
@@ -326,7 +325,7 @@
             margin-top: -21rem;
             margin-left: 19rem;
 
-            @include small-tablet{
+            @include small-tablet {
                 margin: 0;
                 max-width: 100%;
                 padding: 0;
@@ -334,5 +333,185 @@
             }
         }
     }
+}
 
+#calculate-modal {
+    .steps {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .step {
+        animation: fade 250ms ease-in-out forwards;
+
+        &.--active {
+            animation: slide 150ms ease-in-out both;
+        }
+    }
+
+    .modal {
+        padding: 5.2rem 14.1rem;
+        min-height: 50rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        @include small-tablet {
+            padding: 11rem 5rem 5rem;
+            min-height: auto;
+        }
+    }
+
+    .modal__title {
+        margin-bottom: 1.5rem;
+        text-align: center;
+
+        @include small-tablet {
+            text-align: start;
+        }
+    }
+
+    .modal__description {
+        margin-bottom: 3rem;
+        text-align: center;
+
+        @include small-tablet {
+            text-align: start;
+        }
+    }
+
+    .calculate__steps {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 17rem;
+        margin: 0 auto 3rem;
+
+        @include small-tablet {
+            gap: 10.2rem;
+            margin: 0 0 4rem;
+            justify-content: flex-start;
+        }
+    }
+
+    .calculate__step {
+        max-width: 6.3rem;
+        width: 100%;
+        height: auto;
+        position: relative;
+
+        @include small-tablet {
+            max-width: 10rem;
+        }
+
+        &:not(:last-child) {
+            &::after {
+                @include pseudo {
+                    width: 15rem;
+                    height: 0.2rem;
+                    background: #e3edff;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -16rem;
+
+                    @include small-tablet{
+                        width: 8rem;
+                        right: -9rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .calculate__form {
+        &-title {
+            @include h2;
+            display: block;
+            text-align: center;
+            margin-bottom: 3rem;
+
+            @include small-tablet {
+                text-align: start;
+            }
+        }
+
+        &-questions {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            justify-content: center;
+            margin-bottom: 4.5rem;
+
+            @include small-tablet {
+                flex-direction: column;
+                gap: 2rem;
+                margin-bottom: 6rem;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+        }
+
+        &-question {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            white-space: nowrap;
+
+            input {
+                width: 4.1rem;
+            }
+
+            @include small-tablet {
+                gap: 0.5rem;
+                width: 100%;
+
+                input {
+                    width: 100%;
+                }
+            }
+        }
+
+        &-button {
+            display: block;
+            margin: 0 auto;
+
+            @include small-tablet {
+                margin: initial;
+                width: 100%;
+                max-width: 32rem;
+                text-align: center;
+            }
+        }
+
+        &-phone {
+            position: relative;
+            padding: 0.75rem 0.9rem 0.75rem 3.1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-radius: 10rem;
+            border: 0.2rem solid #eeeff5;
+            max-width: 29.5rem;
+            width: 100%;
+            margin: 0 auto;
+
+            input {
+                width: 100%;
+                @include p;
+
+                &::placeholder {
+                    @include p;
+                    color: #bcbcbc;
+                }
+            }
+
+            &-button {
+                svg {
+                    pointer-events: none;
+                    user-select: none;
+                }
+            }
+        }
+    }
 }

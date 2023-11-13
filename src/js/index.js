@@ -1,6 +1,6 @@
-import $ from 'jquery';
-
 import { Fancybox } from '@fancyapps/ui';
+import Inputmask from 'inputmask';
+
 import './components';
 
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
@@ -11,30 +11,13 @@ Fancybox.bind('[data-fancybox]', {
         zoom: false
     }
 });
+function setPhoneMask() {
+    const phoneInputs = document.querySelectorAll('input[type="tel"]');
 
-const burgerMenuButton = document.querySelector('.header__burger');
-const closeBurgerButton = document.querySelector('.header__burger-menu-heading .close');
-
-burgerMenuButton.addEventListener('click', () => {
-    $('.header__burger-menu').addClass('--active');
-    $('body').addClass('locked')
-});
-
-closeBurgerButton.addEventListener('click', () => {
-    $('.header__burger-menu').removeClass('--active');
-    $('body').removeClass('locked')
-});
-
-const burgerMenuDropdown = document.querySelectorAll('.header__burger-menu-item');
-
-burgerMenuDropdown.forEach((dropdown) => {
-    dropdown.addEventListener('click', () => {
-        const arrow = dropdown.querySelector('.header__burger-menu-item-title');
-        const list = dropdown.querySelector('.header__burger-menu-dropdown-list');
-
-        if (!list) return;
-
-        $(list).slideToggle().css('display', 'flex');
-        $(arrow).toggleClass('--active');
+    phoneInputs.forEach((phoneInput) => {
+        const im = new Inputmask('+ 7 (999) 999-99-99', {placeholder: '+ 7 (999) 999-99-99'});
+        im.mask(phoneInput);
     });
-});
+}
+
+setPhoneMask();
