@@ -92,7 +92,7 @@ if (currentStep < 0) {
 
 multiStepForm.addEventListener('click', (e) => {
     if (e.target.matches('[data-next]')) {
-        const fields = [...formSteps[currentStep].querySelectorAll('input')];
+        const fields = Array.from(formSteps[currentStep].querySelectorAll('input'));
 
         const isValidFields = fields.every((input) => input.reportValidity());
 
@@ -105,6 +105,7 @@ multiStepForm.addEventListener('click', (e) => {
 
 formSteps.forEach((step) => {
     step.addEventListener('animationend', (e) => {
+        console.log(!e.target.classList.contains('--active'))
         formSteps[currentStep].classList.remove('hidden');
         e.target.classList.toggle('hidden', !e.target.classList.contains('--active'));
     });
