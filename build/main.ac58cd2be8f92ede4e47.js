@@ -24027,7 +24027,7 @@ const PLACEMARKS = [{
 const placemarkOptions = {
   hideIconOnBalloonOpen: false,
   iconLayout: 'default#image',
-  iconImageHref: '../images/placemark.svg',
+  iconImageHref: '../local/templates/alghoritm_recovery/images/placemark.svg',
   iconImageSize: [28, 28],
   iconImageOffset: [-5, -10]
 };

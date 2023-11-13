@@ -1,8 +1,8 @@
-import Swiper from 'swiper';
+import $ from 'jquery';
 
+import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 
-import $ from 'jquery';
 
 import { rem, swiperDefaultSetting } from '../utils';
 
@@ -48,7 +48,7 @@ const PLACEMARKS = [
 const placemarkOptions = {
     hideIconOnBalloonOpen: false,
     iconLayout: 'default#image',
-    iconImageHref: '../images/placemark.svg',
+    iconImageHref: '../local/templates/alghoritm_recovery/images/placemark.svg',
     iconImageSize: [28, 28],
     iconImageOffset: [-5, -10]
 };
