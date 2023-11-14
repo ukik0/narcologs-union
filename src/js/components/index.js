@@ -4,5 +4,5 @@ export * from './yandex-map';
 export * from './services';
 export * from './accordion';
 export * from './select';
-// export * from './burger-menu';
-// export * from './modals';
+export * from './burger-menu';
+export * from './modals';
