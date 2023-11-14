@@ -84,28 +84,27 @@ new Swiper(
 );
 
 new Swiper(
-    '.centers__swiper.desktop',
+    '.centers__swiper',
     swiperDefaultSetting('centers', {
-        modules: [Navigation],
-        breakpoints: {
-            768: {
-                spaceBetween: rem(3.6),
-                slidesPerView: 1,
-                grabCursor: true
-            }
-        }
-    })
-);
-
-new Swiper(
-    '.centers__swiper.mobile',
-    swiperDefaultSetting('centers', {
-        modules: [Navigation],
+        modules: [Navigation, Grid],
         breakpoints: {
             0: {
-                spaceBetween: rem(3.6),
+                spaceBetween: rem(1.5),
                 slidesPerView: 1,
-                grabCursor: true
+                grabCursor: true,
+                grid: {
+                    rows: 3,
+                    fill: 'row'
+                }
+            },
+            768: {
+                spaceBetween: rem(3.6),
+                slidesPerView: 2,
+                grabCursor: true,
+                grid: {
+                    rows: 2,
+                    fill: 'row'
+                }
             }
         }
     })
@@ -131,33 +130,27 @@ new Swiper(
 );
 
 new Swiper(
-    '.clinics__swiper.desktop',
+    '.clinics__swiper',
     swiperDefaultSetting('clinics', {
         modules: [Navigation, Grid],
         breakpoints: {
-            768: {
-                spaceBetween: rem(3.6),
-                slidesPerView: 3,
+            0: {
+                spaceBetween: rem(1.5),
+                slidesPerView: 1,
                 grabCursor: true,
                 grid: {
-                    rows: 2,
+                    rows: 3,
                     fill: 'row'
                 },
-                loop: false
-            }
-        }
-    })
-);
-
-new Swiper(
-    '.clinics__swiper.mobile',
-    swiperDefaultSetting('clinics', {
-        modules: [Navigation],
-        breakpoints: {
-            0: {
+            },
+            768: {
                 spaceBetween: rem(3.6),
-                slidesPerView: 1,
-                grabCursor: true
+                slidesPerView: 2,
+                grabCursor: true,
+                grid: {
+                    rows: 5,
+                    fill: 'row'
+                },
             }
         }
     })
