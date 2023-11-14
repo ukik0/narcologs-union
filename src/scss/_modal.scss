@@ -476,6 +476,12 @@
             display: block;
             margin: 0 auto;
 
+            &.mobile {
+                @media (min-width: 48em) {
+                    display: none;
+                }
+            }
+
             @include small-tablet {
                 margin: initial;
                 width: 100%;
@@ -496,6 +502,13 @@
             width: 100%;
             margin: 0 auto;
 
+            @include small-tablet{
+                margin: 5rem 0;
+                max-width: 50rem;
+                padding: 3rem 4rem;
+                border-radius: 15rem;
+            }
+
             input {
                 width: 100%;
                 @include p;
@@ -510,6 +523,24 @@
                 svg {
                     pointer-events: none;
                     user-select: none;
+                }
+            }
+        }
+    }
+
+    .step {
+        &:last-child{
+            @include small-tablet{
+                .modal__title {
+                    text-align: center;
+                }
+
+                .modal__description {
+                    text-align: center;
+                }
+
+                .calculate__steps {
+                    justify-content: center;
                 }
             }
         }
