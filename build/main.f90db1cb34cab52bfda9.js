@@ -24171,117 +24171,6 @@ var services = __webpack_require__(625);
 var accordion = __webpack_require__(557);
 // EXTERNAL MODULE: ./src/js/components/select.js
 var components_select = __webpack_require__(407);
-;// CONCATENATED MODULE: ./src/js/components/burger-menu.js
-
-const burgerMenuButton = document.querySelector('.header__burger');
-const closeBurgerButton = document.querySelector('.header__burger-menu-heading .close');
-burgerMenuButton.addEventListener('click', () => {
-  jquery_default()('.header__burger-menu').addClass('--active');
-  jquery_default()('body').addClass('locked');
-});
-closeBurgerButton.addEventListener('click', () => {
-  jquery_default()('.header__burger-menu').removeClass('--active');
-  jquery_default()('body').removeClass('locked');
-});
-const burgerMenuDropdown = document.querySelectorAll('.header__burger-menu-item');
-burgerMenuDropdown.forEach(dropdown => {
-  dropdown.addEventListener('click', () => {
-    const arrow = dropdown.querySelector('.header__burger-menu-item-title');
-    const list = dropdown.querySelector('.header__burger-menu-dropdown-list');
-    if (!list) return;
-    jquery_default()(list).slideToggle().css('display', 'flex');
-    jquery_default()(arrow).toggleClass('--active');
-  });
-});
-;// CONCATENATED MODULE: ./src/js/components/modals.js
-
-function bindModal(trigger, modal, close) {
-  let callback = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : () => null;
-  modal = document.querySelector(modal), close = document.querySelector(close);
-  const body = document.body;
-  const modalBody = modal.querySelector('.modal');
-  if (!jquery_default()(trigger) || !modal || !close || !modalBody) return;
-  jquery_default()(trigger).each(function () {
-    jquery_default()(this).on('click', e => {
-      e.preventDefault();
-      modal.classList.add('--active');
-      modalBody.classList.add('--active');
-      body.classList.add('locked');
-    });
-  });
-  jquery_default()(close).on('click', () => {
-    modalBody.classList.remove('--active');
-    modal.classList.remove('--active');
-    body.classList.remove('locked');
-  });
-  jquery_default()(modal).on('click', e => {
-    if (e.target === modal) {
-      modalBody.classList.remove('--active');
-      modal.classList.remove('--active');
-      body.classList.remove('locked');
-    }
-  });
-  callback();
-}
-bindModal('.request-button', '#request-modal', '#request-modal .modal__close');
-bindModal('.request-success-button', '#request-modal-success', '#request-modal-success .modal__close', bindSuccessModal);
-bindModal('.comment-button', '#comment-modal', '#comment-modal .modal__close');
-bindModal('.calculate-button', '#calculate-modal', '#calculate-modal .modal__close');
-function bindSuccessModal() {
-  jquery_default()('.request-success-button').on('click', event => {
-    event.preventDefault();
-    jquery_default()('.modal__wrapper').each(function () {
-      jquery_default()(this).removeClass('--active');
-      jquery_default()(this).find('.modal').removeClass('--active');
-    });
-    jquery_default()('#request-modal-success').addClass('--active');
-    jquery_default()('#request-modal-success .modal').addClass('--active');
-  });
-}
-const reviewButtons = document.querySelectorAll('.reviews__item-info-button');
-reviewButtons.forEach((button, index) => {
-  button.addEventListener('click', event => {
-    const review = jquery_default()(event.target).closest('.reviews__item-info');
-    const reviewText = review.find('.reviews__item-info-description').text();
-    const modal = jquery_default()('#comment-modal');
-    const modalBody = modal.find('.modal');
-    const text = modalBody.find('.reviews__item-info-description');
-    modal.addClass('--active');
-    modalBody.addClass('--active');
-    document.body.classList.add('locked');
-    text.html(reviewText);
-  });
-});
-const multiStepForm = document.querySelector('[data-multi-step]');
-const formSteps = Array.from(multiStepForm.querySelectorAll('[data-step]'));
-let currentStep = formSteps.findIndex(step => step.classList.contains('--active'));
-Array.from(document.querySelectorAll('form')).forEach(form => form.addEventListener('submit', event => event.preventDefault()));
-if (currentStep < 0) {
-  currentStep = 0;
-  showCurrentStep();
-}
-multiStepForm.addEventListener('click', e => {
-  if (e.target.matches('[data-next]')) {
-    const fields = Array.from(formSteps[currentStep].querySelectorAll('input'));
-    const isValidFields = fields.every(input => input.reportValidity());
-    if (isValidFields) {
-      currentStep += 1;
-      showCurrentStep();
-    }
-  }
-});
-formSteps.forEach(step => {
-  step.addEventListener('animationend', e => {
-    console.log(!e.target.classList.contains('--active'));
-    formSteps[currentStep].classList.remove('hidden');
-    e.target.classList.toggle('hidden', !e.target.classList.contains('--active'));
-  });
-});
-function showCurrentStep() {
-  formSteps.forEach((step, index) => {
-    step.classList.toggle('--active', index === currentStep);
-  });
-}
 ;// CONCATENATED MODULE: ./src/js/components/index.js
 
 
@@ -24289,8 +24178,8 @@ function showCurrentStep() {
 
 
 
-
-
+// export * from './burger-menu';
+// export * from './modals';
 ;// CONCATENATED MODULE: ./src/js/index.js
 
 
